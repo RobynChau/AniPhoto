@@ -1,0 +1,946 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B4D10172B9632C4000DDF1F /* EPSDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D10162B9632C4000DDF1F /* EPSDefines.m */; };
+		4B4D101B2B963A54000DDF1F /* EPSSystemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D101A2B963A54000DDF1F /* EPSSystemButton.m */; };
+		4B4E48702BD83D130004CE99 /* EPSPhotoGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E486F2BD83D130004CE99 /* EPSPhotoGenerator.m */; };
+		4B4E48742BD8423E0004CE99 /* EPSResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E48732BD8423E0004CE99 /* EPSResultViewController.m */; };
+		4B7104EB2B5994070035C450 /* ToolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104DB2B5994070035C450 /* ToolViewCell.m */; };
+		4B7104EE2B5994070035C450 /* ToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104E22B5994070035C450 /* ToolView.m */; };
+		4B7104EF2B5994070035C450 /* EPSPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104E32B5994070035C450 /* EPSPickerViewController.m */; };
+		4B7104F02B5994070035C450 /* EPSEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104E72B5994070035C450 /* EPSEditorViewController.m */; };
+		4B7104F12B5994070035C450 /* EPSModelOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104E82B5994070035C450 /* EPSModelOptionCell.m */; };
+		4B7104F32B5994070035C450 /* EPSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104EA2B5994070035C450 /* EPSHomeViewController.m */; };
+		4B7104F52B5994160035C450 /* AnimeGANv2_1024.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104F42B5994160035C450 /* AnimeGANv2_1024.mlmodel */; };
+		4B7104FE2B59969F0035C450 /* EPSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104FD2B59969F0035C450 /* EPSSettingsViewController.m */; };
+		4B8765B42B5D9E38008822BF /* EPSSettingSectionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8765B32B5D9E38008822BF /* EPSSettingSectionConfiguration.m */; };
+		4B8765B72B5DA4E8008822BF /* EPSSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8765B62B5DA4E8008822BF /* EPSSettingCell.m */; };
+		4B881B6E2B6C0D2A004D1505 /* EPSSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B881B6D2B6C0D2A004D1505 /* EPSSignInViewController.m */; };
+		4BA0B38C2B5846850066E6CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0B38B2B5846850066E6CB /* AppDelegate.m */; };
+		4BA0B3972B58468E0066E6CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA0B3962B58468E0066E6CB /* Assets.xcassets */; };
+		4BA0B39A2B58468E0066E6CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA0B3982B58468E0066E6CB /* LaunchScreen.storyboard */; };
+		4BA0B39D2B58468E0066E6CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0B39C2B58468E0066E6CB /* main.m */; };
+		4BA62F802BD5918000956EE4 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F7F2BD5918000956EE4 /* AppAuth */; };
+		4BA62F822BD5918000956EE4 /* AppAuthCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F812BD5918000956EE4 /* AppAuthCore */; };
+		4BA62F852BD591ED00956EE4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F842BD591ED00956EE4 /* FirebaseAuth */; };
+		4BA62F872BD591ED00956EE4 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F862BD591ED00956EE4 /* FirebaseDatabase */; };
+		4BA62F892BD591ED00956EE4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F882BD591ED00956EE4 /* FirebaseFirestore */; };
+		4BA62F8B2BD591ED00956EE4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F8A2BD591ED00956EE4 /* FirebaseFirestoreSwift */; };
+		4BA62F8D2BD591ED00956EE4 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F8C2BD591ED00956EE4 /* FirebaseInAppMessaging-Beta */; };
+		4BA62F8F2BD591ED00956EE4 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F8E2BD591ED00956EE4 /* FirebaseInAppMessagingSwift-Beta */; };
+		4BA62F912BD591ED00956EE4 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F902BD591ED00956EE4 /* FirebaseMessaging */; };
+		4BA62F932BD591ED00956EE4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F922BD591ED00956EE4 /* FirebaseStorage */; };
+		4BA62F962BD5920A00956EE4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA62F952BD5920A00956EE4 /* SDWebImage */; };
+		4BA62FF52BD5985900956EE4 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FDC2BD5985800956EE4 /* NSArray+MASAdditions.m */; };
+		4BA62FF62BD5985900956EE4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FDD2BD5985800956EE4 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		4BA62FF72BD5985900956EE4 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FDE2BD5985800956EE4 /* MASConstraint.m */; };
+		4BA62FF82BD5985900956EE4 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FDF2BD5985800956EE4 /* MASLayoutConstraint.m */; };
+		4BA62FF92BD5985900956EE4 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FE02BD5985800956EE4 /* MASConstraintMaker.m */; };
+		4BA62FFA2BD5985900956EE4 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FE22BD5985800956EE4 /* ViewController+MASAdditions.m */; };
+		4BA62FFB2BD5985900956EE4 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FE32BD5985800956EE4 /* MASViewConstraint.m */; };
+		4BA62FFC2BD5985900956EE4 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FE92BD5985900956EE4 /* View+MASAdditions.m */; };
+		4BA62FFD2BD5985900956EE4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FEC2BD5985900956EE4 /* MASCompositeConstraint.m */; };
+		4BA62FFE2BD5985900956EE4 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FF42BD5985900956EE4 /* MASViewAttribute.m */; };
+		4BAB7DFC2B9704CD00B4F524 /* UIColor+EPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */; };
+		4BBD9D6F2BCFAC73009C9ECD /* UIImage+EPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */; };
+		4BBD9D722BCFC2C4009C9ECD /* EPSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D712BCFC2C4009C9ECD /* EPSLoadingView.m */; };
+		4BBD9D772BCFC5FB009C9ECD /* EPSResultWaitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D762BCFC5FB009C9ECD /* EPSResultWaitingViewController.m */; };
+		4BC55CA02B5FAEEB006B9022 /* EPSUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC55C9F2B5FAEEB006B9022 /* EPSUserEntity.m */; };
+		4BC728E32BD9581100B27C34 /* EPSShareableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728E22BD9581100B27C34 /* EPSShareableImage.m */; };
+		4BC728EA2BD9665D00B27C34 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728E82BD9665D00B27C34 /* UIView+Toast.m */; };
+		4BC728ED2BD9822A00B27C34 /* EPSBlurImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728EC2BD9822A00B27C34 /* EPSBlurImageView.m */; };
+		4BC728F12BD9904F00B27C34 /* EPSImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728F02BD9904F00B27C34 /* EPSImageHelper.m */; };
+		4BD12ED12BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12ED02BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m */; };
+		4BD12ED42BCED79600B8DA16 /* EPSModelOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12ED32BCED79600B8DA16 /* EPSModelOption.m */; };
+		4BD12EDA2BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12ED92BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m */; };
+		4BD12EE32BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12EE22BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m */; };
+		4BD12EE62BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */; };
+		4BD50ADC2BA01322001F2DFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4BA62FA72BD592CD00956EE4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B4D10152B9632C4000DDF1F /* EPSDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSDefines.h; sourceTree = "<group>"; };
+		4B4D10162B9632C4000DDF1F /* EPSDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSDefines.m; sourceTree = "<group>"; };
+		4B4D10192B963A54000DDF1F /* EPSSystemButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSystemButton.h; sourceTree = "<group>"; };
+		4B4D101A2B963A54000DDF1F /* EPSSystemButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSystemButton.m; sourceTree = "<group>"; };
+		4B4E486E2BD83D130004CE99 /* EPSPhotoGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSPhotoGenerator.h; sourceTree = "<group>"; };
+		4B4E486F2BD83D130004CE99 /* EPSPhotoGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSPhotoGenerator.m; sourceTree = "<group>"; };
+		4B4E48722BD8423E0004CE99 /* EPSResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSResultViewController.h; sourceTree = "<group>"; };
+		4B4E48732BD8423E0004CE99 /* EPSResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSResultViewController.m; sourceTree = "<group>"; };
+		4B7104DA2B5994060035C450 /* ToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolView.h; sourceTree = "<group>"; };
+		4B7104DB2B5994070035C450 /* ToolViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolViewCell.m; sourceTree = "<group>"; };
+		4B7104DE2B5994070035C450 /* EPSModelOptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSModelOptionCell.h; sourceTree = "<group>"; };
+		4B7104E02B5994070035C450 /* EPSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHomeViewController.h; sourceTree = "<group>"; };
+		4B7104E22B5994070035C450 /* ToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolView.m; sourceTree = "<group>"; };
+		4B7104E32B5994070035C450 /* EPSPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSPickerViewController.m; sourceTree = "<group>"; };
+		4B7104E42B5994070035C450 /* EPSEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSEditorViewController.h; sourceTree = "<group>"; };
+		4B7104E52B5994070035C450 /* EPSPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSPickerViewController.h; sourceTree = "<group>"; };
+		4B7104E62B5994070035C450 /* ToolViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolViewCell.h; sourceTree = "<group>"; };
+		4B7104E72B5994070035C450 /* EPSEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSEditorViewController.m; sourceTree = "<group>"; };
+		4B7104E82B5994070035C450 /* EPSModelOptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModelOptionCell.m; sourceTree = "<group>"; };
+		4B7104EA2B5994070035C450 /* EPSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHomeViewController.m; sourceTree = "<group>"; };
+		4B7104F42B5994160035C450 /* AnimeGANv2_1024.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv2_1024.mlmodel; sourceTree = "<group>"; };
+		4B7104FC2B59969F0035C450 /* EPSSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSettingsViewController.h; sourceTree = "<group>"; };
+		4B7104FD2B59969F0035C450 /* EPSSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSettingsViewController.m; sourceTree = "<group>"; };
+		4B8765B22B5D9E38008822BF /* EPSSettingSectionConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSettingSectionConfiguration.h; sourceTree = "<group>"; };
+		4B8765B32B5D9E38008822BF /* EPSSettingSectionConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSettingSectionConfiguration.m; sourceTree = "<group>"; };
+		4B8765B52B5DA4E8008822BF /* EPSSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSettingCell.h; sourceTree = "<group>"; };
+		4B8765B62B5DA4E8008822BF /* EPSSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSettingCell.m; sourceTree = "<group>"; };
+		4B881B6C2B6C0D2A004D1505 /* EPSSignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSignInViewController.h; sourceTree = "<group>"; };
+		4B881B6D2B6C0D2A004D1505 /* EPSSignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSignInViewController.m; sourceTree = "<group>"; };
+		4BA0B3872B5846850066E6CB /* AniPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BA0B38A2B5846850066E6CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4BA0B38B2B5846850066E6CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4BA0B3962B58468E0066E6CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BA0B3992B58468E0066E6CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4BA0B39B2B58468E0066E6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BA0B39C2B58468E0066E6CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4BA62FDC2BD5985800956EE4 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		4BA62FDD2BD5985800956EE4 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		4BA62FDE2BD5985800956EE4 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		4BA62FDF2BD5985800956EE4 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		4BA62FE02BD5985800956EE4 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		4BA62FE12BD5985800956EE4 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		4BA62FE22BD5985800956EE4 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		4BA62FE32BD5985800956EE4 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		4BA62FE42BD5985800956EE4 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		4BA62FE52BD5985800956EE4 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		4BA62FE62BD5985800956EE4 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		4BA62FE72BD5985900956EE4 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		4BA62FE82BD5985900956EE4 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		4BA62FE92BD5985900956EE4 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		4BA62FEA2BD5985900956EE4 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		4BA62FEB2BD5985900956EE4 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		4BA62FEC2BD5985900956EE4 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		4BA62FED2BD5985900956EE4 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		4BA62FEE2BD5985900956EE4 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		4BA62FEF2BD5985900956EE4 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		4BA62FF02BD5985900956EE4 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		4BA62FF12BD5985900956EE4 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		4BA62FF22BD5985900956EE4 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		4BA62FF32BD5985900956EE4 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		4BA62FF42BD5985900956EE4 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		4BAB7DFA2B9704CD00B4F524 /* UIColor+EPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EPS.h"; sourceTree = "<group>"; };
+		4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EPS.m"; sourceTree = "<group>"; };
+		4BBD9D6D2BCFAC73009C9ECD /* UIImage+EPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+EPS.h"; sourceTree = "<group>"; };
+		4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EPS.m"; sourceTree = "<group>"; };
+		4BBD9D702BCFC2C4009C9ECD /* EPSLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSLoadingView.h; sourceTree = "<group>"; };
+		4BBD9D712BCFC2C4009C9ECD /* EPSLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSLoadingView.m; sourceTree = "<group>"; };
+		4BBD9D752BCFC5FB009C9ECD /* EPSResultWaitingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSResultWaitingViewController.h; sourceTree = "<group>"; };
+		4BBD9D762BCFC5FB009C9ECD /* EPSResultWaitingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSResultWaitingViewController.m; sourceTree = "<group>"; };
+		4BC55C9E2B5FAEEB006B9022 /* EPSUserEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSUserEntity.h; sourceTree = "<group>"; };
+		4BC55C9F2B5FAEEB006B9022 /* EPSUserEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSUserEntity.m; sourceTree = "<group>"; };
+		4BC728E12BD9581100B27C34 /* EPSShareableImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSShareableImage.h; sourceTree = "<group>"; };
+		4BC728E22BD9581100B27C34 /* EPSShareableImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSShareableImage.m; sourceTree = "<group>"; };
+		4BC728E82BD9665D00B27C34 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		4BC728E92BD9665D00B27C34 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		4BC728EB2BD9822A00B27C34 /* EPSBlurImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSBlurImageView.h; sourceTree = "<group>"; };
+		4BC728EC2BD9822A00B27C34 /* EPSBlurImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBlurImageView.m; sourceTree = "<group>"; };
+		4BC728EF2BD9904F00B27C34 /* EPSImageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSImageHelper.h; sourceTree = "<group>"; };
+		4BC728F02BD9904F00B27C34 /* EPSImageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSImageHelper.m; sourceTree = "<group>"; };
+		4BD12ECF2BCED73A00B8DA16 /* EPSModelOptionSectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSModelOptionSectionViewController.h; sourceTree = "<group>"; };
+		4BD12ED02BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSModelOptionSectionViewController.m; sourceTree = "<group>"; };
+		4BD12ED22BCED79600B8DA16 /* EPSModelOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSModelOption.h; sourceTree = "<group>"; };
+		4BD12ED32BCED79600B8DA16 /* EPSModelOption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSModelOption.m; sourceTree = "<group>"; };
+		4BD12ED82BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSModelOptionSectionLabel.h; sourceTree = "<group>"; };
+		4BD12ED92BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSModelOptionSectionLabel.m; sourceTree = "<group>"; };
+		4BD12EE12BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomePhotoSectionHeaderView.h; sourceTree = "<group>"; };
+		4BD12EE22BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomePhotoSectionHeaderView.m; sourceTree = "<group>"; };
+		4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeLabelSectionHeaderView.h; sourceTree = "<group>"; };
+		4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeLabelSectionHeaderView.m; sourceTree = "<group>"; };
+		4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BA0B3842B5846850066E6CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BA62F912BD591ED00956EE4 /* FirebaseMessaging in Frameworks */,
+				4BA62F802BD5918000956EE4 /* AppAuth in Frameworks */,
+				4BA62F8D2BD591ED00956EE4 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				4BA62F932BD591ED00956EE4 /* FirebaseStorage in Frameworks */,
+				4BA62F8F2BD591ED00956EE4 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				4BA62F852BD591ED00956EE4 /* FirebaseAuth in Frameworks */,
+				4BA62F872BD591ED00956EE4 /* FirebaseDatabase in Frameworks */,
+				4BA62F892BD591ED00956EE4 /* FirebaseFirestore in Frameworks */,
+				4BA62F962BD5920A00956EE4 /* SDWebImage in Frameworks */,
+				4BA62F822BD5918000956EE4 /* AppAuthCore in Frameworks */,
+				4BA62F8B2BD591ED00956EE4 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B4D10132B963243000DDF1F /* Ultilities */ = {
+			isa = PBXGroup;
+			children = (
+				4B4D10182B963A2D000DDF1F /* CommonView */,
+				4B4D10152B9632C4000DDF1F /* EPSDefines.h */,
+				4B4D10162B9632C4000DDF1F /* EPSDefines.m */,
+				4BAB7DF92B97048100B4F524 /* Extension */,
+				4BC728EE2BD9902000B27C34 /* Helper */,
+				4BA62FDA2BD5945900956EE4 /* Masonry */,
+				4BC728E72BD9664D00B27C34 /* Toast */,
+			);
+			path = Ultilities;
+			sourceTree = "<group>";
+		};
+		4B4D10182B963A2D000DDF1F /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				4B4D10192B963A54000DDF1F /* EPSSystemButton.h */,
+				4B4D101A2B963A54000DDF1F /* EPSSystemButton.m */,
+				4BBD9D702BCFC2C4009C9ECD /* EPSLoadingView.h */,
+				4BBD9D712BCFC2C4009C9ECD /* EPSLoadingView.m */,
+				4BC728EB2BD9822A00B27C34 /* EPSBlurImageView.h */,
+				4BC728EC2BD9822A00B27C34 /* EPSBlurImageView.m */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		4B4E486A2BD83C7A0004CE99 /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				4B4E486E2BD83D130004CE99 /* EPSPhotoGenerator.h */,
+				4B4E486F2BD83D130004CE99 /* EPSPhotoGenerator.m */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
+		4B4E48712BD841DC0004CE99 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				4B4E48722BD8423E0004CE99 /* EPSResultViewController.h */,
+				4B4E48732BD8423E0004CE99 /* EPSResultViewController.m */,
+				4BC728E12BD9581100B27C34 /* EPSShareableImage.h */,
+				4BC728E22BD9581100B27C34 /* EPSShareableImage.m */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		4B7104F62B5994760035C450 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4BD12ED72BCED9FE00B8DA16 /* Model */,
+				4BD12ED62BCED9F800B8DA16 /* Controller */,
+				4BD12ED52BCED9F100B8DA16 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4B7104F72B5994810035C450 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				4B7104E52B5994070035C450 /* EPSPickerViewController.h */,
+				4B7104E32B5994070035C450 /* EPSPickerViewController.m */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		4B7104F82B5994B00035C450 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				4B7104DA2B5994060035C450 /* ToolView.h */,
+				4B7104E22B5994070035C450 /* ToolView.m */,
+				4B7104E62B5994070035C450 /* ToolViewCell.h */,
+				4B7104DB2B5994070035C450 /* ToolViewCell.m */,
+				4B7104E42B5994070035C450 /* EPSEditorViewController.h */,
+				4B7104E72B5994070035C450 /* EPSEditorViewController.m */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		4B7104FA2B59953F0035C450 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				4B7104F42B5994160035C450 /* AnimeGANv2_1024.mlmodel */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		4B7104FB2B5996560035C450 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4BA62F7C2BD58E2F00956EE4 /* Controller */,
+				4BA62F7B2BD58E2800956EE4 /* View */,
+				4BA62F7A2BD58E2100956EE4 /* Model */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4BA0B37E2B5846850066E6CB = {
+			isa = PBXGroup;
+			children = (
+				4BA0B3892B5846850066E6CB /* AniPhoto */,
+				4BA0B3882B5846850066E6CB /* Products */,
+				4BD50ADE2BA014E8001F2DFC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4BA0B3882B5846850066E6CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BA0B3872B5846850066E6CB /* AniPhoto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BA0B3892B5846850066E6CB /* AniPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				4B4E486A2BD83C7A0004CE99 /* Generator */,
+				4BBD9D732BCFC5BC009C9ECD /* Waiting */,
+				4B4E48712BD841DC0004CE99 /* Result */,
+				4B4D10132B963243000DDF1F /* Ultilities */,
+				4BC55C9D2B5FAE5D006B9022 /* Model */,
+				4B7104FA2B59953F0035C450 /* CoreML */,
+				4B7104F82B5994B00035C450 /* Edit */,
+				4B7104F62B5994760035C450 /* Home */,
+				4B7104F72B5994810035C450 /* Picker */,
+				4B7104FB2B5996560035C450 /* Profile */,
+				4BF7826A2B962CC600003B86 /* SignIn */,
+				4BA0B38A2B5846850066E6CB /* AppDelegate.h */,
+				4BA0B38B2B5846850066E6CB /* AppDelegate.m */,
+				4BA0B39C2B58468E0066E6CB /* main.m */,
+				4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */,
+				4BA0B39B2B58468E0066E6CB /* Info.plist */,
+				4BA0B3982B58468E0066E6CB /* LaunchScreen.storyboard */,
+				4BA0B3962B58468E0066E6CB /* Assets.xcassets */,
+			);
+			path = AniPhoto;
+			sourceTree = "<group>";
+		};
+		4BA62F7A2BD58E2100956EE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B8765B22B5D9E38008822BF /* EPSSettingSectionConfiguration.h */,
+				4B8765B32B5D9E38008822BF /* EPSSettingSectionConfiguration.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BA62F7B2BD58E2800956EE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B8765B52B5DA4E8008822BF /* EPSSettingCell.h */,
+				4B8765B62B5DA4E8008822BF /* EPSSettingCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BA62F7C2BD58E2F00956EE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B7104FC2B59969F0035C450 /* EPSSettingsViewController.h */,
+				4B7104FD2B59969F0035C450 /* EPSSettingsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BA62FDA2BD5945900956EE4 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				4BA62FE52BD5985800956EE4 /* MASCompositeConstraint.h */,
+				4BA62FEC2BD5985900956EE4 /* MASCompositeConstraint.m */,
+				4BA62FF22BD5985900956EE4 /* MASConstraint.h */,
+				4BA62FDE2BD5985800956EE4 /* MASConstraint.m */,
+				4BA62FEA2BD5985900956EE4 /* MASConstraint+Private.h */,
+				4BA62FF12BD5985900956EE4 /* MASConstraintMaker.h */,
+				4BA62FE02BD5985800956EE4 /* MASConstraintMaker.m */,
+				4BA62FE72BD5985900956EE4 /* MASLayoutConstraint.h */,
+				4BA62FDF2BD5985800956EE4 /* MASLayoutConstraint.m */,
+				4BA62FE42BD5985800956EE4 /* Masonry.h */,
+				4BA62FEB2BD5985900956EE4 /* MASUtilities.h */,
+				4BA62FF02BD5985900956EE4 /* MASViewAttribute.h */,
+				4BA62FF42BD5985900956EE4 /* MASViewAttribute.m */,
+				4BA62FF32BD5985900956EE4 /* MASViewConstraint.h */,
+				4BA62FE32BD5985800956EE4 /* MASViewConstraint.m */,
+				4BA62FE82BD5985900956EE4 /* NSArray+MASAdditions.h */,
+				4BA62FDC2BD5985800956EE4 /* NSArray+MASAdditions.m */,
+				4BA62FE62BD5985800956EE4 /* NSArray+MASShorthandAdditions.h */,
+				4BA62FED2BD5985900956EE4 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				4BA62FDD2BD5985800956EE4 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				4BA62FEE2BD5985900956EE4 /* View+MASAdditions.h */,
+				4BA62FE92BD5985900956EE4 /* View+MASAdditions.m */,
+				4BA62FE12BD5985800956EE4 /* View+MASShorthandAdditions.h */,
+				4BA62FEF2BD5985900956EE4 /* ViewController+MASAdditions.h */,
+				4BA62FE22BD5985800956EE4 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		4BAB7DF92B97048100B4F524 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB7DFA2B9704CD00B4F524 /* UIColor+EPS.h */,
+				4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */,
+				4BBD9D6D2BCFAC73009C9ECD /* UIImage+EPS.h */,
+				4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4BBD9D732BCFC5BC009C9ECD /* Waiting */ = {
+			isa = PBXGroup;
+			children = (
+				4BBD9D742BCFC5D5009C9ECD /* Controller */,
+			);
+			path = Waiting;
+			sourceTree = "<group>";
+		};
+		4BBD9D742BCFC5D5009C9ECD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BBD9D752BCFC5FB009C9ECD /* EPSResultWaitingViewController.h */,
+				4BBD9D762BCFC5FB009C9ECD /* EPSResultWaitingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BC55C9D2B5FAE5D006B9022 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BC55C9E2B5FAEEB006B9022 /* EPSUserEntity.h */,
+				4BC55C9F2B5FAEEB006B9022 /* EPSUserEntity.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BC728E72BD9664D00B27C34 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				4BC728E92BD9665D00B27C34 /* UIView+Toast.h */,
+				4BC728E82BD9665D00B27C34 /* UIView+Toast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		4BC728EE2BD9902000B27C34 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4BC728EF2BD9904F00B27C34 /* EPSImageHelper.h */,
+				4BC728F02BD9904F00B27C34 /* EPSImageHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4BD12ED52BCED9F100B8DA16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B7104DE2B5994070035C450 /* EPSModelOptionCell.h */,
+				4B7104E82B5994070035C450 /* EPSModelOptionCell.m */,
+				4BD12EE12BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.h */,
+				4BD12EE22BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m */,
+				4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */,
+				4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */,
+				4BD12ED82BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.h */,
+				4BD12ED92BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BD12ED62BCED9F800B8DA16 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B7104E02B5994070035C450 /* EPSHomeViewController.h */,
+				4B7104EA2B5994070035C450 /* EPSHomeViewController.m */,
+				4BD12ECF2BCED73A00B8DA16 /* EPSModelOptionSectionViewController.h */,
+				4BD12ED02BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BD12ED72BCED9FE00B8DA16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BD12ED22BCED79600B8DA16 /* EPSModelOption.h */,
+				4BD12ED32BCED79600B8DA16 /* EPSModelOption.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BD50ADE2BA014E8001F2DFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BF7826A2B962CC600003B86 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				4B881B6C2B6C0D2A004D1505 /* EPSSignInViewController.h */,
+				4B881B6D2B6C0D2A004D1505 /* EPSSignInViewController.m */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BA0B3862B5846850066E6CB /* AniPhoto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BA0B3A02B58468E0066E6CB /* Build configuration list for PBXNativeTarget "AniPhoto" */;
+			buildPhases = (
+				4BA0B3832B5846850066E6CB /* Sources */,
+				4BA0B3842B5846850066E6CB /* Frameworks */,
+				4BA0B3852B5846850066E6CB /* Resources */,
+				4BA62FA72BD592CD00956EE4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AniPhoto;
+			packageProductDependencies = (
+				4BA62F7F2BD5918000956EE4 /* AppAuth */,
+				4BA62F812BD5918000956EE4 /* AppAuthCore */,
+				4BA62F842BD591ED00956EE4 /* FirebaseAuth */,
+				4BA62F862BD591ED00956EE4 /* FirebaseDatabase */,
+				4BA62F882BD591ED00956EE4 /* FirebaseFirestore */,
+				4BA62F8A2BD591ED00956EE4 /* FirebaseFirestoreSwift */,
+				4BA62F8C2BD591ED00956EE4 /* FirebaseInAppMessaging-Beta */,
+				4BA62F8E2BD591ED00956EE4 /* FirebaseInAppMessagingSwift-Beta */,
+				4BA62F902BD591ED00956EE4 /* FirebaseMessaging */,
+				4BA62F922BD591ED00956EE4 /* FirebaseStorage */,
+				4BA62F952BD5920A00956EE4 /* SDWebImage */,
+			);
+			productName = AniPhoto;
+			productReference = 4BA0B3872B5846850066E6CB /* AniPhoto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BA0B37F2B5846850066E6CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4BA0B3862B5846850066E6CB = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = 4BA0B3822B5846850066E6CB /* Build configuration list for PBXProject "AniPhoto" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BA0B37E2B5846850066E6CB;
+			packageReferences = (
+				4BA62F7E2BD5918000956EE4 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */,
+				4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4BA62F942BD5920A00956EE4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				4BC728E42BD964F300B27C34 /* XCRemoteSwiftPackageReference "toast-swift" */,
+			);
+			productRefGroup = 4BA0B3882B5846850066E6CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BA0B3862B5846850066E6CB /* AniPhoto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BA0B3852B5846850066E6CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BA0B39A2B58468E0066E6CB /* LaunchScreen.storyboard in Resources */,
+				4BA0B3972B58468E0066E6CB /* Assets.xcassets in Resources */,
+				4BD50ADC2BA01322001F2DFC /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BA0B3832B5846850066E6CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BA62FF52BD5985900956EE4 /* NSArray+MASAdditions.m in Sources */,
+				4B8765B42B5D9E38008822BF /* EPSSettingSectionConfiguration.m in Sources */,
+				4BD12EE32BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m in Sources */,
+				4BA62FF62BD5985900956EE4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				4BA62FFD2BD5985900956EE4 /* MASCompositeConstraint.m in Sources */,
+				4B4D10172B9632C4000DDF1F /* EPSDefines.m in Sources */,
+				4BA62FFA2BD5985900956EE4 /* ViewController+MASAdditions.m in Sources */,
+				4BA62FF92BD5985900956EE4 /* MASConstraintMaker.m in Sources */,
+				4BC55CA02B5FAEEB006B9022 /* EPSUserEntity.m in Sources */,
+				4B881B6E2B6C0D2A004D1505 /* EPSSignInViewController.m in Sources */,
+				4BC728E32BD9581100B27C34 /* EPSShareableImage.m in Sources */,
+				4BA0B38C2B5846850066E6CB /* AppDelegate.m in Sources */,
+				4B7104F52B5994160035C450 /* AnimeGANv2_1024.mlmodel in Sources */,
+				4B7104F12B5994070035C450 /* EPSModelOptionCell.m in Sources */,
+				4BC728F12BD9904F00B27C34 /* EPSImageHelper.m in Sources */,
+				4BA62FFC2BD5985900956EE4 /* View+MASAdditions.m in Sources */,
+				4B4E48742BD8423E0004CE99 /* EPSResultViewController.m in Sources */,
+				4BC728ED2BD9822A00B27C34 /* EPSBlurImageView.m in Sources */,
+				4B4E48702BD83D130004CE99 /* EPSPhotoGenerator.m in Sources */,
+				4BA62FFE2BD5985900956EE4 /* MASViewAttribute.m in Sources */,
+				4BAB7DFC2B9704CD00B4F524 /* UIColor+EPS.m in Sources */,
+				4BBD9D6F2BCFAC73009C9ECD /* UIImage+EPS.m in Sources */,
+				4BA62FF72BD5985900956EE4 /* MASConstraint.m in Sources */,
+				4BC728EA2BD9665D00B27C34 /* UIView+Toast.m in Sources */,
+				4BBD9D772BCFC5FB009C9ECD /* EPSResultWaitingViewController.m in Sources */,
+				4B7104F02B5994070035C450 /* EPSEditorViewController.m in Sources */,
+				4B7104EF2B5994070035C450 /* EPSPickerViewController.m in Sources */,
+				4B7104EB2B5994070035C450 /* ToolViewCell.m in Sources */,
+				4BA0B39D2B58468E0066E6CB /* main.m in Sources */,
+				4BBD9D722BCFC2C4009C9ECD /* EPSLoadingView.m in Sources */,
+				4BA62FFB2BD5985900956EE4 /* MASViewConstraint.m in Sources */,
+				4BA62FF82BD5985900956EE4 /* MASLayoutConstraint.m in Sources */,
+				4BD12EDA2BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m in Sources */,
+				4B4D101B2B963A54000DDF1F /* EPSSystemButton.m in Sources */,
+				4B7104EE2B5994070035C450 /* ToolView.m in Sources */,
+				4B7104FE2B59969F0035C450 /* EPSSettingsViewController.m in Sources */,
+				4BD12EE62BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m in Sources */,
+				4B8765B72B5DA4E8008822BF /* EPSSettingCell.m in Sources */,
+				4BD12ED12BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m in Sources */,
+				4B7104F32B5994070035C450 /* EPSHomeViewController.m in Sources */,
+				4BD12ED42BCED79600B8DA16 /* EPSModelOption.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4BA0B3982B58468E0066E6CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BA0B3992B58468E0066E6CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BA0B39E2B58468E0066E6CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4BA0B39F2B58468E0066E6CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BA0B3A12B58468E0066E6CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FGV7F4AR4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AniPhoto/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take your photos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to save your photos";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhatCH.AniPhoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BA0B3A22B58468E0066E6CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FGV7F4AR4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AniPhoto/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take your photos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to save your photos";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhatCH.AniPhoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BA0B3822B5846850066E6CB /* Build configuration list for PBXProject "AniPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BA0B39E2B58468E0066E6CB /* Debug */,
+				4BA0B39F2B58468E0066E6CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BA0B3A02B58468E0066E6CB /* Build configuration list for PBXNativeTarget "AniPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BA0B3A12B58468E0066E6CB /* Debug */,
+				4BA0B3A22B58468E0066E6CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4BA62F7E2BD5918000956EE4 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openid/AppAuth-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.7.4;
+			};
+		};
+		4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.24.0;
+			};
+		};
+		4BA62F942BD5920A00956EE4 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.19.1;
+			};
+		};
+		4BC728E42BD964F300B27C34 /* XCRemoteSwiftPackageReference "toast-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BastiaanJansen/toast-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4BA62F7F2BD5918000956EE4 /* AppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F7E2BD5918000956EE4 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuth;
+		};
+		4BA62F812BD5918000956EE4 /* AppAuthCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F7E2BD5918000956EE4 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuthCore;
+		};
+		4BA62F842BD591ED00956EE4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4BA62F862BD591ED00956EE4 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		4BA62F882BD591ED00956EE4 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		4BA62F8A2BD591ED00956EE4 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		4BA62F8C2BD591ED00956EE4 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		4BA62F8E2BD591ED00956EE4 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		4BA62F902BD591ED00956EE4 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		4BA62F922BD591ED00956EE4 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		4BA62F952BD5920A00956EE4 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA62F942BD5920A00956EE4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4BA0B37F2B5846850066E6CB /* Project object */;
+}

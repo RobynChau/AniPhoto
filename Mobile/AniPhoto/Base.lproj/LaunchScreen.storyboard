@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_background" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-72-47F">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="aniphoto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qW-9h-IXd">
+                                <rect key="frame" x="40" y="386" width="312" height="81"/>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7qW-9h-IXd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0OR-Mc-uvx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MOx-72-47F" secondAttribute="trailing" id="60Y-Gu-RG1"/>
+                            <constraint firstItem="7qW-9h-IXd" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="71p-Nw-63R"/>
+                            <constraint firstItem="7qW-9h-IXd" firstAttribute="centerX" secondItem="MOx-72-47F" secondAttribute="centerX" id="K9Q-0I-P0l"/>
+                            <constraint firstItem="MOx-72-47F" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="NFv-RK-7rF"/>
+                            <constraint firstItem="MOx-72-47F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qFH-Ve-QGi"/>
+                            <constraint firstAttribute="bottom" secondItem="MOx-72-47F" secondAttribute="bottom" id="wNJ-x8-3kD"/>
+                            <constraint firstItem="7qW-9h-IXd" firstAttribute="centerY" secondItem="MOx-72-47F" secondAttribute="centerY" id="xR4-EU-nTN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="signup_background" width="2293" height="4095"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
