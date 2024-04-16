@@ -1,0 +1,68 @@
+@startuml "ANIPHOTO DATABASE DESIGN"
+
+!define TABLE_BORDERCOLOR DarkSlateGray
+!define TABLE_HEADERCOLOR LightSteelBlue
+!define TABLE_ROWSCOLOR White
+!define TABLE_FONTCOLOR Black
+
+!define PK_BORDERCOLOR DarkSlateGray
+!define PK_BACKGROUNDCOLOR LightGreen
+!define PK_FONTCOLOR Black
+
+!define FK_BORDERCOLOR DarkSlateGray
+!define FK_BACKGROUNDCOLOR LightYellow
+!define FK_FONTCOLOR Black
+
+!define COL_BORDERCOLOR DarkSlateGray
+!define COL_BACKGROUNDCOLOR White
+!define COL_FONTCOLOR Black
+
+skinparam shadowing false
+skinparam monochrome true
+
+!define TABLE(name,desc) class name as "desc" << (T,#FFAAAA) >>
+!define PRIMARY_KEY(column) column << (PK,#AAFFAA) >>
+!define FOREIGN_KEY(column) column << (FK,#FFFFAA) >>
+!define COLUMN(column) column
+
+hide methods
+hide stereotypes
+
+' Define tables
+TABLE(User, "User") {
+  PRIMARY_KEY(id) INTEGER
+  COLUMN(username) -- VARCHAR(255)
+  COLUMN(hashPassword) -- VARCHAR(255)
+  COLUMN(email) -- VARCHAR(255)
+  COLUMN(registeredAt) -- DATE
+}
+
+TABLE(Photo, "Photo") {
+  PRIMARY_KEY(id) INTEGER
+  FOREIGN_KEY(createdBy) INTEGER
+  COLUMN(originalId) INTEGER
+  COLUMN(title) VARCHAR(255)
+  COLUMN(imageUrl) VARCHAR(255)
+  COLUMN(createdAt) DATE
+}
+
+TABLE(Album, "Album") {
+  PRIMARY_KEY(id) INTEGER
+  FOREIGN_KEY(createdBy) INTEGER
+  COLUMN(name) VARCHAR(255)
+  COLUMN(createdAt) DATE
+}
+
+TABLE(Tag, "Tag") {
+  PRIMARY_KEY(id) INTEGER
+  COLUMN(name) VARCHAR(255)
+}
+
+' Define relationships
+User --{ Photo : owns
+User --{ Album : owns
+Photo --{ Tag : hasTags
+Album --{ Photo : contains
+Photo --{ Photo : originalPhoto
+
+@enduml
