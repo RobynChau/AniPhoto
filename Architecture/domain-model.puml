@@ -1,5 +1,4 @@
 @startuml "ANIPHOTO DOMAIN MODEL DIAGRAM"
-
     class User {
         +id: Integer
         +username: String
@@ -17,23 +16,14 @@
         +createdBy: User
     }
 
-    class Album {
+    class Model {
         +id: Integer
         +name: String
-        +createdAt: Date
-        +createdBy: User
-        +photos: Set<Photo>
-    }
-
-    class Tag {
-        +id: Integer
-        +name: String
-        +photos: Set<Photo>
+        +title: String
+        +description: String
+        +previewUrl: String
     }
 
     User "1" -- "*" Photo : owns
-    User "1" -- "*" Album : owns
-    Photo "1" -- "*" Tag : hasTags
-    Album "1" -- "*" Photo : contains
-
+    Photo "1" -- "*" Model : hasModel
 @enduml

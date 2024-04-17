@@ -1,34 +1,25 @@
 @startuml "ANIPHOTO USE CASE DIAGRAM"
+    left to right direction
 
-    rectangle "Aniphoto Application" {
-        'Creating actors
-        actor "Logged In User" as loggedInUser
-        actor "Logged Out User" as loggedOutUser
-        (Explored generated anime-style photos) as (Explore)
-        (Generate anime-style photos) as (Generate)
-        (Edit photos) as (Edit)
+    rectangle "Aniphoto IOS Application" {
+        actor "User" as user
+        (Explore effects) as (Explore)
+        (Import photos) as (Import)
         (Share photos) as (Share)
 
-        'Adding extensions
-        loggedOutUser <|-- loggedInUser
+        user --down-> (Login)
+        user --down-> (Logout)
 
-        'Creating use cases of logged out user
-        loggedOutUser --right-> (Login)
-        (Login) <. (Register): includes
+        user --down-> (Explore)
+        user --down-> (Import)
+        user --down-> (Generate photos)
+        user --down-> (View photos)
+        user --down-> (Share)
+        user --down-> (Setting)
 
-        'Creating use cases of logged in user
-        loggedInUser --right-> (Logout)
-        loggedInUser --down-> (Explore)
-        loggedInUser --down-> (Generate)
-        loggedInUser --right-> (Share)
-
-
-        (Explore) <. (Generate): includes
-        
-        (Explore) .down.> (View photos): extends
-        (Explore) .down.> (Edit): extends
-
-        (Generate) .right.> (Edit): extends
+        actor "Admin" as admin
+        admin --down-> (Block user)
+        admin --down-> (See activity log of users)
     }
 
 @enduml

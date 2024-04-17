@@ -1,68 +1,70 @@
-@startuml "ANIPHOTO DATABASE DESIGN"
+@startuml
 
-!define TABLE_BORDERCOLOR DarkSlateGray
-!define TABLE_HEADERCOLOR LightSteelBlue
-!define TABLE_ROWSCOLOR White
-!define TABLE_FONTCOLOR Black
+!theme plain
+hide empty methods
 
-!define PK_BORDERCOLOR DarkSlateGray
-!define PK_BACKGROUNDCOLOR LightGreen
-!define PK_FONTCOLOR Black
+!procedure $schema($name, $slug)
+package "$name" as $slug <<Rectangle>>
+!endprocedure
 
-!define FK_BORDERCOLOR DarkSlateGray
-!define FK_BACKGROUNDCOLOR LightYellow
-!define FK_FONTCOLOR Black
+!procedure $table($name, $slug)
+entity "<b>$name</b>" as $slug << (T, Orange) table >>
+!endprocedure
 
-!define COL_BORDERCOLOR DarkSlateGray
-!define COL_BACKGROUNDCOLOR White
-!define COL_FONTCOLOR Black
+!procedure $view($name, $slug)
+entity "<b>$name</b>" as $slug << (V, Aquamarine) view >>
+!endprocedure
 
-skinparam shadowing false
-skinparam monochrome true
+!procedure $pk($name)
+<color:#GoldenRod><&key></color> <b>$name</b>
+!endprocedure
 
-!define TABLE(name,desc) class name as "desc" << (T,#FFAAAA) >>
-!define PRIMARY_KEY(column) column << (PK,#AAFFAA) >>
-!define FOREIGN_KEY(column) column << (FK,#FFFFAA) >>
-!define COLUMN(column) column
+!procedure $fk($name)
+<color:#Silver><&key></color> $name
+!endprocedure
 
-hide methods
-hide stereotypes
+!procedure $column($name)
+{field} <color:#White><&media-record></color> $name
+!endprocedure
 
-' Define tables
-TABLE(User, "User") {
-  PRIMARY_KEY(id) INTEGER
-  COLUMN(username) -- VARCHAR(255)
-  COLUMN(hashPassword) -- VARCHAR(255)
-  COLUMN(email) -- VARCHAR(255)
-  COLUMN(registeredAt) -- DATE
+
+title "ANIPHOTO DOMAIN MODEL DIAGRAM"
+
+$schema("ANIPHOTO", "id_12345678") {
+
+  $table("User", "id_abcdef01") {
+    $pk("id"): INTEGER NOT NULL
+    $column("username"): VARCHAR
+    $column("hashPassword"): VARCHAR
+    $column("email"): VARCHAR
+    $column("registeredAt"): DATE
+  }
+
+  $table("Photo", "id_abcdef02") {
+    $pk("id"): INTEGER NOT NULL
+    $column("originalId"): INTEGER 
+    $column("title"): VARCHAR
+    $column("imageUrl"): VARCHAR
+    $column("createdAt"): DATE
+    $fk("createdBy"): INTEGER NOT NULL
+  }
+
+  $table("Model", "id_abcdef04") {
+    $pk("id"): INTEGER NOT NULL
+    $column("name"): VARCHAR
+    $column("title"): VARCHAR
+    $column("description"): VARCHAR
+    $column("previewUrl"): VARCHAR
+  }
+
+  $table("PhotoModel", "id_abcdef06") {
+    $fk("photoId"): INTEGER NOT NULL
+    $fk("modelId"): INTEGER NOT NULL
+  }
+
+  id_abcdef01 --{ id_abcdef02 : owns
+  id_abcdef02 --{ id_abcdef06 : hasTags
+
 }
-
-TABLE(Photo, "Photo") {
-  PRIMARY_KEY(id) INTEGER
-  FOREIGN_KEY(createdBy) INTEGER
-  COLUMN(originalId) INTEGER
-  COLUMN(title) VARCHAR(255)
-  COLUMN(imageUrl) VARCHAR(255)
-  COLUMN(createdAt) DATE
-}
-
-TABLE(Album, "Album") {
-  PRIMARY_KEY(id) INTEGER
-  FOREIGN_KEY(createdBy) INTEGER
-  COLUMN(name) VARCHAR(255)
-  COLUMN(createdAt) DATE
-}
-
-TABLE(Tag, "Tag") {
-  PRIMARY_KEY(id) INTEGER
-  COLUMN(name) VARCHAR(255)
-}
-
-' Define relationships
-User --{ Photo : owns
-User --{ Album : owns
-Photo --{ Tag : hasTags
-Album --{ Photo : contains
-Photo --{ Photo : originalPhoto
 
 @enduml
