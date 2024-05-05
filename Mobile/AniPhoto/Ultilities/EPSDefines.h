@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define kModelServerLink @"https://1078-34-16-192-14.ngrok-free.app"
+#define kModelServerLink @"https://fab9-34-125-213-20.ngrok-free.app"
 
 typedef enum : NSUInteger {
     HomeModelSectionTypeDefault         = 0,

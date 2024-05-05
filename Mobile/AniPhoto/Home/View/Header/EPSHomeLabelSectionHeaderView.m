@@ -6,6 +6,8 @@
 //
 
 #import "EPSHomeLabelSectionHeaderView.h"
+#import "Masonry.h"
+#import "UIColor+EPS.h"
 
 @interface EPSHomeLabelSectionHeaderView ()
 @property (nonatomic, strong) UILabel *typeLabel;
@@ -26,34 +28,32 @@
     self = [super initWithFrame:frame];
     if (self) {
         _typeLabel = [[UILabel alloc] init];
-        _typeLabel.font = [UIFont systemFontOfSize:10];
-        _typeLabel.textColor = UIColor.systemPurpleColor;
-        _typeLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        _typeLabel.font = [UIFont systemFontOfSize:14];
+        _typeLabel.textColor = [UIColor colorWithHexString:@"#b049f5"];
         [self addSubview:_typeLabel];
 
         _nameLabel = [[UILabel alloc] init];
         _nameLabel.font = [UIFont boldSystemFontOfSize:26];
         _nameLabel.textColor = UIColor.whiteColor;
-        _nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_nameLabel];
     }
     [self setNeedsUpdateConstraints];
     return self;
 }
 
-- (void)setNeedsUpdateConstraints {
-    [NSLayoutConstraint activateConstraints:@[
-        [_typeLabel.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:10],
-        [_typeLabel.topAnchor constraintEqualToAnchor:self.topAnchor],
-        [_typeLabel.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
-        [_typeLabel.heightAnchor constraintEqualToConstant:20],
-
-        [_nameLabel.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:10],
-        [_nameLabel.topAnchor constraintEqualToAnchor:_typeLabel.bottomAnchor],
-        [_nameLabel.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
-        [_nameLabel.heightAnchor constraintEqualToConstant:30],
-    ]];
-    [super setNeedsUpdateConstraints];
+- (void)updateConstraints {
+    [self.typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self).inset(0);
+        make.top.trailing.equalTo(self);
+        make.height.equalTo(@20);
+    }];
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self).inset(0);
+        make.top.equalTo(self.typeLabel.mas_bottom).inset(8);
+        make.trailing.equalTo(self);
+        make.height.equalTo(@20);
+    }];
+    [super updateConstraints];
 }
 
 - (void)prepareForReuse {

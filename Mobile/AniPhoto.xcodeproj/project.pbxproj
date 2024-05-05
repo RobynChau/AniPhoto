@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B062AA52BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4B062AA42BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg */; };
+		4B38131A2BDFACE9008B2BFB /* NSString+EPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3813192BDFACE9008B2BFB /* NSString+EPS.m */; };
+		4B38131F2BDFF33E008B2BFB /* EPSLastCreatedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38131E2BDFF33E008B2BFB /* EPSLastCreatedCell.m */; };
 		4B4D10172B9632C4000DDF1F /* EPSDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D10162B9632C4000DDF1F /* EPSDefines.m */; };
 		4B4D101B2B963A54000DDF1F /* EPSSystemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D101A2B963A54000DDF1F /* EPSSystemButton.m */; };
 		4B4E48702BD83D130004CE99 /* EPSPhotoGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E486F2BD83D130004CE99 /* EPSPhotoGenerator.m */; };
@@ -48,6 +51,7 @@
 		4BA62FFD2BD5985900956EE4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FEC2BD5985900956EE4 /* MASCompositeConstraint.m */; };
 		4BA62FFE2BD5985900956EE4 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FF42BD5985900956EE4 /* MASViewAttribute.m */; };
 		4BAB7DFC2B9704CD00B4F524 /* UIColor+EPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */; };
+		4BB5BF852BDF947C000708EC /* EPSHomeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5BF842BDF947C000708EC /* EPSHomeHeaderCell.m */; };
 		4BBD9D6F2BCFAC73009C9ECD /* UIImage+EPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */; };
 		4BBD9D722BCFC2C4009C9ECD /* EPSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D712BCFC2C4009C9ECD /* EPSLoadingView.m */; };
 		4BBD9D772BCFC5FB009C9ECD /* EPSResultWaitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D762BCFC5FB009C9ECD /* EPSResultWaitingViewController.m */; };
@@ -56,10 +60,7 @@
 		4BC728EA2BD9665D00B27C34 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728E82BD9665D00B27C34 /* UIView+Toast.m */; };
 		4BC728ED2BD9822A00B27C34 /* EPSBlurImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728EC2BD9822A00B27C34 /* EPSBlurImageView.m */; };
 		4BC728F12BD9904F00B27C34 /* EPSImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728F02BD9904F00B27C34 /* EPSImageHelper.m */; };
-		4BD12ED12BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12ED02BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m */; };
 		4BD12ED42BCED79600B8DA16 /* EPSModelOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12ED32BCED79600B8DA16 /* EPSModelOption.m */; };
-		4BD12EDA2BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12ED92BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m */; };
-		4BD12EE32BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12EE22BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m */; };
 		4BD12EE62BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */; };
 		4BD50ADC2BA01322001F2DFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B062AA42BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg"; sourceTree = "<group>"; };
+		4B3813182BDFACE9008B2BFB /* NSString+EPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+EPS.h"; sourceTree = "<group>"; };
+		4B3813192BDFACE9008B2BFB /* NSString+EPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+EPS.m"; sourceTree = "<group>"; };
+		4B38131D2BDFF33E008B2BFB /* EPSLastCreatedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSLastCreatedCell.h; sourceTree = "<group>"; };
+		4B38131E2BDFF33E008B2BFB /* EPSLastCreatedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSLastCreatedCell.m; sourceTree = "<group>"; };
 		4B4D10152B9632C4000DDF1F /* EPSDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSDefines.h; sourceTree = "<group>"; };
 		4B4D10162B9632C4000DDF1F /* EPSDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSDefines.m; sourceTree = "<group>"; };
 		4B4D10192B963A54000DDF1F /* EPSSystemButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSystemButton.h; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		4BA62FF42BD5985900956EE4 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		4BAB7DFA2B9704CD00B4F524 /* UIColor+EPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EPS.h"; sourceTree = "<group>"; };
 		4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EPS.m"; sourceTree = "<group>"; };
+		4BB5BF832BDF947C000708EC /* EPSHomeHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeHeaderCell.h; sourceTree = "<group>"; };
+		4BB5BF842BDF947C000708EC /* EPSHomeHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeHeaderCell.m; sourceTree = "<group>"; };
 		4BBD9D6D2BCFAC73009C9ECD /* UIImage+EPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+EPS.h"; sourceTree = "<group>"; };
 		4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EPS.m"; sourceTree = "<group>"; };
 		4BBD9D702BCFC2C4009C9ECD /* EPSLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSLoadingView.h; sourceTree = "<group>"; };
@@ -157,14 +165,8 @@
 		4BC728EC2BD9822A00B27C34 /* EPSBlurImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBlurImageView.m; sourceTree = "<group>"; };
 		4BC728EF2BD9904F00B27C34 /* EPSImageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSImageHelper.h; sourceTree = "<group>"; };
 		4BC728F02BD9904F00B27C34 /* EPSImageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSImageHelper.m; sourceTree = "<group>"; };
-		4BD12ECF2BCED73A00B8DA16 /* EPSModelOptionSectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSModelOptionSectionViewController.h; sourceTree = "<group>"; };
-		4BD12ED02BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSModelOptionSectionViewController.m; sourceTree = "<group>"; };
 		4BD12ED22BCED79600B8DA16 /* EPSModelOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSModelOption.h; sourceTree = "<group>"; };
 		4BD12ED32BCED79600B8DA16 /* EPSModelOption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSModelOption.m; sourceTree = "<group>"; };
-		4BD12ED82BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSModelOptionSectionLabel.h; sourceTree = "<group>"; };
-		4BD12ED92BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSModelOptionSectionLabel.m; sourceTree = "<group>"; };
-		4BD12EE12BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomePhotoSectionHeaderView.h; sourceTree = "<group>"; };
-		4BD12EE22BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomePhotoSectionHeaderView.m; sourceTree = "<group>"; };
 		4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeLabelSectionHeaderView.h; sourceTree = "<group>"; };
 		4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeLabelSectionHeaderView.m; sourceTree = "<group>"; };
 		4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -192,6 +194,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B062AA12BD9969A00E84BD6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4B062AA42BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4B38131B2BDFF262008B2BFB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4BB5BF832BDF947C000708EC /* EPSHomeHeaderCell.h */,
+				4BB5BF842BDF947C000708EC /* EPSHomeHeaderCell.m */,
+				4B38131D2BDFF33E008B2BFB /* EPSLastCreatedCell.h */,
+				4B38131E2BDFF33E008B2BFB /* EPSLastCreatedCell.m */,
+				4B7104DE2B5994070035C450 /* EPSModelOptionCell.h */,
+				4B7104E82B5994070035C450 /* EPSModelOptionCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4B38131C2BDFF267008B2BFB /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */,
+				4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		4B4D10132B963243000DDF1F /* Ultilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +341,7 @@
 		4BA0B3892B5846850066E6CB /* AniPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				4B062AA12BD9969A00E84BD6 /* Resource */,
 				4B4E486A2BD83C7A0004CE99 /* Generator */,
 				4BBD9D732BCFC5BC009C9ECD /* Waiting */,
 				4B4E48712BD841DC0004CE99 /* Result */,
@@ -397,6 +430,8 @@
 				4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */,
 				4BBD9D6D2BCFAC73009C9ECD /* UIImage+EPS.h */,
 				4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */,
+				4B3813182BDFACE9008B2BFB /* NSString+EPS.h */,
+				4B3813192BDFACE9008B2BFB /* NSString+EPS.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -448,14 +483,8 @@
 		4BD12ED52BCED9F100B8DA16 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B7104DE2B5994070035C450 /* EPSModelOptionCell.h */,
-				4B7104E82B5994070035C450 /* EPSModelOptionCell.m */,
-				4BD12EE12BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.h */,
-				4BD12EE22BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m */,
-				4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */,
-				4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */,
-				4BD12ED82BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.h */,
-				4BD12ED92BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m */,
+				4B38131C2BDFF267008B2BFB /* Header */,
+				4B38131B2BDFF262008B2BFB /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -465,8 +494,6 @@
 			children = (
 				4B7104E02B5994070035C450 /* EPSHomeViewController.h */,
 				4B7104EA2B5994070035C450 /* EPSHomeViewController.m */,
-				4BD12ECF2BCED73A00B8DA16 /* EPSModelOptionSectionViewController.h */,
-				4BD12ED02BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -574,6 +601,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B062AA52BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg in Resources */,
 				4BA0B39A2B58468E0066E6CB /* LaunchScreen.storyboard in Resources */,
 				4BA0B3972B58468E0066E6CB /* Assets.xcassets in Resources */,
 				4BD50ADC2BA01322001F2DFC /* GoogleService-Info.plist in Resources */,
@@ -589,7 +617,6 @@
 			files = (
 				4BA62FF52BD5985900956EE4 /* NSArray+MASAdditions.m in Sources */,
 				4B8765B42B5D9E38008822BF /* EPSSettingSectionConfiguration.m in Sources */,
-				4BD12EE32BCEF32B00B8DA16 /* EPSHomePhotoSectionHeaderView.m in Sources */,
 				4BA62FF62BD5985900956EE4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				4BA62FFD2BD5985900956EE4 /* MASCompositeConstraint.m in Sources */,
 				4B4D10172B9632C4000DDF1F /* EPSDefines.m in Sources */,
@@ -600,6 +627,7 @@
 				4BC728E32BD9581100B27C34 /* EPSShareableImage.m in Sources */,
 				4BA0B38C2B5846850066E6CB /* AppDelegate.m in Sources */,
 				4B7104F52B5994160035C450 /* AnimeGANv2_1024.mlmodel in Sources */,
+				4B38131F2BDFF33E008B2BFB /* EPSLastCreatedCell.m in Sources */,
 				4B7104F12B5994070035C450 /* EPSModelOptionCell.m in Sources */,
 				4BC728F12BD9904F00B27C34 /* EPSImageHelper.m in Sources */,
 				4BA62FFC2BD5985900956EE4 /* View+MASAdditions.m in Sources */,
@@ -615,17 +643,17 @@
 				4B7104F02B5994070035C450 /* EPSEditorViewController.m in Sources */,
 				4B7104EF2B5994070035C450 /* EPSPickerViewController.m in Sources */,
 				4B7104EB2B5994070035C450 /* ToolViewCell.m in Sources */,
+				4BB5BF852BDF947C000708EC /* EPSHomeHeaderCell.m in Sources */,
 				4BA0B39D2B58468E0066E6CB /* main.m in Sources */,
 				4BBD9D722BCFC2C4009C9ECD /* EPSLoadingView.m in Sources */,
 				4BA62FFB2BD5985900956EE4 /* MASViewConstraint.m in Sources */,
 				4BA62FF82BD5985900956EE4 /* MASLayoutConstraint.m in Sources */,
-				4BD12EDA2BCEDB1A00B8DA16 /* EPSModelOptionSectionLabel.m in Sources */,
+				4B38131A2BDFACE9008B2BFB /* NSString+EPS.m in Sources */,
 				4B4D101B2B963A54000DDF1F /* EPSSystemButton.m in Sources */,
 				4B7104EE2B5994070035C450 /* ToolView.m in Sources */,
 				4B7104FE2B59969F0035C450 /* EPSSettingsViewController.m in Sources */,
 				4BD12EE62BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m in Sources */,
 				4B8765B72B5DA4E8008822BF /* EPSSettingCell.m in Sources */,
-				4BD12ED12BCED73A00B8DA16 /* EPSModelOptionSectionViewController.m in Sources */,
 				4B7104F32B5994070035C450 /* EPSHomeViewController.m in Sources */,
 				4BD12ED42BCED79600B8DA16 /* EPSModelOption.m in Sources */,
 			);
@@ -776,8 +804,8 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to save your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -809,8 +837,8 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to save your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

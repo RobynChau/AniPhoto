@@ -10,7 +10,6 @@
 // View Controllers
 #import "EPSSignInViewController.h"
 #import "EPSHomeViewController.h"
-#import "EPSModelOptionSectionViewController.h"
 #import "EPSResultWaitingViewController.h"
 // Helpers
 #import "EPSDefines.h"

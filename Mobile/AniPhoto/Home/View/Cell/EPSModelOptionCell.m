@@ -12,6 +12,10 @@
 
 @implementation EPSModelOptionCell
 
++ (NSString *)cellIdentifier {
+    return @"EPSModelOptionCell";
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -24,10 +28,6 @@
         [self addSubview:_imageView];
     }
     return self;
-}
-
-+ (NSString *)cellIdentifier {
-    return @"EPSModelOptionCell";
 }
 
 - (void)setCellImage:(UIImage *)image {
