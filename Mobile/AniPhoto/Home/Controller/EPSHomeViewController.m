@@ -2,23 +2,29 @@
 //  EPSHomeViewController.m
 //  AniPhoto
 //
-//  Created by PhatCH on 02/01/2024.
+//  Created by PhatCH on 14/5/24.
 //
 
 #import "EPSHomeViewController.h"
-#import "EPSPickerViewController.h"
-#import "EPSSettingsViewController.h"
-#import "EPSModelOptionCell.h"
-#import "EPSHomeHeaderCell.h"
+#import "EPSHomeToolCollectionView.h"
+#import "EPSOverlayHeaderView.h"
 #import "EPSLastCreatedCell.h"
 #import "EPSHomeLabelSectionHeaderView.h"
+#import "EPSHomeToolCell.h"
+#import "EPSHomeEditCell.h"
+#import "EPSHomeBannerCell.h"
+#import "EPSUserSessionManager.h"
+#import "EPSAniGANViewController.h"
+#import "EPSAniGANResultViewController.h"
+#import "EPSHistoryViewController.h"
 
 // Utilities
-#import "Masonry.h"
+#import "EPSDatabaseManager.h"
+#import "EPSDefines.h"
 
 #define BUTTON_WIDTH 180
 #define INTER_SECTION_PADDING 15.0f
-#define HEADER_SECTION_HEIGHT 320
+#define BANNER_SECTION_HEIGHT 160
 #define MODEL_SECTION_HEADER_HEIGHT 50
 #define MODEL_SECTION_HEADER_BOTTOM_PADDING 10
 #define MODEL_SECTION_CONTENT_HEIGHT 280
@@ -26,17 +32,25 @@
 #define MODEL_SECTION_CONTENT_LEADING_PADDING 10
 #define CREATED_SECTION_CONTENT_HEIGHT 180
 
+#define TOOL_SECTION_INDEX 0
+#define BANNER_SECTION_INDEX 1
+#define LAST_CREATED_SECTION_INDEX 2
+#define EDIT_SECTION_INDEX 3
+
 @interface EPSHomeViewController () <
 UICollectionViewDataSource,
 UICollectionViewDelegate,
-UICollectionViewDelegateFlowLayout
+UICollectionViewDelegateFlowLayout,
+EPSHomeToolViewDelegate,
+EPSHomeLabelSectionHeaderDelegate
 >
-@property (nonatomic, strong) UIImageView *headerView;
-@property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) NSArray *sampleOutputs;
+@property (nonatomic, strong) NSArray<UIImage *> *lastCreatedImages;
+@property (nonatomic, strong) NSMutableArray<UIImage *> *latestPhotoPreviews;
+@property (nonatomic, strong) NSArray<NSNumber *> *tools;
 
-@property (nonatomic, strong) UIButton *settingButton;
-@property (nonatomic, strong) UIButton *createButton;
+@property (nonatomic, strong) UICollectionView *mainCollectionView;
+@property (nonatomic, strong) EPSOverlayHeaderView *overlayHeaderView;
+
 @end
 
 @implementation EPSHomeViewController
@@ -45,53 +59,64 @@ UICollectionViewDelegateFlowLayout
     self = [super init];
     if (self) {
         self.view.backgroundColor = UIColor.systemBackgroundColor;
-        _sampleOutputs = @[@"output", @"output2", @"output3", @"output4", @"output5", @"output6", @"output7"];
 
+        _lastCreatedImages = [[EPSDatabaseManager sharedInstance] loadImages];
+        _latestPhotoPreviews = [NSMutableArray array];
+        _tools = @[@(EPSHomeToolTypeEdit), @(EPSHomeToolTypeAniGAN), @(EPSHomeToolTypeSticker), @(EPSHomeToolTypeText), @(EPSHomeToolTypeFilter)];
+
+        [self _fetchLatestPhoto];
         [self _setupView];
+
+        [[NSNotificationCenter defaultCenter]
+         addObserver:self
+         selector:@selector(dbDidUpdate)
+         name:@"EPSDtaManagerDidUpdateDB"
+         object:nil];
     }
     return self;
 }
 
-- (void)_setupView {
-    [self _setupCollectionView];
-
-    _settingButton = [UIButton systemButtonWithImage:[UIImage systemImageNamed:@"info.circle.fill"]
-                                              target:self
-                                              action:@selector(settingButtonPressed)];
-    _settingButton.tintColor = UIColor.labelColor;
-    [self.view addSubview:_settingButton];
-
-    _createButton = [UIButton systemButtonWithImage:[UIImage systemImageNamed:@"wand.and.stars"]
-                                             target:self
-                                             action:@selector(createButtonPressed)];
-    _createButton.tintColor = UIColor.labelColor;
-    [self.view addSubview:_createButton];
-}
-
-- (void)_setupCollectionView {
-    UICollectionViewCompositionalLayout *layout = [self createCollectionViewLayout];
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    _collectionView.showsVerticalScrollIndicator = NO;
-    _collectionView.showsHorizontalScrollIndicator = NO;
-
-    [_collectionView registerClass:EPSModelOptionCell.class
-        forCellWithReuseIdentifier:EPSModelOptionCell.cellIdentifier];
-    [_collectionView registerClass:EPSHomeHeaderCell.class 
-        forCellWithReuseIdentifier:EPSHomeHeaderCell.cellIdentifier];
-    [_collectionView registerClass:EPSLastCreatedCell.class
-        forCellWithReuseIdentifier:EPSLastCreatedCell.cellIdentifier];
-    [_collectionView registerClass:EPSHomeLabelSectionHeaderView.class
-        forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
-               withReuseIdentifier:EPSHomeLabelSectionHeaderView.reusableViewIdentifier];
-
-    _collectionView.delegate = self;
-    _collectionView.dataSource = self;
-    [self.view addSubview:_collectionView];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)_setupView {
+    [self _setupMainCollectionView];
+
+    _overlayHeaderView = [[EPSOverlayHeaderView alloc] initWithTitle:@"AniPhoto"];
+    [self.view addSubview:_overlayHeaderView];
+}
+
+- (void)_setupMainCollectionView {
+    UICollectionViewCompositionalLayout *layout = [self createCollectionViewLayout];
+    _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    _mainCollectionView.showsVerticalScrollIndicator = NO;
+    _mainCollectionView.showsHorizontalScrollIndicator = NO;
+
+    _mainCollectionView.delegate = self;
+    _mainCollectionView.dataSource = self;
+
+    [_mainCollectionView registerClass:EPSLastCreatedCell.class
+            forCellWithReuseIdentifier:EPSLastCreatedCell.cellIdentifier];
+    [_mainCollectionView registerClass:EPSHomeToolCell.class
+            forCellWithReuseIdentifier:EPSHomeToolCell.cellIdentifier];
+    [_mainCollectionView registerClass:EPSHomeEditCell.class
+            forCellWithReuseIdentifier:EPSHomeEditCell.cellIdentifier];
+    [_mainCollectionView registerClass:EPSHomeBannerCell.class
+            forCellWithReuseIdentifier:EPSHomeBannerCell.cellIdentifier];
+    [_mainCollectionView registerClass:EPSHomeLabelSectionHeaderView.class
+            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                   withReuseIdentifier:EPSHomeLabelSectionHeaderView.reusableViewIdentifier];
+    [self.view addSubview:_mainCollectionView];
 }
 
 - (UICollectionViewCompositionalLayout *)createCollectionViewLayout {
@@ -99,70 +124,43 @@ UICollectionViewDelegateFlowLayout
     [[UICollectionViewCompositionalLayout alloc]
      initWithSectionProvider: ^NSCollectionLayoutSection * _Nullable(NSInteger section,
                                                                      id<NSCollectionLayoutEnvironment> _Nonnull layoutEnvironment) {
-        if (section == 0) {
-            return [self _headerSectionLayout];
-        } else if (section == 1) {
+        if (section == TOOL_SECTION_INDEX) {
+            return [self _toolSectionLayout];
+        } else if (section == BANNER_SECTION_INDEX) {
+            return [self _bannerSectionLayout];
+        } else if (section == LAST_CREATED_SECTION_INDEX) {
             return [self _createdSectionLayout];
-        } else {
-            return [self _modelSectionLayout];
+        } else if (section == EDIT_SECTION_INDEX) {
+            return [self _editSectionLayout];
         }
+        return nil;
     }];
     return layout;
 }
 
-- (NSCollectionLayoutSection *)_headerSectionLayout {
-    NSCollectionLayoutItem *itemLayout =
-    [NSCollectionLayoutItem
-     itemWithLayoutSize:[NSCollectionLayoutSize
-                         sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
-                         heightDimension:[NSCollectionLayoutDimension fractionalHeightDimension:1]]];
-
-    NSCollectionLayoutGroup *groupLayout =
-    [NSCollectionLayoutGroup
-     horizontalGroupWithLayoutSize:[NSCollectionLayoutSize
-                                    sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
-                                    heightDimension:[NSCollectionLayoutDimension absoluteDimension:HEADER_SECTION_HEIGHT]]
-     subitem:itemLayout
-     count:1];
-
-    NSCollectionLayoutSection *sectionLayout = [NSCollectionLayoutSection sectionWithGroup:groupLayout];
-    sectionLayout.orthogonalScrollingBehavior = UICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPagingCentered;
-    sectionLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, INTER_SECTION_PADDING, 0);
-
-    return sectionLayout;
-}
-
-- (NSCollectionLayoutSection *)_modelSectionLayout {
+- (NSCollectionLayoutSection *)_toolSectionLayout {
     // Item
     NSCollectionLayoutItem *itemLayout =
     [NSCollectionLayoutItem
      itemWithLayoutSize:[NSCollectionLayoutSize
-                         sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
+                         sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:0.2]
                          heightDimension:[NSCollectionLayoutDimension fractionalHeightDimension:1]]];
-    itemLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, 0, MODEL_SECTION_INTER_ITEM_SPACING);
+    itemLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, 0, 0);
 
-    NSCollectionLayoutBoundarySupplementaryItem *supplementaryLayout =
-    [NSCollectionLayoutBoundarySupplementaryItem
-     supplementaryItemWithLayoutSize:[NSCollectionLayoutSize
-                                      sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
-                                      heightDimension:[NSCollectionLayoutDimension absoluteDimension:MODEL_SECTION_HEADER_HEIGHT]]
-     elementKind:UICollectionElementKindSectionHeader
-     containerAnchor:[NSCollectionLayoutAnchor layoutAnchorWithEdges:NSDirectionalRectEdgeTop | NSDirectionalRectEdgeLeading]];
     // Group
     NSCollectionLayoutGroup *groupLayout =
     [NSCollectionLayoutGroup
      horizontalGroupWithLayoutSize:[NSCollectionLayoutSize
-                                    sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1.3]
-                                    heightDimension:[NSCollectionLayoutDimension absoluteDimension:MODEL_SECTION_CONTENT_HEIGHT + MODEL_SECTION_HEADER_HEIGHT]]
+                                    sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
+                                    heightDimension:[NSCollectionLayoutDimension absoluteDimension:100]]
      subitem:itemLayout
-     count:3];
-    groupLayout.contentInsets = NSDirectionalEdgeInsetsMake(MODEL_SECTION_HEADER_HEIGHT + MODEL_SECTION_HEADER_BOTTOM_PADDING, 0, 0, 0);
+     count:5];
+    groupLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, 0, 0);
 
     // Section
     NSCollectionLayoutSection *sectionLayout = [NSCollectionLayoutSection sectionWithGroup:groupLayout];
-    sectionLayout.boundarySupplementaryItems = @[supplementaryLayout];
-    sectionLayout.orthogonalScrollingBehavior = UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuous;
-    sectionLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, MODEL_SECTION_CONTENT_LEADING_PADDING, INTER_SECTION_PADDING, 0);
+    sectionLayout.orthogonalScrollingBehavior = UICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPagingCentered;
+    sectionLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, 0, 0);
 
     return sectionLayout;
 }
@@ -197,95 +195,286 @@ UICollectionViewDelegateFlowLayout
     NSCollectionLayoutSection *sectionLayout = [NSCollectionLayoutSection sectionWithGroup:groupLayout];
     sectionLayout.boundarySupplementaryItems = @[supplementaryLayout];
     sectionLayout.orthogonalScrollingBehavior = UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuous;
-    sectionLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, MODEL_SECTION_CONTENT_LEADING_PADDING, INTER_SECTION_PADDING, 0);
+    sectionLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, INTER_SECTION_PADDING, 0);
 
     return sectionLayout;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES];
+- (NSCollectionLayoutSection *)_editSectionLayout {
+    // Item
+    NSCollectionLayoutItem *itemLayout =
+    [NSCollectionLayoutItem
+     itemWithLayoutSize:[NSCollectionLayoutSize
+                         sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
+                         heightDimension:[NSCollectionLayoutDimension fractionalHeightDimension:1]]];
+    itemLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, 0, MODEL_SECTION_INTER_ITEM_SPACING);
+
+    NSCollectionLayoutBoundarySupplementaryItem *supplementaryLayout =
+    [NSCollectionLayoutBoundarySupplementaryItem
+     supplementaryItemWithLayoutSize:[NSCollectionLayoutSize
+                                      sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
+                                      heightDimension:[NSCollectionLayoutDimension absoluteDimension:MODEL_SECTION_HEADER_HEIGHT]]
+     elementKind:UICollectionElementKindSectionHeader
+     containerAnchor:[NSCollectionLayoutAnchor layoutAnchorWithEdges:NSDirectionalRectEdgeTop | NSDirectionalRectEdgeLeading]];
+    // Group
+    NSCollectionLayoutGroup *groupLayout =
+    [NSCollectionLayoutGroup
+     horizontalGroupWithLayoutSize:[NSCollectionLayoutSize
+                                    sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1.3]
+                                    heightDimension:[NSCollectionLayoutDimension absoluteDimension:120 + MODEL_SECTION_HEADER_HEIGHT]]
+     subitem:itemLayout
+     count:4];
+    groupLayout.contentInsets = NSDirectionalEdgeInsetsMake(MODEL_SECTION_HEADER_HEIGHT + MODEL_SECTION_HEADER_BOTTOM_PADDING, 0, 0, 0);
+
+    // Section
+    NSCollectionLayoutSection *sectionLayout = [NSCollectionLayoutSection sectionWithGroup:groupLayout];
+    sectionLayout.boundarySupplementaryItems = @[supplementaryLayout];
+    sectionLayout.orthogonalScrollingBehavior = UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuous;
+    sectionLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, INTER_SECTION_PADDING, 0);
+
+    return sectionLayout;
+}
+
+- (NSCollectionLayoutSection *)_bannerSectionLayout {
+    NSCollectionLayoutItem *itemLayout =
+    [NSCollectionLayoutItem
+     itemWithLayoutSize:[NSCollectionLayoutSize
+                         sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
+                         heightDimension:[NSCollectionLayoutDimension fractionalHeightDimension:1]]];
+
+    NSCollectionLayoutGroup *groupLayout =
+    [NSCollectionLayoutGroup
+     horizontalGroupWithLayoutSize:[NSCollectionLayoutSize
+                                    sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1]
+                                    heightDimension:[NSCollectionLayoutDimension absoluteDimension:BANNER_SECTION_HEIGHT]]
+     subitem:itemLayout
+     count:1];
+
+    NSCollectionLayoutSection *sectionLayout = [NSCollectionLayoutSection sectionWithGroup:groupLayout];
+    sectionLayout.orthogonalScrollingBehavior = UICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPagingCentered;
+    sectionLayout.contentInsets = NSDirectionalEdgeInsetsMake(0, 0, INTER_SECTION_PADDING, 0);
+
+    return sectionLayout;
 }
 
 - (void)updateViewConstraints {
-    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.trailing.bottom.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view).inset(-60);
+    [self.overlayHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.leading.trailing.equalTo(self.view.mas_safeAreaLayoutGuide).insets(UIEdgeInsetsMake(-30, 10, 0, 10));
+        make.height.equalTo(@32);
     }];
-    [self.settingButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).inset(10);
-            make.leading.mas_equalTo(self.view).inset(20);
-            make.size.mas_equalTo(@44);
-    }];
-    [self.createButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).inset(10);
-            make.trailing.mas_equalTo(self.view).inset(20);
-            make.size.mas_equalTo(@44);
+
+    [self.mainCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.bottom.equalTo(self.view).insets(UIEdgeInsetsMake(0, 10, 0, 10));
+        make.top.equalTo(self.view.mas_safeAreaLayoutGuide).inset(20);
     }];
     [super updateViewConstraints];
 }
 
-- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        EPSHomeHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:EPSHomeHeaderCell.cellIdentifier forIndexPath:indexPath];
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView
+                                   cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    if (indexPath.section == TOOL_SECTION_INDEX) {
+        EPSHomeToolCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:EPSHomeToolCell.cellIdentifier forIndexPath:indexPath];
+        EPSHomeToolType toolType = ((NSNumber *)self.tools[indexPath.item]).integerValue;
+        [cell setUpWithType:toolType];
         return cell;
-    } else if (indexPath.section == 1) {
+    } else if (indexPath.section == BANNER_SECTION_INDEX) {
+        EPSHomeBannerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:EPSHomeBannerCell.cellIdentifier forIndexPath:indexPath];
+        return cell;
+    } else if (indexPath.section == LAST_CREATED_SECTION_INDEX) {
         EPSLastCreatedCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:EPSLastCreatedCell.cellIdentifier forIndexPath:indexPath];
+        UIImage *image = self.lastCreatedImages[indexPath.item];
+        [cell setImage:image];
+        [cell setShouldShowOverlay:YES];
         return cell;
-    } else {
-        EPSModelOptionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:EPSModelOptionCell.cellIdentifier forIndexPath:indexPath];
-        NSInteger index = indexPath.item + indexPath.section >= self.sampleOutputs.count ? indexPath.item + indexPath.section - self.sampleOutputs.count : indexPath.item + indexPath.section;
-        [cell setCellImage:[UIImage imageNamed:self.sampleOutputs[index]]];
-        cell.backgroundColor = UIColor.redColor;
+    } else if (indexPath.section == EDIT_SECTION_INDEX) {
+        EPSHomeEditCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:EPSHomeEditCell.cellIdentifier forIndexPath:indexPath];
+        if (indexPath.item == 0) {
+            [cell setImage:nil];
+        } else {
+            UIImage *image = self.latestPhotoPreviews[indexPath.item - 1];
+            [cell setImage:image];
+        }
         return cell;
     }
+    return nil;
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath {
     if (kind == UICollectionElementKindSectionHeader) {
-        EPSHomeLabelSectionHeaderView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:EPSHomeLabelSectionHeaderView.reusableViewIdentifier forIndexPath:indexPath];
-        [header setSectionType:HomeModelSectionTypeExclusive sectionName:@"AI Photo"];
-        return header;
+        if (indexPath.section == LAST_CREATED_SECTION_INDEX) {
+            EPSHomeLabelSectionHeaderView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:EPSHomeLabelSectionHeaderView.reusableViewIdentifier forIndexPath:indexPath];
+            [header setName:@"Recently Created" sectionIndex:LAST_CREATED_SECTION_INDEX];
+            header.delegate = self;
+            return header;
+        } else if (indexPath.section == EDIT_SECTION_INDEX) {
+            EPSHomeLabelSectionHeaderView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:EPSHomeLabelSectionHeaderView.reusableViewIdentifier forIndexPath:indexPath];
+            [header setName:@"Edit Your Photos" sectionIndex:EDIT_SECTION_INDEX];
+            header.delegate = self;
+            return header;
+        }
     }
     return nil;
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section == 0) {
+    if (section == TOOL_SECTION_INDEX) {
+        return self.tools.count;
+    } else if (section == LAST_CREATED_SECTION_INDEX) {
+        return self.lastCreatedImages.count;
+    } else if (section == BANNER_SECTION_INDEX) {
         return 1;
+    } else if (section == EDIT_SECTION_INDEX) {
+        return self.latestPhotoPreviews.count + 1;
     }
-    return 5;
+    return 0;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 10;
+    return EDIT_SECTION_INDEX + 1;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        return;
+    if (indexPath.section == TOOL_SECTION_INDEX) {
+        EPSHomeToolCell *cell = EPSDynamicCast([collectionView cellForItemAtIndexPath:indexPath], EPSHomeToolCell);
+        if (cell) {
+            switch (cell.toolType) {
+                case EPSHomeToolTypeNone:
+                    return;
+                case EPSHomeToolTypeEdit:
+                    [self _editToolButtonPressedWithImage:nil selectedToolType:EPSHomeToolTypeNone];
+                    break;
+                case EPSHomeToolTypeAniGAN:
+                    [self _presentAniGANViewController];
+                    break;
+                case EPSHomeToolTypeSticker:
+                case EPSHomeToolTypeText:
+                case EPSHomeToolTypeFilter:
+                    [self _editToolButtonPressedWithImage:nil selectedToolType:cell.toolType];
+                    break;
+            }
+        }
+    } else if (indexPath.section == BANNER_SECTION_INDEX) {
+        
+    } else if (indexPath.section == LAST_CREATED_SECTION_INDEX) {
+        EPSLastCreatedCell *cell = EPSDynamicCast([collectionView cellForItemAtIndexPath:indexPath], EPSLastCreatedCell);
+        if (cell) {
+            UIImage *selectedImage = self.lastCreatedImages[indexPath.item];
+            EPSAniGANResultViewController *vc = [[EPSAniGANResultViewController alloc] initWithOriginImage:selectedImage shouldGenerate:NO isStandAloneVC:YES];
+            UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+            navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:navVC animated:YES completion:nil];
+        }
+    } else if (indexPath.section == EDIT_SECTION_INDEX) {
+        EPSHomeEditCell *cell = EPSDynamicCast([collectionView cellForItemAtIndexPath:indexPath], EPSHomeEditCell);
+        if (cell) {
+            [self _editToolButtonPressedWithImage:cell.cellImage selectedToolType:EPSHomeToolTypeNone];
+        }
     }
-    EPSModelOptionCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-
-    EPSPickerViewController *picker = [[EPSPickerViewController alloc] initWithImage:cell.imageView.image modelName:@"AniGAN" modelDes:@"It works best with vertical portrait photos of a person"];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:picker];
-    [self.navigationController presentViewController:navVC animated:YES completion:nil];
 }
 
-- (void)createButtonPressed {
-    EPSPickerViewController *picker = [[EPSPickerViewController alloc]
-                                       initWithImage:[UIImage imageNamed:@"output"]
-                                       modelName:@"AniGAN"
-                                       modelDes:@"It works best with vertical portrait photos of a person"];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:picker];
-    [self.navigationController presentViewController:navVC animated:YES completion:nil];
+- (void)headerView:(EPSHomeLabelSectionHeaderView *)headerView didSelectHeader:(BOOL)didSelect {
+    if (headerView.sectionIndex == LAST_CREATED_SECTION_INDEX) {
+        EPSHistoryViewController *vc = [[EPSHistoryViewController alloc] init];
+        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+        navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:navVC animated:YES completion:nil];
+    } else if (headerView.sectionIndex == EDIT_SECTION_INDEX) {
+        [self _editToolButtonPressedWithImage:nil selectedToolType:EPSHomeToolTypeNone];
+    }
 }
 
-- (void)settingButtonPressed {
-    EPSSettingsViewController *vc = [[EPSSettingsViewController alloc] init];
+- (void)toolView:(nonnull EPSHomeToolCollectionView *)toolView didSelectTool:(EPSHomeToolType)toolType {
+
+}
+
+- (void)_fetchLatestPhoto {
+    [EPSPhotoManager getCameraRollAlbumWithAllowSelectImage:YES allowSelectVideo:NO completion:^(EPSAlbumListModel * _Nonnull cameraRoll) {
+        NSArray *fetchResults = [EPSPhotoManager fetchPhotoIn:cameraRoll.result ascending:NO allowSelectImage:YES allowSelectVideo:NO limitCount:9];
+        for (EPSPhotoModel *model in fetchResults) {
+            [EPSPhotoManager fetchOriginalImageFor:model.asset progress:nil completion:^(UIImage * _Nullable image, BOOL isDegraded) {
+                if (image && !isDegraded && self.latestPhotoPreviews.count < 10) {
+                    [self.latestPhotoPreviews addObject:image];
+                }
+                if (self.latestPhotoPreviews.count == 9) {
+                    [self.mainCollectionView reloadData];
+                }
+            }];
+        }
+    }];
+}
+
+- (void)_editToolButtonPressedWithImage:(UIImage *)selectImage selectedToolType:(EPSHomeToolType)homeToolType {
+    if (selectImage) {
+        [self _presentPhotoEditorWithImage:selectImage selectedToolType:homeToolType];
+    } else {
+        EPSPhotoConfiguration *config = [EPSPhotoConfiguration default];
+        config.allowSelectVideo = NO;
+        config.maxSelectCount = 1;
+        config.allowSelectGif = NO;
+        config.allowEditImage = NO;
+
+        EPSPhotoPreviewSheet *sheetPicker = [[EPSPhotoPreviewSheet alloc] initWithConfiguration:config];
+        sheetPicker.selectImageBlock = ^(NSArray<EPSResultModel *> * _Nonnull selectResults, BOOL isFullImage) {
+            EPSResultModel *selectResult = selectResults.firstObject;
+            UIImage *pickedImage = selectResult.image;
+            [self _presentPhotoEditorWithImage:pickedImage selectedToolType:homeToolType];
+        };
+        [sheetPicker showPhotoLibraryWithSender:self];
+    }
+}
+
+- (void)_presentPhotoEditorWithImage:(UIImage *)image selectedToolType:(EPSHomeToolType)homeToolType {
+    EPSImageEditorViewController *editorVC = [[EPSImageEditorViewController alloc]
+                                              initWithImage:image
+                                              editModel:nil];
+    editorVC.editFinishBlock = ^(UIImage * _Nonnull image, EPSEditImageModel * _Nullable model) {
+        [[EPSDatabaseManager sharedInstance] saveImage:image withCreationTime:NSDate.now];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"EPSDtaManagerDidUpdateDB" object:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            EPSAniGANResultViewController *resultVC = [[EPSAniGANResultViewController alloc] initWithOriginImage:image shouldGenerate:NO isStandAloneVC:YES];
+            UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:resultVC];
+            navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:navVC animated:YES completion:nil];
+        });
+    };
+    editorVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:editorVC animated:YES completion:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            switch (homeToolType) {
+                case EPSHomeToolTypeNone:
+                case EPSHomeToolTypeEdit:
+                case EPSHomeToolTypeAniGAN:
+                    break;
+                case EPSHomeToolTypeSticker:
+                    [editorVC selectToolAtIndex:2];
+                    [editorVC imageStickerBtnClick];
+                    break;
+                case EPSHomeToolTypeText:
+                    [editorVC selectToolAtIndex:3];
+                    [editorVC textStickerBtnClick];
+                    break;
+                case EPSHomeToolTypeFilter:
+                    [editorVC selectToolAtIndex:5];
+                    [editorVC filterBtnClick];
+                    break;
+            }
+        });
+    }];
+}
+
+- (void)_presentAniGANViewController {
+    EPSAniGANViewController *vc = [[EPSAniGANViewController alloc] init];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
-    navVC.modalPresentationStyle = UIModalPresentationPageSheet;
-    [self.navigationController presentViewController:navVC animated:YES completion:nil];
+    navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:navVC animated:YES completion:nil];
 }
 
+- (void)dbDidUpdate {
+    _lastCreatedImages = [[EPSDatabaseManager sharedInstance] loadImages];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.mainCollectionView reloadData];
+    });
+}
 @end

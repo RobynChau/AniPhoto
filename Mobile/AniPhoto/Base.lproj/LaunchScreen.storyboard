@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-72-47F">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen_background2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-72-47F">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </imageView>
@@ -48,7 +48,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg" width="1800" height="3215"/>
+        <image name="launchscreen_background2.jpg" width="1600" height="2400"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

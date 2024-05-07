@@ -10,7 +10,9 @@
 // View Controllers
 #import "EPSSignInViewController.h"
 #import "EPSHomeViewController.h"
-#import "EPSResultWaitingViewController.h"
+#import "EPSUserSessionManager.h"
+#import "EPSTabBarController.h"
+#import "EPSStoreKitManager.h"
 // Helpers
 #import "EPSDefines.h"
 #import <FirebaseCore/FirebaseCore.h>
@@ -26,34 +28,32 @@
     
     // Config Firebase
     [FIRApp configure];
-    
-    BOOL hasSignedIn = YES;
-    
-    UIViewController *vc;
-    if (!hasSignedIn) {
-        vc = [[EPSSignInViewController alloc] init];
-    } else {
-        vc = [[EPSHomeViewController alloc] init];
-    }
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    [EPSUserSessionManager.shared initiateUserSession];
+    [[EPSStoreKitManager shared] requestAllProducts];
+
+    UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+    [appearance configureWithTransparentBackground];
+    appearance.backgroundColor = UIColor.clearColor;
+    UINavigationBar.appearance.standardAppearance = appearance;
+    UINavigationBar.appearance.compactAppearance = appearance;
+    UINavigationBar.appearance.scrollEdgeAppearance = appearance;
+
+    UIViewController *vc = [[EPSTabBarController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = navVC;
+    self.window.tintColor = UIColor.labelColor;
+    self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
 }
 
+
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    // Sends the URL to the current authorization flow (if any) which will
-    // process it if it relates to an authorization response.
     if ([_currentAuthorizationFlow resumeExternalUserAgentFlowWithURL:url]) {
         _currentAuthorizationFlow = nil;
         return YES;
     }
-
-    // Your additional URL handling (if any) goes here.
-
     return NO;
 }
 

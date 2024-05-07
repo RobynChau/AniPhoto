@@ -11,10 +11,20 @@
 
 - (instancetype)initWithTitle:(NSString *)title
                      iconName:(nullable NSString *)iconName {
+    self = [self initWithTitle:title 
+                      iconName:iconName
+                         style:EPSSettingItemStyleDefault];
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+                     iconName:(nullable NSString *)iconName
+                        style:(EPSSettingItemStyle)style {
     self = [super init];
     if (self) {
         _settingTitle = title;
         _iconName = iconName;
+        _style = style;
     }
     return self;
 }
@@ -61,9 +71,9 @@
 + (EPSSettingSectionConfiguration *)socialSettingsConfig {
     NSArray *items = @[
         [[EPSSettingItemConfiguration alloc] initWithTitle:@"Follow us on Instagram" 
-                                                  iconName:nil],
-        [[EPSSettingItemConfiguration alloc] initWithTitle:@"Follow us on Tiktok" 
-                                                  iconName:nil],
+                                                  iconName:@"instagram_logo"],
+        [[EPSSettingItemConfiguration alloc] initWithTitle:@"Follow us on Tiktok"
+                                                  iconName:@"tiktok_logo"],
         [[EPSSettingItemConfiguration alloc] initWithTitle:@"Rate the app" 
                                                   iconName:@"star.circle.fill"],
     ];
@@ -86,6 +96,40 @@
     return setting;
 }
 
++ (EPSSettingSectionConfiguration *)signOutSettingsConfig {
+    NSArray *items = @[
+        [[EPSSettingItemConfiguration alloc] initWithTitle:@"Sign Out"
+                                                  iconName:@"rectangle.portrait.and.arrow.forward.fill"
+                                                     style:EPSSettingItemStyleDestruction],
+    ];
+    EPSSettingSectionConfiguration *setting = [[EPSSettingSectionConfiguration alloc]
+                                               initWithTitle:@"Sign Out"
+                                               items:items];
+    return setting;
+}
 
++ (EPSSettingSectionConfiguration *)headerSettingsConfig {
+    NSArray *items = @[
+        [[EPSSettingItemConfiguration alloc] initWithTitle:@"Header"
+                                                  iconName:@"rectangle.portrait.and.arrow.forward.fill"
+                                                     style:EPSSettingItemStyleDestruction],
+    ];
+    EPSSettingSectionConfiguration *setting = [[EPSSettingSectionConfiguration alloc]
+                                               initWithTitle:@"Header"
+                                               items:items];
+    return setting;
+}
+
++ (EPSSettingSectionConfiguration *)promoteSubConfig {
+    NSArray *items = @[
+        [[EPSSettingItemConfiguration alloc] initWithTitle:@"Promote"
+                                                  iconName:@"rectangle.portrait.and.arrow.forward.fill"
+                                                     style:EPSSettingItemStyleDestruction],
+    ];
+    EPSSettingSectionConfiguration *setting = [[EPSSettingSectionConfiguration alloc]
+                                               initWithTitle:@"Promote"
+                                               items:items];
+    return setting;
+}
 
 @end

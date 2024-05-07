@@ -9,7 +9,10 @@
 #import "AnimeGANv2_1024.h"
 #import "EPSDefines.h"
 #import "UIImage+EPS.h"
+#import "EPSUserSessionManager.h"
 #import <SDWebImage/SDWebImage.h>
+#import "EPSDatabaseManager.h"
+#import "EPSUserSessionManager.h"
 @import FirebaseStorage;
 
 @interface EPSPhotoGenerator () {
@@ -54,7 +57,7 @@
     dispatch_async(_actionQueue, ^{
         UIImage *processedUIImage = [self _preprocessedUIImage:uiImage];
         [self uploadImageToFirebase:processedUIImage
-                             userID:@"21062001"
+                             userID:EPSUserSessionManager.shared.deviceID
                          completion:^(NSURL * _Nullable photoURL, NSError * _Nullable error) {
             if (photoURL) {
                 if (self.shouldUseOnDevice) {
@@ -110,52 +113,47 @@
 
 - (void)_generatePhotoUsingServerModelWithURL:(NSURL *)photoUrl
                                    completion:(EPSPhotoGeneratorCompletionBlock)completion {
-    NSString *urlString = [NSString stringWithFormat:@"%@/process/", kModelServerLink];
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
+    NSString *urlString = [NSString stringWithFormat:@"%@/v2/ml/anime", kServerEndPointURL];
+    NSURL *url = [NSURL URLWithString:urlString];
 
-    [urlRequest addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [urlRequest setHTTPMethod:@"POST"];
+    NSURLSessionConfiguration *sessionConfiguration = EPSRequestBuilder.defaultSessionConfiguration;
+
     NSDictionary *mapData = @{
         @"source_img_path" : photoUrl.absoluteString,
     };
 
     NSError *convertPostDataError;
-    NSData *postData = [NSJSONSerialization dataWithJSONObject:mapData options:0 error:&convertPostDataError];
+    NSData *bodyData = [NSJSONSerialization dataWithJSONObject:mapData options:0 error:&convertPostDataError];
 
-    if (!postData) {
+    if (!bodyData) {
         completion(nil, convertPostDataError);
         return;
     }
 
-    [urlRequest setHTTPBody:postData];
+    [EPSRequestBuilder dataTaskForURL:url 
+                 sessionConfiguration:sessionConfiguration
+                          requestType:EPSHTTPRequestTypePost
+                             bodyData:bodyData
+                           completion:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        if ([response eps_stringForKey:@"processed_url"]) {
+            [EPSUserSessionManager.shared fetchUserCredit];
 
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session
-                                      dataTaskWithRequest:urlRequest
-                                      completionHandler:^(NSData *data,
-                                                          NSURLResponse *response,
-                                                          NSError *error) {
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-        if (httpResponse.statusCode == 200) {
-            NSError *parseError = nil;
-            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+            NSInteger currentCreditCount = EPSUserSessionManager.shared.userSession.totalCreditCount;
+            [EPSUserSessionManager.shared.userSession updateTempCreditCount:currentCreditCount - 1];
 
-            if ([[responseDictionary objectForKey:@"processed_url"] isKindOfClass:NSString.class]) {
-                NSString *processedImageURL = [responseDictionary objectForKey:@"processed_url"];
-                [[SDWebImageDownloader sharedDownloader]
-                 downloadImageWithURL:[NSURL URLWithString:processedImageURL]
-                 completed:^(UIImage * _Nullable image,
-                             NSData * _Nullable data,
-                             NSError * _Nullable error,
-                             BOOL finished) {
-                    completion(image, error);
-                }];
-            }
+            NSString *processedImageURL = [response eps_stringForKey:@"processed_url"];
+            [[SDWebImageDownloader sharedDownloader]
+             downloadImageWithURL:[NSURL URLWithString:processedImageURL]
+             completed:^(UIImage * _Nullable image,
+                         NSData * _Nullable data,
+                         NSError * _Nullable error,
+                         BOOL finished) {
+                completion(image, error);
+            }];
         } else {
             completion(nil, error);
         }
     }];
-    [dataTask resume];
 }
 
 - (void)_generatePhotoUsingOnDeviceModelWithUIImage:(UIImage *)uiImage 

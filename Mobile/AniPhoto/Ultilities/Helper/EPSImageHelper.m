@@ -2,7 +2,7 @@
 //  EPSImageHelper.m
 //  AniPhoto
 //
-//  Created by LAP14667 on 25/4/24.
+//  Created by PhatCH on 25/4/24.
 //
 
 #import "EPSImageHelper.h"

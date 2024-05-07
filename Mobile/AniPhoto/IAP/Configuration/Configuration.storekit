@@ -1,0 +1,190 @@
+{
+  "identifier" : "41ADAEDB",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "BF338451",
+      "localizations" : [
+        {
+          "description" : "A bundle of 50 credits",
+          "displayName" : "Credit",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.PhatCH.AniPhoto.Credit",
+      "referenceName" : "Credit",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "BFAB9832",
+      "localizations" : [
+
+      ],
+      "name" : "Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : false,
+          "groupNumber" : 4,
+          "internalID" : "152D9631",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "50 credits for a month",
+              "displayName" : "AniPhoto Pro",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.PhatCH.AniPhoto.Pro.Month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro Month",
+          "subscriptionGroupID" : "BFAB9832",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "10.99",
+          "familyShareable" : false,
+          "groupNumber" : 3,
+          "internalID" : "54A75DB5",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "50 credits every month for a year",
+              "displayName" : "AniPhoto Pro",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.PhatCH.AniPhoto.Pro.Year",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro Year",
+          "subscriptionGroupID" : "BFAB9832",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "10.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "3FEBA226",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Unlimited credits for a month",
+              "displayName" : "AniPhoto Pro+",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.PhatCH.AniPhoto.ProPlus.Month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro+ Month",
+          "subscriptionGroupID" : "BFAB9832",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "109.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "73EF208E",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Unlimited credits for a year",
+              "displayName" : "AniPhoto Pro+",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.PhatCH.AniPhoto.ProPlus.Year",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro+ Year",
+          "subscriptionGroupID" : "BFAB9832",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

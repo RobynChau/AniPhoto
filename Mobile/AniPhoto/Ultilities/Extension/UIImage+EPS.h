@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)reflectedImageWithHeight:(NSUInteger)height fromAlpha:(float)fromAlpha toAlpha:(float)toAlpha;
 
++ (UIImage *)imageWithColor:(UIColor *)color andBounds:(CGRect)imgBounds;
+
 @end
 
 NS_ASSUME_NONNULL_END

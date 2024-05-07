@@ -13,6 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 
++ (UIColor *)customBlue;
++ (UIColor *)customGreen;
++ (UIColor *)customYellow;
++ (UIColor *)customOrange;
++ (UIColor *)customPink;
++ (UIColor *)customPurple;
 @end
 
 NS_ASSUME_NONNULL_END

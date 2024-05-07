@@ -7,24 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B062AA52BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4B062AA42BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg */; };
+		4B2759CD2BFD00D2004BBB3C /* EPSHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2759CC2BFD00D2004BBB3C /* EPSHistoryViewController.m */; };
+		4B2759D42BFD0F40004BBB3C /* EPSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2759D32BFD0F40004BBB3C /* EPSTabBarController.m */; };
+		4B2759D72BFD12F6004BBB3C /* EPSProfileHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2759D62BFD12F6004BBB3C /* EPSProfileHeaderCell.m */; };
+		4B2759DA2BFD186F004BBB3C /* EPSProfileSubscriptionPromoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2759D92BFD186F004BBB3C /* EPSProfileSubscriptionPromoteCell.m */; };
+		4B2759DD2BFD19A2004BBB3C /* EPSGradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2759DC2BFD19A2004BBB3C /* EPSGradientLabel.swift */; };
+		4B31E8D82BFE50A90044260E /* EPSStoreKitItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B31E8D12BFE50A90044260E /* EPSStoreKitItems.m */; };
+		4B31E8D92BFE50A90044260E /* EPSStoreKitProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B31E8D22BFE50A90044260E /* EPSStoreKitProducts.m */; };
+		4B31E8DA2BFE50A90044260E /* EPSStoreKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B31E8D42BFE50A90044260E /* EPSStoreKitManager.m */; };
+		4B31E8E12BFE574E0044260E /* EPSSubscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B31E8E02BFE574E0044260E /* EPSSubscriptionViewController.m */; };
 		4B38131A2BDFACE9008B2BFB /* NSString+EPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3813192BDFACE9008B2BFB /* NSString+EPS.m */; };
 		4B38131F2BDFF33E008B2BFB /* EPSLastCreatedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38131E2BDFF33E008B2BFB /* EPSLastCreatedCell.m */; };
+		4B429C902BFA02BA000B7F26 /* EPSHomeEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B429C8F2BFA02BA000B7F26 /* EPSHomeEditCell.m */; };
+		4B45FB242BF9D82E00EB1CFF /* EPSOverlayHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45FB232BF9D82E00EB1CFF /* EPSOverlayHeaderView.m */; };
+		4B45FB272BF9DD6700EB1CFF /* EPSHomeToolCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45FB262BF9DD6700EB1CFF /* EPSHomeToolCollectionView.m */; };
 		4B4D10172B9632C4000DDF1F /* EPSDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D10162B9632C4000DDF1F /* EPSDefines.m */; };
 		4B4D101B2B963A54000DDF1F /* EPSSystemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D101A2B963A54000DDF1F /* EPSSystemButton.m */; };
 		4B4E48702BD83D130004CE99 /* EPSPhotoGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E486F2BD83D130004CE99 /* EPSPhotoGenerator.m */; };
-		4B4E48742BD8423E0004CE99 /* EPSResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E48732BD8423E0004CE99 /* EPSResultViewController.m */; };
-		4B7104EB2B5994070035C450 /* ToolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104DB2B5994070035C450 /* ToolViewCell.m */; };
-		4B7104EE2B5994070035C450 /* ToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104E22B5994070035C450 /* ToolView.m */; };
-		4B7104EF2B5994070035C450 /* EPSPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104E32B5994070035C450 /* EPSPickerViewController.m */; };
-		4B7104F02B5994070035C450 /* EPSEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104E72B5994070035C450 /* EPSEditorViewController.m */; };
-		4B7104F12B5994070035C450 /* EPSModelOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104E82B5994070035C450 /* EPSModelOptionCell.m */; };
-		4B7104F32B5994070035C450 /* EPSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104EA2B5994070035C450 /* EPSHomeViewController.m */; };
+		4B4F22922C01D57D00187AF6 /* EPSUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F22912C01D57D00187AF6 /* EPSUserSession.m */; };
+		4B4F22972C01DDC800187AF6 /* TSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F22962C01DDC800187AF6 /* TSHelper.m */; };
+		4B4F22A02C01EAD500187AF6 /* EPSRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F229F2C01EAD500187AF6 /* EPSRequestBuilder.m */; };
+		4B4F22A62C02655500187AF6 /* NSDictionary+Accessors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F22A52C02655500187AF6 /* NSDictionary+Accessors.m */; };
+		4B4F22B62C031EF800187AF6 /* EPSUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F22B52C031EF800187AF6 /* EPSUserInfoViewController.m */; };
+		4B4F22B92C03281100187AF6 /* EPSUserSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F22B82C03281100187AF6 /* EPSUserSubscription.m */; };
+		4B4F22BD2C03318A00187AF6 /* NSDateFormatter+MediumDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F22BB2C03318A00187AF6 /* NSDateFormatter+MediumDateFormatter.m */; };
 		4B7104F52B5994160035C450 /* AnimeGANv2_1024.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104F42B5994160035C450 /* AnimeGANv2_1024.mlmodel */; };
-		4B7104FE2B59969F0035C450 /* EPSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104FD2B59969F0035C450 /* EPSSettingsViewController.m */; };
+		4B7104FE2B59969F0035C450 /* EPSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7104FD2B59969F0035C450 /* EPSProfileViewController.m */; };
+		4B77009F2BFE7BDF00C935E8 /* EPSGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7700992BFE7BDF00C935E8 /* EPSGradientView.m */; };
+		4B7700A02BFE7BDF00C935E8 /* EPSSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B77009B2BFE7BDF00C935E8 /* EPSSegmentedControl.m */; };
+		4B7700A12BFE7BDF00C935E8 /* UIView+EPSRemoveConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B77009D2BFE7BDF00C935E8 /* UIView+EPSRemoveConstraints.m */; };
 		4B8765B42B5D9E38008822BF /* EPSSettingSectionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8765B32B5D9E38008822BF /* EPSSettingSectionConfiguration.m */; };
-		4B8765B72B5DA4E8008822BF /* EPSSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8765B62B5DA4E8008822BF /* EPSSettingCell.m */; };
+		4B8765B72B5DA4E8008822BF /* EPSProfileSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8765B62B5DA4E8008822BF /* EPSProfileSettingCell.m */; };
 		4B881B6E2B6C0D2A004D1505 /* EPSSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B881B6D2B6C0D2A004D1505 /* EPSSignInViewController.m */; };
+		4B9D3C392BEA89E900861879 /* EPSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D3C382BEA89E900861879 /* EPSDatabaseManager.m */; };
+		4B9D3C3C2BEBEE8800861879 /* EPSUserSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9D3C3B2BEBEE8800861879 /* EPSUserSessionManager.m */; };
+		4B9D3C3F2BECF00000861879 /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 4B9D3C3E2BECF00000861879 /* FMDB */; };
 		4BA0B38C2B5846850066E6CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0B38B2B5846850066E6CB /* AppDelegate.m */; };
 		4BA0B3972B58468E0066E6CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA0B3962B58468E0066E6CB /* Assets.xcassets */; };
 		4BA0B39A2B58468E0066E6CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA0B3982B58468E0066E6CB /* LaunchScreen.storyboard */; };
@@ -51,18 +68,150 @@
 		4BA62FFD2BD5985900956EE4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FEC2BD5985900956EE4 /* MASCompositeConstraint.m */; };
 		4BA62FFE2BD5985900956EE4 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA62FF42BD5985900956EE4 /* MASViewAttribute.m */; };
 		4BAB7DFC2B9704CD00B4F524 /* UIColor+EPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */; };
-		4BB5BF852BDF947C000708EC /* EPSHomeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5BF842BDF947C000708EC /* EPSHomeHeaderCell.m */; };
+		4BB3C26C2BF3537F00F5C9EF /* EPSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3C26B2BF3537F00F5C9EF /* EPSHomeViewController.m */; };
+		4BB3C2722BF356C800F5C9EF /* EPSHomeToolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3C2712BF356C800F5C9EF /* EPSHomeToolCell.m */; };
 		4BBD9D6F2BCFAC73009C9ECD /* UIImage+EPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */; };
 		4BBD9D722BCFC2C4009C9ECD /* EPSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D712BCFC2C4009C9ECD /* EPSLoadingView.m */; };
-		4BBD9D772BCFC5FB009C9ECD /* EPSResultWaitingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD9D762BCFC5FB009C9ECD /* EPSResultWaitingViewController.m */; };
+		4BBEDB512BFA6E3600BF5F9E /* EPSAniGANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBEDB502BFA6E3600BF5F9E /* EPSAniGANViewController.m */; };
+		4BBEDB542BFA74A500BF5F9E /* EPSAniGANEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBEDB532BFA74A500BF5F9E /* EPSAniGANEmptyView.m */; };
+		4BBEDB562BFA8D0C00BF5F9E /* EPSAniGANTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBEDB552BFA8D0C00BF5F9E /* EPSAniGANTransition.swift */; };
+		4BC1BFE62C0454C50097C83D /* launchscreen_background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BC1BFE52C0454C40097C83D /* launchscreen_background2.jpg */; };
 		4BC55CA02B5FAEEB006B9022 /* EPSUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC55C9F2B5FAEEB006B9022 /* EPSUserEntity.m */; };
 		4BC728E32BD9581100B27C34 /* EPSShareableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728E22BD9581100B27C34 /* EPSShareableImage.m */; };
 		4BC728EA2BD9665D00B27C34 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728E82BD9665D00B27C34 /* UIView+Toast.m */; };
 		4BC728ED2BD9822A00B27C34 /* EPSBlurImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728EC2BD9822A00B27C34 /* EPSBlurImageView.m */; };
 		4BC728F12BD9904F00B27C34 /* EPSImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC728F02BD9904F00B27C34 /* EPSImageHelper.m */; };
-		4BD12ED42BCED79600B8DA16 /* EPSModelOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12ED32BCED79600B8DA16 /* EPSModelOption.m */; };
+		4BCDBD352BE8C31200372F5C /* Array+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCEC2BE8C31100372F5C /* Array+AniPhoto.swift */; };
+		4BCDBD362BE8C31200372F5C /* Bool+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCED2BE8C31100372F5C /* Bool+AniPhoto.swift */; };
+		4BCDBD372BE8C31200372F5C /* Bundle+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCEE2BE8C31100372F5C /* Bundle+AniPhoto.swift */; };
+		4BCDBD382BE8C31200372F5C /* Cell+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCEF2BE8C31100372F5C /* Cell+AniPhoto.swift */; };
+		4BCDBD392BE8C31200372F5C /* CGFloat+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF02BE8C31100372F5C /* CGFloat+AniPhoto.swift */; };
+		4BCDBD3A2BE8C31200372F5C /* NSError+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF12BE8C31100372F5C /* NSError+AniPhoto.swift */; };
+		4BCDBD3B2BE8C31200372F5C /* PHAsset+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF22BE8C31100372F5C /* PHAsset+AniPhoto.swift */; };
+		4BCDBD3C2BE8C31200372F5C /* String+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF32BE8C31100372F5C /* String+AniPhoto.swift */; };
+		4BCDBD3D2BE8C31200372F5C /* UIColor+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF42BE8C31100372F5C /* UIColor+AniPhoto.swift */; };
+		4BCDBD3E2BE8C31200372F5C /* UIFont+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF52BE8C31100372F5C /* UIFont+AniPhoto.swift */; };
+		4BCDBD3F2BE8C31200372F5C /* UIGraphicsImageRenderer+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF62BE8C31100372F5C /* UIGraphicsImageRenderer+AniPhoto.swift */; };
+		4BCDBD402BE8C31200372F5C /* UIImage+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF72BE8C31100372F5C /* UIImage+AniPhoto.swift */; };
+		4BCDBD412BE8C31200372F5C /* UIScrollView+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF82BE8C31100372F5C /* UIScrollView+AniPhoto.swift */; };
+		4BCDBD422BE8C31200372F5C /* UIView+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCF92BE8C31100372F5C /* UIView+AniPhoto.swift */; };
+		4BCDBD432BE8C31200372F5C /* UIViewController+AniPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCFA2BE8C31100372F5C /* UIViewController+AniPhoto.swift */; };
+		4BCDBD442BE8C31200372F5C /* EPSClipImageDismissAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCFC2BE8C31100372F5C /* EPSClipImageDismissAnimatedTransition.swift */; };
+		4BCDBD452BE8C31200372F5C /* EPSPhotoPreviewAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCFD2BE8C31100372F5C /* EPSPhotoPreviewAnimatedTransition.swift */; };
+		4BCDBD462BE8C31200372F5C /* EPSPhotoPreviewPopInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBCFE2BE8C31100372F5C /* EPSPhotoPreviewPopInteractiveTransition.swift */; };
+		4BCDBD472BE8C31200372F5C /* EPSCustomCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD002BE8C31100372F5C /* EPSCustomCamera.swift */; };
+		4BCDBD482BE8C31200372F5C /* EPSAdjustSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD022BE8C31200372F5C /* EPSAdjustSlider.swift */; };
+		4BCDBD492BE8C31200372F5C /* EPSBaseStickerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD032BE8C31200372F5C /* EPSBaseStickerState.swift */; };
+		4BCDBD4A2BE8C31200372F5C /* EPSBaseStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD042BE8C31200372F5C /* EPSBaseStickerView.swift */; };
+		4BCDBD4B2BE8C31200372F5C /* EPSClipImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD052BE8C31200372F5C /* EPSClipImageViewController.swift */; };
+		4BCDBD4C2BE8C31200372F5C /* EPSImageEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD062BE8C31200372F5C /* EPSImageEditorViewController.swift */; };
+		4BCDBD4D2BE8C31200372F5C /* EPSEditorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD072BE8C31200372F5C /* EPSEditorManager.swift */; };
+		4BCDBD4E2BE8C31200372F5C /* EPSEditToolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD082BE8C31200372F5C /* EPSEditToolCell.swift */; };
+		4BCDBD4F2BE8C31200372F5C /* EPSVideoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD092BE8C31200372F5C /* EPSVideoEditorViewController.swift */; };
+		4BCDBD502BE8C31200372F5C /* EPSFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD0A2BE8C31200372F5C /* EPSFilter.swift */; };
+		4BCDBD512BE8C31200372F5C /* EPSImageStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD0B2BE8C31200372F5C /* EPSImageStickerView.swift */; };
+		4BCDBD522BE8C31200372F5C /* EPSInputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD0C2BE8C31200372F5C /* EPSInputTextViewController.swift */; };
+		4BCDBD532BE8C31200372F5C /* EPSPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD0D2BE8C31200372F5C /* EPSPaths.swift */; };
+		4BCDBD542BE8C31200372F5C /* EPSTextStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD0E2BE8C31200372F5C /* EPSTextStickerView.swift */; };
+		4BCDBD552BE8C31200372F5C /* EPSAddPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD102BE8C31200372F5C /* EPSAddPhotoCell.swift */; };
+		4BCDBD562BE8C31200372F5C /* EPSAlbumListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD112BE8C31200372F5C /* EPSAlbumListCell.swift */; };
+		4BCDBD572BE8C31200372F5C /* EPSAlbumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD122BE8C31200372F5C /* EPSAlbumListController.swift */; };
+		4BCDBD582BE8C31200372F5C /* EPSAlbumListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD132BE8C31200372F5C /* EPSAlbumListModel.swift */; };
+		4BCDBD592BE8C31200372F5C /* EPSAnimationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD142BE8C31200372F5C /* EPSAnimationUtils.swift */; };
+		4BCDBD5A2BE8C31200372F5C /* EPSCameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD152BE8C31200372F5C /* EPSCameraCell.swift */; };
+		4BCDBD5B2BE8C31200372F5C /* EPSCameraConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD162BE8C31200372F5C /* EPSCameraConfiguration.swift */; };
+		4BCDBD5C2BE8C31200372F5C /* EPSCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD172BE8C31200372F5C /* EPSCollectionViewFlowLayout.swift */; };
+		4BCDBD5D2BE8C31200372F5C /* EPSCustomAlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD182BE8C31200372F5C /* EPSCustomAlertProtocol.swift */; };
+		4BCDBD5E2BE8C31200372F5C /* EPSImageEditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD192BE8C31200372F5C /* EPSImageEditorConfiguration.swift */; };
+		4BCDBD5F2BE8C31200372F5C /* EPSEmbedAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD1A2BE8C31200372F5C /* EPSEmbedAlbumListView.swift */; };
+		4BCDBD602BE8C31200372F5C /* EPSEnlargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD1B2BE8C31200372F5C /* EPSEnlargeButton.swift */; };
+		4BCDBD612BE8C31200372F5C /* EPSFetchImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD1C2BE8C31200372F5C /* EPSFetchImageOperation.swift */; };
+		4BCDBD622BE8C31200372F5C /* EPSGeneralDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD1D2BE8C31200372F5C /* EPSGeneralDefine.swift */; };
+		4BCDBD632BE8C31200372F5C /* EPSImageNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD1E2BE8C31200372F5C /* EPSImageNavController.swift */; };
+		4BCDBD642BE8C31200372F5C /* EPSImagePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD1F2BE8C31200372F5C /* EPSImagePreviewController.swift */; };
+		4BCDBD652BE8C31200372F5C /* EPSLanguageDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD202BE8C31200372F5C /* EPSLanguageDefine.swift */; };
+		4BCDBD662BE8C31200372F5C /* EPSPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD212BE8C31200372F5C /* EPSPhotoBrowser.swift */; };
+		4BCDBD672BE8C31200372F5C /* EPSPhotoConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD222BE8C31200372F5C /* EPSPhotoConfiguration.swift */; };
+		4BCDBD682BE8C31200372F5C /* EPSPhotoConfiguration+Chaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD232BE8C31200372F5C /* EPSPhotoConfiguration+Chaining.swift */; };
+		4BCDBD692BE8C31200372F5C /* EPSPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD242BE8C31200372F5C /* EPSPhotoManager.swift */; };
+		4BCDBD6A2BE8C31200372F5C /* EPSPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD252BE8C31200372F5C /* EPSPhotoModel.swift */; };
+		4BCDBD6B2BE8C31200372F5C /* EPSPhotoPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD262BE8C31200372F5C /* EPSPhotoPreviewCell.swift */; };
+		4BCDBD6C2BE8C31200372F5C /* EPSPhotoPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD272BE8C31200372F5C /* EPSPhotoPreviewController.swift */; };
+		4BCDBD6D2BE8C31200372F5C /* EPSPhotoPreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD282BE8C31200372F5C /* EPSPhotoPreviewSheet.swift */; };
+		4BCDBD6E2BE8C31200372F5C /* EPSPhotoUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD292BE8C31200372F5C /* EPSPhotoUIConfiguration.swift */; };
+		4BCDBD6F2BE8C31200372F5C /* EPSPhotoUIConfiguration+Chaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD2A2BE8C31200372F5C /* EPSPhotoUIConfiguration+Chaining.swift */; };
+		4BCDBD702BE8C31200372F5C /* EPSProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD2B2BE8C31200372F5C /* EPSProgressHUD.swift */; };
+		4BCDBD712BE8C31200372F5C /* EPSProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD2C2BE8C31200372F5C /* EPSProgressView.swift */; };
+		4BCDBD722BE8C31200372F5C /* EPSResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD2D2BE8C31200372F5C /* EPSResultModel.swift */; };
+		4BCDBD732BE8C31200372F5C /* EPSThumbnailPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD2E2BE8C31200372F5C /* EPSThumbnailPhotoCell.swift */; };
+		4BCDBD742BE8C31200372F5C /* EPSThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD2F2BE8C31200372F5C /* EPSThumbnailViewController.swift */; };
+		4BCDBD752BE8C31200372F5C /* EPSVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD302BE8C31200372F5C /* EPSVideoManager.swift */; };
+		4BCDBD762BE8C31200372F5C /* EPSWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD322BE8C31200372F5C /* EPSWeakProxy.m */; };
+		4BCDBD772BE8C31200372F5C /* ZLWeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBD332BE8C31200372F5C /* ZLWeakProxy.swift */; };
+		4BCDBDBD2BE8CD0900372F5C /* ZLPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BCDBDBC2BE8CD0900372F5C /* ZLPhotoBrowser.bundle */; };
+		4BCDBDBF2BE8E3C000372F5C /* EPSImageStickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDBE2BE8E3C000372F5C /* EPSImageStickerContainerView.swift */; };
+		4BCDBDEB2BE8E68400372F5C /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDC62BE8E68100372F5C /* ConstraintView.swift */; };
+		4BCDBDEC2BE8E68400372F5C /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDC72BE8E68200372F5C /* ConstraintViewDSL.swift */; };
+		4BCDBDED2BE8E68400372F5C /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDC82BE8E68200372F5C /* ConstraintMakerRelatable.swift */; };
+		4BCDBDEE2BE8E68400372F5C /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDC92BE8E68200372F5C /* UILayoutSupport+Extensions.swift */; };
+		4BCDBDEF2BE8E68400372F5C /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDCA2BE8E68200372F5C /* ConstraintConfig.swift */; };
+		4BCDBDF02BE8E68400372F5C /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDCB2BE8E68200372F5C /* ConstraintInsets.swift */; };
+		4BCDBDF12BE8E68400372F5C /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDCC2BE8E68200372F5C /* ConstraintInsetTarget.swift */; };
+		4BCDBDF22BE8E68400372F5C /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDCD2BE8E68200372F5C /* ConstraintPriorityTarget.swift */; };
+		4BCDBDF32BE8E68400372F5C /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDCE2BE8E68200372F5C /* ConstraintMakerEditable.swift */; };
+		4BCDBDF42BE8E68400372F5C /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDCF2BE8E68200372F5C /* ConstraintRelation.swift */; };
+		4BCDBDF52BE8E68400372F5C /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD02BE8E68200372F5C /* ConstraintOffsetTarget.swift */; };
+		4BCDBDF62BE8E68400372F5C /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD12BE8E68200372F5C /* ConstraintDSL.swift */; };
+		4BCDBDF72BE8E68400372F5C /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD22BE8E68200372F5C /* ConstraintLayoutGuide.swift */; };
+		4BCDBDF82BE8E68400372F5C /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD32BE8E68200372F5C /* ConstraintMakerFinalizable.swift */; };
+		4BCDBDF92BE8E68400372F5C /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD42BE8E68300372F5C /* ConstraintLayoutSupportDSL.swift */; };
+		4BCDBDFA2BE8E68400372F5C /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD52BE8E68300372F5C /* ConstraintDirectionalInsets.swift */; };
+		4BCDBDFB2BE8E68400372F5C /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD62BE8E68300372F5C /* Debugging.swift */; };
+		4BCDBDFC2BE8E68400372F5C /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD72BE8E68300372F5C /* LayoutConstraintItem.swift */; };
+		4BCDBDFD2BE8E68400372F5C /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD82BE8E68300372F5C /* ConstraintLayoutGuide+Extensions.swift */; };
+		4BCDBDFE2BE8E68400372F5C /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD92BE8E68300372F5C /* ConstraintMakerPriortizable.swift */; };
+		4BCDBDFF2BE8E68400372F5C /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDDA2BE8E68300372F5C /* Constraint.swift */; };
+		4BCDBE002BE8E68400372F5C /* ConstraintMakerRelatable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDDB2BE8E68300372F5C /* ConstraintMakerRelatable+Extensions.swift */; };
+		4BCDBE012BE8E68400372F5C /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDDC2BE8E68300372F5C /* ConstraintMultiplierTarget.swift */; };
+		4BCDBE022BE8E68400372F5C /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDDD2BE8E68300372F5C /* ConstraintItem.swift */; };
+		4BCDBE032BE8E68400372F5C /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDDE2BE8E68300372F5C /* ConstraintPriority.swift */; };
+		4BCDBE042BE8E68400372F5C /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDDF2BE8E68300372F5C /* ConstraintMaker.swift */; };
+		4BCDBE052BE8E68400372F5C /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE02BE8E68300372F5C /* ConstraintAttributes.swift */; };
+		4BCDBE062BE8E68400372F5C /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE12BE8E68300372F5C /* ConstraintDirectionalInsetTarget.swift */; };
+		4BCDBE072BE8E68400372F5C /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE22BE8E68400372F5C /* ConstraintRelatableTarget.swift */; };
+		4BCDBE082BE8E68400372F5C /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE32BE8E68400372F5C /* ConstraintDescription.swift */; };
+		4BCDBE092BE8E68400372F5C /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE42BE8E68400372F5C /* ConstraintView+Extensions.swift */; };
+		4BCDBE0A2BE8E68400372F5C /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE52BE8E68400372F5C /* ConstraintLayoutSupport.swift */; };
+		4BCDBE0B2BE8E68400372F5C /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE62BE8E68400372F5C /* ConstraintLayoutGuideDSL.swift */; };
+		4BCDBE0C2BE8E68400372F5C /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE72BE8E68400372F5C /* ConstraintMakerExtendable.swift */; };
+		4BCDBE0D2BE8E68400372F5C /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE82BE8E68400372F5C /* Typealiases.swift */; };
+		4BCDBE0E2BE8E68400372F5C /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE92BE8E68400372F5C /* LayoutConstraint.swift */; };
+		4BCDBE0F2BE8E68400372F5C /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDEA2BE8E68400372F5C /* ConstraintConstantTarget.swift */; };
 		4BD12EE62BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */; };
 		4BD50ADC2BA01322001F2DFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */; };
+		4BDF7C2E2BFF9949002DF23C /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C2C2BFF9949002DF23C /* UIButtonExtension.swift */; };
+		4BDF7C2F2BFF9949002DF23C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C2D2BFF9949002DF23C /* UIImageExtension.swift */; };
+		4BDF7C322BFFABB4002DF23C /* EPSCreditPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C312BFFABB4002DF23C /* EPSCreditPurchaseViewController.m */; };
+		4BDF7C362BFFAE53002DF23C /* EPSCurrentCreditFullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C352BFFAE53002DF23C /* EPSCurrentCreditFullView.m */; };
+		4BDF7C392BFFB705002DF23C /* EPSCreditProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C382BFFB705002DF23C /* EPSCreditProductView.m */; };
+		4BDF7C3C2BFFBFEA002DF23C /* EPSCurrentCreditMiniView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C3B2BFFBFEA002DF23C /* EPSCurrentCreditMiniView.m */; };
+		4BE899532BFB1C260063D85B /* SJAttributesRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8993B2BFB1C260063D85B /* SJAttributesRecorder.m */; };
+		4BE899542BFB1C260063D85B /* SJAttributeWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8993D2BFB1C260063D85B /* SJAttributeWorker.m */; };
+		4BE899552BFB1C260063D85B /* SJUIKitTextMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE899412BFB1C260063D85B /* SJUIKitTextMaker.m */; };
+		4BE899562BFB1C260063D85B /* SJUTAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE899432BFB1C260063D85B /* SJUTAttributes.m */; };
+		4BE899572BFB1C260063D85B /* SJUTRangeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE899452BFB1C260063D85B /* SJUTRangeHandler.m */; };
+		4BE899582BFB1C260063D85B /* SJUTRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE899472BFB1C260063D85B /* SJUTRecorder.m */; };
+		4BE899592BFB1C260063D85B /* SJUTRegexHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE899492BFB1C260063D85B /* SJUTRegexHandler.m */; };
+		4BE8995A2BFB1C260063D85B /* NSAttributedString+SJMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8994C2BFB1C260063D85B /* NSAttributedString+SJMake.m */; };
+		4BE8995B2BFB1C260063D85B /* SJAttributesStringMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8994F2BFB1C260063D85B /* SJAttributesStringMaker.swift */; };
+		4BE8995C2BFB1C260063D85B /* SJUIKitTextMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE899512BFB1C260063D85B /* SJUIKitTextMaker.swift */; };
+		4BF5F7322BFB71CB0032DC02 /* EPSAniGANResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5F7312BFB71CB0032DC02 /* EPSAniGANResultViewController.m */; };
+		4BF5F7372BFB72760032DC02 /* EPSAniGANResultSecondaryToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5F7362BFB72760032DC02 /* EPSAniGANResultSecondaryToolView.m */; };
+		4BF5F73B2BFB7A540032DC02 /* EPSAniGANResultToolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5F73A2BFB7A540032DC02 /* EPSAniGANResultToolCell.m */; };
+		4BF5F73F2BFB81C90032DC02 /* EPSSimplifiedToolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5F73E2BFB81C90032DC02 /* EPSSimplifiedToolModel.m */; };
+		4BF5F7432BFBB6E00032DC02 /* EPSSimplifiedFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5F7422BFBB6E00032DC02 /* EPSSimplifiedFilterModel.m */; };
+		4BF5F7462BFBB76C0032DC02 /* EPSAniGANFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5F7452BFBB76C0032DC02 /* EPSAniGANFilterCell.m */; };
+		4BF5F74A2BFBD3120032DC02 /* EPSHomeBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5F7492BFBD3120032DC02 /* EPSHomeBannerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,40 +228,74 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4B062AA42BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg"; sourceTree = "<group>"; };
+		4B2759CB2BFD00D2004BBB3C /* EPSHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHistoryViewController.h; sourceTree = "<group>"; };
+		4B2759CC2BFD00D2004BBB3C /* EPSHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHistoryViewController.m; sourceTree = "<group>"; };
+		4B2759D22BFD0F40004BBB3C /* EPSTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSTabBarController.h; sourceTree = "<group>"; };
+		4B2759D32BFD0F40004BBB3C /* EPSTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSTabBarController.m; sourceTree = "<group>"; };
+		4B2759D52BFD12F6004BBB3C /* EPSProfileHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSProfileHeaderCell.h; sourceTree = "<group>"; };
+		4B2759D62BFD12F6004BBB3C /* EPSProfileHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSProfileHeaderCell.m; sourceTree = "<group>"; };
+		4B2759D82BFD186F004BBB3C /* EPSProfileSubscriptionPromoteCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSProfileSubscriptionPromoteCell.h; sourceTree = "<group>"; };
+		4B2759D92BFD186F004BBB3C /* EPSProfileSubscriptionPromoteCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSProfileSubscriptionPromoteCell.m; sourceTree = "<group>"; };
+		4B2759DC2BFD19A2004BBB3C /* EPSGradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSGradientLabel.swift; sourceTree = "<group>"; };
+		4B31E8CB2BFE47E00044260E /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		4B31E8D12BFE50A90044260E /* EPSStoreKitItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSStoreKitItems.m; sourceTree = "<group>"; };
+		4B31E8D22BFE50A90044260E /* EPSStoreKitProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSStoreKitProducts.m; sourceTree = "<group>"; };
+		4B31E8D42BFE50A90044260E /* EPSStoreKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSStoreKitManager.m; sourceTree = "<group>"; };
+		4B31E8D52BFE50A90044260E /* EPSStoreKitProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSStoreKitProducts.h; sourceTree = "<group>"; };
+		4B31E8D62BFE50A90044260E /* EPSStoreKitItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSStoreKitItems.h; sourceTree = "<group>"; };
+		4B31E8D72BFE50A90044260E /* EPSStoreKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSStoreKitManager.h; sourceTree = "<group>"; };
+		4B31E8DF2BFE574E0044260E /* EPSSubscriptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSubscriptionViewController.h; sourceTree = "<group>"; };
+		4B31E8E02BFE574E0044260E /* EPSSubscriptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSubscriptionViewController.m; sourceTree = "<group>"; };
 		4B3813182BDFACE9008B2BFB /* NSString+EPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+EPS.h"; sourceTree = "<group>"; };
 		4B3813192BDFACE9008B2BFB /* NSString+EPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+EPS.m"; sourceTree = "<group>"; };
 		4B38131D2BDFF33E008B2BFB /* EPSLastCreatedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSLastCreatedCell.h; sourceTree = "<group>"; };
 		4B38131E2BDFF33E008B2BFB /* EPSLastCreatedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSLastCreatedCell.m; sourceTree = "<group>"; };
+		4B429C8E2BFA02BA000B7F26 /* EPSHomeEditCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeEditCell.h; sourceTree = "<group>"; };
+		4B429C8F2BFA02BA000B7F26 /* EPSHomeEditCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeEditCell.m; sourceTree = "<group>"; };
+		4B45FB222BF9D82E00EB1CFF /* EPSOverlayHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSOverlayHeaderView.h; sourceTree = "<group>"; };
+		4B45FB232BF9D82E00EB1CFF /* EPSOverlayHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSOverlayHeaderView.m; sourceTree = "<group>"; };
+		4B45FB252BF9DD6700EB1CFF /* EPSHomeToolCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeToolCollectionView.h; sourceTree = "<group>"; };
+		4B45FB262BF9DD6700EB1CFF /* EPSHomeToolCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeToolCollectionView.m; sourceTree = "<group>"; };
 		4B4D10152B9632C4000DDF1F /* EPSDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSDefines.h; sourceTree = "<group>"; };
 		4B4D10162B9632C4000DDF1F /* EPSDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSDefines.m; sourceTree = "<group>"; };
 		4B4D10192B963A54000DDF1F /* EPSSystemButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSystemButton.h; sourceTree = "<group>"; };
 		4B4D101A2B963A54000DDF1F /* EPSSystemButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSystemButton.m; sourceTree = "<group>"; };
 		4B4E486E2BD83D130004CE99 /* EPSPhotoGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSPhotoGenerator.h; sourceTree = "<group>"; };
 		4B4E486F2BD83D130004CE99 /* EPSPhotoGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSPhotoGenerator.m; sourceTree = "<group>"; };
-		4B4E48722BD8423E0004CE99 /* EPSResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSResultViewController.h; sourceTree = "<group>"; };
-		4B4E48732BD8423E0004CE99 /* EPSResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSResultViewController.m; sourceTree = "<group>"; };
-		4B7104DA2B5994060035C450 /* ToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolView.h; sourceTree = "<group>"; };
-		4B7104DB2B5994070035C450 /* ToolViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolViewCell.m; sourceTree = "<group>"; };
-		4B7104DE2B5994070035C450 /* EPSModelOptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSModelOptionCell.h; sourceTree = "<group>"; };
-		4B7104E02B5994070035C450 /* EPSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSHomeViewController.h; sourceTree = "<group>"; };
-		4B7104E22B5994070035C450 /* ToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolView.m; sourceTree = "<group>"; };
-		4B7104E32B5994070035C450 /* EPSPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSPickerViewController.m; sourceTree = "<group>"; };
-		4B7104E42B5994070035C450 /* EPSEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSEditorViewController.h; sourceTree = "<group>"; };
-		4B7104E52B5994070035C450 /* EPSPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSPickerViewController.h; sourceTree = "<group>"; };
-		4B7104E62B5994070035C450 /* ToolViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolViewCell.h; sourceTree = "<group>"; };
-		4B7104E72B5994070035C450 /* EPSEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSEditorViewController.m; sourceTree = "<group>"; };
-		4B7104E82B5994070035C450 /* EPSModelOptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSModelOptionCell.m; sourceTree = "<group>"; };
-		4B7104EA2B5994070035C450 /* EPSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSHomeViewController.m; sourceTree = "<group>"; };
+		4B4F22902C01D57D00187AF6 /* EPSUserSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSUserSession.h; sourceTree = "<group>"; };
+		4B4F22912C01D57D00187AF6 /* EPSUserSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSUserSession.m; sourceTree = "<group>"; };
+		4B4F22952C01DDC800187AF6 /* TSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSHelper.h; sourceTree = "<group>"; };
+		4B4F22962C01DDC800187AF6 /* TSHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSHelper.m; sourceTree = "<group>"; };
+		4B4F229E2C01EAD500187AF6 /* EPSRequestBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSRequestBuilder.h; sourceTree = "<group>"; };
+		4B4F229F2C01EAD500187AF6 /* EPSRequestBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSRequestBuilder.m; sourceTree = "<group>"; };
+		4B4F22A42C02655400187AF6 /* NSDictionary+Accessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Accessors.h"; sourceTree = "<group>"; };
+		4B4F22A52C02655500187AF6 /* NSDictionary+Accessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Accessors.m"; sourceTree = "<group>"; };
+		4B4F22B42C031EF800187AF6 /* EPSUserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSUserInfoViewController.h; sourceTree = "<group>"; };
+		4B4F22B52C031EF800187AF6 /* EPSUserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSUserInfoViewController.m; sourceTree = "<group>"; };
+		4B4F22B72C03281100187AF6 /* EPSUserSubscription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSUserSubscription.h; sourceTree = "<group>"; };
+		4B4F22B82C03281100187AF6 /* EPSUserSubscription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSUserSubscription.m; sourceTree = "<group>"; };
+		4B4F22BA2C03318A00187AF6 /* NSDateFormatter+MediumDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+MediumDateFormatter.h"; sourceTree = "<group>"; };
+		4B4F22BB2C03318A00187AF6 /* NSDateFormatter+MediumDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+MediumDateFormatter.m"; sourceTree = "<group>"; };
+		4B666D352BE7F9E3009D997B /* AniPhoto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AniPhoto-Bridging-Header.h"; sourceTree = "<group>"; };
 		4B7104F42B5994160035C450 /* AnimeGANv2_1024.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimeGANv2_1024.mlmodel; sourceTree = "<group>"; };
-		4B7104FC2B59969F0035C450 /* EPSSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSettingsViewController.h; sourceTree = "<group>"; };
-		4B7104FD2B59969F0035C450 /* EPSSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSettingsViewController.m; sourceTree = "<group>"; };
+		4B7104FC2B59969F0035C450 /* EPSProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSProfileViewController.h; sourceTree = "<group>"; };
+		4B7104FD2B59969F0035C450 /* EPSProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSProfileViewController.m; sourceTree = "<group>"; };
+		4B7700982BFE7BDF00C935E8 /* EPSGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSGradientView.h; sourceTree = "<group>"; };
+		4B7700992BFE7BDF00C935E8 /* EPSGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSGradientView.m; sourceTree = "<group>"; };
+		4B77009A2BFE7BDF00C935E8 /* EPSSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSegmentedControl.h; sourceTree = "<group>"; };
+		4B77009B2BFE7BDF00C935E8 /* EPSSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSegmentedControl.m; sourceTree = "<group>"; };
+		4B77009C2BFE7BDF00C935E8 /* UIView+EPSRemoveConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EPSRemoveConstraints.h"; sourceTree = "<group>"; };
+		4B77009D2BFE7BDF00C935E8 /* UIView+EPSRemoveConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EPSRemoveConstraints.m"; sourceTree = "<group>"; };
 		4B8765B22B5D9E38008822BF /* EPSSettingSectionConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSettingSectionConfiguration.h; sourceTree = "<group>"; };
 		4B8765B32B5D9E38008822BF /* EPSSettingSectionConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSettingSectionConfiguration.m; sourceTree = "<group>"; };
-		4B8765B52B5DA4E8008822BF /* EPSSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSettingCell.h; sourceTree = "<group>"; };
-		4B8765B62B5DA4E8008822BF /* EPSSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSettingCell.m; sourceTree = "<group>"; };
+		4B8765B52B5DA4E8008822BF /* EPSProfileSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSProfileSettingCell.h; sourceTree = "<group>"; };
+		4B8765B62B5DA4E8008822BF /* EPSProfileSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSProfileSettingCell.m; sourceTree = "<group>"; };
 		4B881B6C2B6C0D2A004D1505 /* EPSSignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSignInViewController.h; sourceTree = "<group>"; };
 		4B881B6D2B6C0D2A004D1505 /* EPSSignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSignInViewController.m; sourceTree = "<group>"; };
+		4B9D3C372BEA89E900861879 /* EPSDatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSDatabaseManager.h; sourceTree = "<group>"; };
+		4B9D3C382BEA89E900861879 /* EPSDatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSDatabaseManager.m; sourceTree = "<group>"; };
+		4B9D3C3A2BEBEE8800861879 /* EPSUserSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSUserSessionManager.h; sourceTree = "<group>"; };
+		4B9D3C3B2BEBEE8800861879 /* EPSUserSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSUserSessionManager.m; sourceTree = "<group>"; };
 		4BA0B3872B5846850066E6CB /* AniPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA0B38A2B5846850066E6CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BA0B38B2B5846850066E6CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -147,14 +330,20 @@
 		4BA62FF42BD5985900956EE4 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		4BAB7DFA2B9704CD00B4F524 /* UIColor+EPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EPS.h"; sourceTree = "<group>"; };
 		4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EPS.m"; sourceTree = "<group>"; };
-		4BB5BF832BDF947C000708EC /* EPSHomeHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeHeaderCell.h; sourceTree = "<group>"; };
-		4BB5BF842BDF947C000708EC /* EPSHomeHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeHeaderCell.m; sourceTree = "<group>"; };
+		4BB3C26A2BF3537F00F5C9EF /* EPSHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeViewController.h; sourceTree = "<group>"; };
+		4BB3C26B2BF3537F00F5C9EF /* EPSHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeViewController.m; sourceTree = "<group>"; };
+		4BB3C2702BF356C800F5C9EF /* EPSHomeToolCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeToolCell.h; sourceTree = "<group>"; };
+		4BB3C2712BF356C800F5C9EF /* EPSHomeToolCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeToolCell.m; sourceTree = "<group>"; };
 		4BBD9D6D2BCFAC73009C9ECD /* UIImage+EPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+EPS.h"; sourceTree = "<group>"; };
 		4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EPS.m"; sourceTree = "<group>"; };
 		4BBD9D702BCFC2C4009C9ECD /* EPSLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSLoadingView.h; sourceTree = "<group>"; };
 		4BBD9D712BCFC2C4009C9ECD /* EPSLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSLoadingView.m; sourceTree = "<group>"; };
-		4BBD9D752BCFC5FB009C9ECD /* EPSResultWaitingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSResultWaitingViewController.h; sourceTree = "<group>"; };
-		4BBD9D762BCFC5FB009C9ECD /* EPSResultWaitingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSResultWaitingViewController.m; sourceTree = "<group>"; };
+		4BBEDB4F2BFA6E3600BF5F9E /* EPSAniGANViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSAniGANViewController.h; sourceTree = "<group>"; };
+		4BBEDB502BFA6E3600BF5F9E /* EPSAniGANViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAniGANViewController.m; sourceTree = "<group>"; };
+		4BBEDB522BFA74A500BF5F9E /* EPSAniGANEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSAniGANEmptyView.h; sourceTree = "<group>"; };
+		4BBEDB532BFA74A500BF5F9E /* EPSAniGANEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAniGANEmptyView.m; sourceTree = "<group>"; };
+		4BBEDB552BFA8D0C00BF5F9E /* EPSAniGANTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPSAniGANTransition.swift; sourceTree = "<group>"; };
+		4BC1BFE52C0454C40097C83D /* launchscreen_background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchscreen_background2.jpg; sourceTree = "<group>"; };
 		4BC55C9E2B5FAEEB006B9022 /* EPSUserEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSUserEntity.h; sourceTree = "<group>"; };
 		4BC55C9F2B5FAEEB006B9022 /* EPSUserEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSUserEntity.m; sourceTree = "<group>"; };
 		4BC728E12BD9581100B27C34 /* EPSShareableImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSShareableImage.h; sourceTree = "<group>"; };
@@ -165,11 +354,160 @@
 		4BC728EC2BD9822A00B27C34 /* EPSBlurImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSBlurImageView.m; sourceTree = "<group>"; };
 		4BC728EF2BD9904F00B27C34 /* EPSImageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSImageHelper.h; sourceTree = "<group>"; };
 		4BC728F02BD9904F00B27C34 /* EPSImageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSImageHelper.m; sourceTree = "<group>"; };
-		4BD12ED22BCED79600B8DA16 /* EPSModelOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSModelOption.h; sourceTree = "<group>"; };
-		4BD12ED32BCED79600B8DA16 /* EPSModelOption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSModelOption.m; sourceTree = "<group>"; };
+		4BCDBCEC2BE8C31100372F5C /* Array+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCED2BE8C31100372F5C /* Bool+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCEE2BE8C31100372F5C /* Bundle+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCEF2BE8C31100372F5C /* Cell+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF02BE8C31100372F5C /* CGFloat+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF12BE8C31100372F5C /* NSError+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF22BE8C31100372F5C /* PHAsset+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF32BE8C31100372F5C /* String+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF42BE8C31100372F5C /* UIColor+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF52BE8C31100372F5C /* UIFont+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF62BE8C31100372F5C /* UIGraphicsImageRenderer+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGraphicsImageRenderer+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF72BE8C31100372F5C /* UIImage+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF82BE8C31100372F5C /* UIScrollView+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCF92BE8C31100372F5C /* UIView+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCFA2BE8C31100372F5C /* UIViewController+AniPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AniPhoto.swift"; sourceTree = "<group>"; };
+		4BCDBCFC2BE8C31100372F5C /* EPSClipImageDismissAnimatedTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSClipImageDismissAnimatedTransition.swift; sourceTree = "<group>"; };
+		4BCDBCFD2BE8C31100372F5C /* EPSPhotoPreviewAnimatedTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoPreviewAnimatedTransition.swift; sourceTree = "<group>"; };
+		4BCDBCFE2BE8C31100372F5C /* EPSPhotoPreviewPopInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoPreviewPopInteractiveTransition.swift; sourceTree = "<group>"; };
+		4BCDBD002BE8C31100372F5C /* EPSCustomCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSCustomCamera.swift; sourceTree = "<group>"; };
+		4BCDBD022BE8C31200372F5C /* EPSAdjustSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSAdjustSlider.swift; sourceTree = "<group>"; };
+		4BCDBD032BE8C31200372F5C /* EPSBaseStickerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSBaseStickerState.swift; sourceTree = "<group>"; };
+		4BCDBD042BE8C31200372F5C /* EPSBaseStickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSBaseStickerView.swift; sourceTree = "<group>"; };
+		4BCDBD052BE8C31200372F5C /* EPSClipImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSClipImageViewController.swift; sourceTree = "<group>"; };
+		4BCDBD062BE8C31200372F5C /* EPSImageEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSImageEditorViewController.swift; sourceTree = "<group>"; };
+		4BCDBD072BE8C31200372F5C /* EPSEditorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSEditorManager.swift; sourceTree = "<group>"; };
+		4BCDBD082BE8C31200372F5C /* EPSEditToolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSEditToolCell.swift; sourceTree = "<group>"; };
+		4BCDBD092BE8C31200372F5C /* EPSVideoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSVideoEditorViewController.swift; sourceTree = "<group>"; };
+		4BCDBD0A2BE8C31200372F5C /* EPSFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSFilter.swift; sourceTree = "<group>"; };
+		4BCDBD0B2BE8C31200372F5C /* EPSImageStickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSImageStickerView.swift; sourceTree = "<group>"; };
+		4BCDBD0C2BE8C31200372F5C /* EPSInputTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSInputTextViewController.swift; sourceTree = "<group>"; };
+		4BCDBD0D2BE8C31200372F5C /* EPSPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPaths.swift; sourceTree = "<group>"; };
+		4BCDBD0E2BE8C31200372F5C /* EPSTextStickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSTextStickerView.swift; sourceTree = "<group>"; };
+		4BCDBD102BE8C31200372F5C /* EPSAddPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSAddPhotoCell.swift; sourceTree = "<group>"; };
+		4BCDBD112BE8C31200372F5C /* EPSAlbumListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSAlbumListCell.swift; sourceTree = "<group>"; };
+		4BCDBD122BE8C31200372F5C /* EPSAlbumListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSAlbumListController.swift; sourceTree = "<group>"; };
+		4BCDBD132BE8C31200372F5C /* EPSAlbumListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSAlbumListModel.swift; sourceTree = "<group>"; };
+		4BCDBD142BE8C31200372F5C /* EPSAnimationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSAnimationUtils.swift; sourceTree = "<group>"; };
+		4BCDBD152BE8C31200372F5C /* EPSCameraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSCameraCell.swift; sourceTree = "<group>"; };
+		4BCDBD162BE8C31200372F5C /* EPSCameraConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSCameraConfiguration.swift; sourceTree = "<group>"; };
+		4BCDBD172BE8C31200372F5C /* EPSCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		4BCDBD182BE8C31200372F5C /* EPSCustomAlertProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSCustomAlertProtocol.swift; sourceTree = "<group>"; };
+		4BCDBD192BE8C31200372F5C /* EPSImageEditorConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSImageEditorConfiguration.swift; sourceTree = "<group>"; };
+		4BCDBD1A2BE8C31200372F5C /* EPSEmbedAlbumListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSEmbedAlbumListView.swift; sourceTree = "<group>"; };
+		4BCDBD1B2BE8C31200372F5C /* EPSEnlargeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSEnlargeButton.swift; sourceTree = "<group>"; };
+		4BCDBD1C2BE8C31200372F5C /* EPSFetchImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSFetchImageOperation.swift; sourceTree = "<group>"; };
+		4BCDBD1D2BE8C31200372F5C /* EPSGeneralDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSGeneralDefine.swift; sourceTree = "<group>"; };
+		4BCDBD1E2BE8C31200372F5C /* EPSImageNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSImageNavController.swift; sourceTree = "<group>"; };
+		4BCDBD1F2BE8C31200372F5C /* EPSImagePreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSImagePreviewController.swift; sourceTree = "<group>"; };
+		4BCDBD202BE8C31200372F5C /* EPSLanguageDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSLanguageDefine.swift; sourceTree = "<group>"; };
+		4BCDBD212BE8C31200372F5C /* EPSPhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoBrowser.swift; sourceTree = "<group>"; };
+		4BCDBD222BE8C31200372F5C /* EPSPhotoConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoConfiguration.swift; sourceTree = "<group>"; };
+		4BCDBD232BE8C31200372F5C /* EPSPhotoConfiguration+Chaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EPSPhotoConfiguration+Chaining.swift"; sourceTree = "<group>"; };
+		4BCDBD242BE8C31200372F5C /* EPSPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoManager.swift; sourceTree = "<group>"; };
+		4BCDBD252BE8C31200372F5C /* EPSPhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoModel.swift; sourceTree = "<group>"; };
+		4BCDBD262BE8C31200372F5C /* EPSPhotoPreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoPreviewCell.swift; sourceTree = "<group>"; };
+		4BCDBD272BE8C31200372F5C /* EPSPhotoPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoPreviewController.swift; sourceTree = "<group>"; };
+		4BCDBD282BE8C31200372F5C /* EPSPhotoPreviewSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoPreviewSheet.swift; sourceTree = "<group>"; };
+		4BCDBD292BE8C31200372F5C /* EPSPhotoUIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSPhotoUIConfiguration.swift; sourceTree = "<group>"; };
+		4BCDBD2A2BE8C31200372F5C /* EPSPhotoUIConfiguration+Chaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EPSPhotoUIConfiguration+Chaining.swift"; sourceTree = "<group>"; };
+		4BCDBD2B2BE8C31200372F5C /* EPSProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSProgressHUD.swift; sourceTree = "<group>"; };
+		4BCDBD2C2BE8C31200372F5C /* EPSProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSProgressView.swift; sourceTree = "<group>"; };
+		4BCDBD2D2BE8C31200372F5C /* EPSResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSResultModel.swift; sourceTree = "<group>"; };
+		4BCDBD2E2BE8C31200372F5C /* EPSThumbnailPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSThumbnailPhotoCell.swift; sourceTree = "<group>"; };
+		4BCDBD2F2BE8C31200372F5C /* EPSThumbnailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSThumbnailViewController.swift; sourceTree = "<group>"; };
+		4BCDBD302BE8C31200372F5C /* EPSVideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSVideoManager.swift; sourceTree = "<group>"; };
+		4BCDBD312BE8C31200372F5C /* EPSWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSWeakProxy.h; sourceTree = "<group>"; };
+		4BCDBD322BE8C31200372F5C /* EPSWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSWeakProxy.m; sourceTree = "<group>"; };
+		4BCDBD332BE8C31200372F5C /* ZLWeakProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLWeakProxy.swift; sourceTree = "<group>"; };
+		4BCDBDBC2BE8CD0900372F5C /* ZLPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZLPhotoBrowser.bundle; sourceTree = "<group>"; };
+		4BCDBDBE2BE8E3C000372F5C /* EPSImageStickerContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSImageStickerContainerView.swift; sourceTree = "<group>"; };
+		4BCDBDC62BE8E68100372F5C /* ConstraintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintView.swift; sourceTree = "<group>"; };
+		4BCDBDC72BE8E68200372F5C /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		4BCDBDC82BE8E68200372F5C /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		4BCDBDC92BE8E68200372F5C /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		4BCDBDCA2BE8E68200372F5C /* ConstraintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConfig.swift; sourceTree = "<group>"; };
+		4BCDBDCB2BE8E68200372F5C /* ConstraintInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintInsets.swift; sourceTree = "<group>"; };
+		4BCDBDCC2BE8E68200372F5C /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		4BCDBDCD2BE8E68200372F5C /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
+		4BCDBDCE2BE8E68200372F5C /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		4BCDBDCF2BE8E68200372F5C /* ConstraintRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
+		4BCDBDD02BE8E68200372F5C /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		4BCDBDD12BE8E68200372F5C /* ConstraintDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDSL.swift; sourceTree = "<group>"; };
+		4BCDBDD22BE8E68200372F5C /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
+		4BCDBDD32BE8E68200372F5C /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		4BCDBDD42BE8E68300372F5C /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
+		4BCDBDD52BE8E68300372F5C /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
+		4BCDBDD62BE8E68300372F5C /* Debugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
+		4BCDBDD72BE8E68300372F5C /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		4BCDBDD82BE8E68300372F5C /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		4BCDBDD92BE8E68300372F5C /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
+		4BCDBDDA2BE8E68300372F5C /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		4BCDBDDB2BE8E68300372F5C /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
+		4BCDBDDC2BE8E68300372F5C /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
+		4BCDBDDD2BE8E68300372F5C /* ConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintItem.swift; sourceTree = "<group>"; };
+		4BCDBDDE2BE8E68300372F5C /* ConstraintPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintPriority.swift; sourceTree = "<group>"; };
+		4BCDBDDF2BE8E68300372F5C /* ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
+		4BCDBDE02BE8E68300372F5C /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
+		4BCDBDE12BE8E68300372F5C /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
+		4BCDBDE22BE8E68400372F5C /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
+		4BCDBDE32BE8E68400372F5C /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
+		4BCDBDE42BE8E68400372F5C /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		4BCDBDE52BE8E68400372F5C /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
+		4BCDBDE62BE8E68400372F5C /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
+		4BCDBDE72BE8E68400372F5C /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		4BCDBDE82BE8E68400372F5C /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		4BCDBDE92BE8E68400372F5C /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
+		4BCDBDEA2BE8E68400372F5C /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeLabelSectionHeaderView.h; sourceTree = "<group>"; };
 		4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeLabelSectionHeaderView.m; sourceTree = "<group>"; };
 		4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4BDF7C2C2BFF9949002DF23C /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		4BDF7C2D2BFF9949002DF23C /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		4BDF7C302BFFABB4002DF23C /* EPSCreditPurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCreditPurchaseViewController.h; sourceTree = "<group>"; };
+		4BDF7C312BFFABB4002DF23C /* EPSCreditPurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCreditPurchaseViewController.m; sourceTree = "<group>"; };
+		4BDF7C342BFFAE53002DF23C /* EPSCurrentCreditFullView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCurrentCreditFullView.h; sourceTree = "<group>"; };
+		4BDF7C352BFFAE53002DF23C /* EPSCurrentCreditFullView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCurrentCreditFullView.m; sourceTree = "<group>"; };
+		4BDF7C372BFFB705002DF23C /* EPSCreditProductView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCreditProductView.h; sourceTree = "<group>"; };
+		4BDF7C382BFFB705002DF23C /* EPSCreditProductView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCreditProductView.m; sourceTree = "<group>"; };
+		4BDF7C3A2BFFBFEA002DF23C /* EPSCurrentCreditMiniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCurrentCreditMiniView.h; sourceTree = "<group>"; };
+		4BDF7C3B2BFFBFEA002DF23C /* EPSCurrentCreditMiniView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSCurrentCreditMiniView.m; sourceTree = "<group>"; };
+		4BE8993A2BFB1C260063D85B /* SJAttributesRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAttributesRecorder.h; sourceTree = "<group>"; };
+		4BE8993B2BFB1C260063D85B /* SJAttributesRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAttributesRecorder.m; sourceTree = "<group>"; };
+		4BE8993C2BFB1C260063D85B /* SJAttributeWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAttributeWorker.h; sourceTree = "<group>"; };
+		4BE8993D2BFB1C260063D85B /* SJAttributeWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAttributeWorker.m; sourceTree = "<group>"; };
+		4BE8993F2BFB1C260063D85B /* SJUIKitAttributesDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJUIKitAttributesDefines.h; sourceTree = "<group>"; };
+		4BE899402BFB1C260063D85B /* SJUIKitTextMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJUIKitTextMaker.h; sourceTree = "<group>"; };
+		4BE899412BFB1C260063D85B /* SJUIKitTextMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJUIKitTextMaker.m; sourceTree = "<group>"; };
+		4BE899422BFB1C260063D85B /* SJUTAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJUTAttributes.h; sourceTree = "<group>"; };
+		4BE899432BFB1C260063D85B /* SJUTAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJUTAttributes.m; sourceTree = "<group>"; };
+		4BE899442BFB1C260063D85B /* SJUTRangeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJUTRangeHandler.h; sourceTree = "<group>"; };
+		4BE899452BFB1C260063D85B /* SJUTRangeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJUTRangeHandler.m; sourceTree = "<group>"; };
+		4BE899462BFB1C260063D85B /* SJUTRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJUTRecorder.h; sourceTree = "<group>"; };
+		4BE899472BFB1C260063D85B /* SJUTRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJUTRecorder.m; sourceTree = "<group>"; };
+		4BE899482BFB1C260063D85B /* SJUTRegexHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJUTRegexHandler.h; sourceTree = "<group>"; };
+		4BE899492BFB1C260063D85B /* SJUTRegexHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJUTRegexHandler.m; sourceTree = "<group>"; };
+		4BE8994B2BFB1C260063D85B /* NSAttributedString+SJMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+SJMake.h"; sourceTree = "<group>"; };
+		4BE8994C2BFB1C260063D85B /* NSAttributedString+SJMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+SJMake.m"; sourceTree = "<group>"; };
+		4BE8994D2BFB1C260063D85B /* SJAttributesFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAttributesFactory.h; sourceTree = "<group>"; };
+		4BE8994F2BFB1C260063D85B /* SJAttributesStringMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAttributesStringMaker.swift; sourceTree = "<group>"; };
+		4BE899512BFB1C260063D85B /* SJUIKitTextMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJUIKitTextMaker.swift; sourceTree = "<group>"; };
+		4BF5F7302BFB71CB0032DC02 /* EPSAniGANResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSAniGANResultViewController.h; sourceTree = "<group>"; };
+		4BF5F7312BFB71CB0032DC02 /* EPSAniGANResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAniGANResultViewController.m; sourceTree = "<group>"; };
+		4BF5F7352BFB72760032DC02 /* EPSAniGANResultSecondaryToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSAniGANResultSecondaryToolView.h; sourceTree = "<group>"; };
+		4BF5F7362BFB72760032DC02 /* EPSAniGANResultSecondaryToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAniGANResultSecondaryToolView.m; sourceTree = "<group>"; };
+		4BF5F7392BFB7A540032DC02 /* EPSAniGANResultToolCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSAniGANResultToolCell.h; sourceTree = "<group>"; };
+		4BF5F73A2BFB7A540032DC02 /* EPSAniGANResultToolCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAniGANResultToolCell.m; sourceTree = "<group>"; };
+		4BF5F73D2BFB81C90032DC02 /* EPSSimplifiedToolModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSimplifiedToolModel.h; sourceTree = "<group>"; };
+		4BF5F73E2BFB81C90032DC02 /* EPSSimplifiedToolModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSimplifiedToolModel.m; sourceTree = "<group>"; };
+		4BF5F7412BFBB6E00032DC02 /* EPSSimplifiedFilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSSimplifiedFilterModel.h; sourceTree = "<group>"; };
+		4BF5F7422BFBB6E00032DC02 /* EPSSimplifiedFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSSimplifiedFilterModel.m; sourceTree = "<group>"; };
+		4BF5F7442BFBB76C0032DC02 /* EPSAniGANFilterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSAniGANFilterCell.h; sourceTree = "<group>"; };
+		4BF5F7452BFBB76C0032DC02 /* EPSAniGANFilterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAniGANFilterCell.m; sourceTree = "<group>"; };
+		4BF5F7482BFBD3120032DC02 /* EPSHomeBannerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeBannerCell.h; sourceTree = "<group>"; };
+		4BF5F7492BFBD3120032DC02 /* EPSHomeBannerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeBannerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BA62F912BD591ED00956EE4 /* FirebaseMessaging in Frameworks */,
+				4B9D3C3F2BECF00000861879 /* FMDB in Frameworks */,
 				4BA62F802BD5918000956EE4 /* AppAuth in Frameworks */,
 				4BA62F8D2BD591ED00956EE4 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				4BA62F932BD591ED00956EE4 /* FirebaseStorage in Frameworks */,
@@ -197,43 +536,124 @@
 		4B062AA12BD9969A00E84BD6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				4B062AA42BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg */,
+				4BC1BFE52C0454C40097C83D /* launchscreen_background2.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		4B38131B2BDFF262008B2BFB /* Cell */ = {
+		4B2759C82BFCFF8F004BBB3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4BB5BF832BDF947C000708EC /* EPSHomeHeaderCell.h */,
-				4BB5BF842BDF947C000708EC /* EPSHomeHeaderCell.m */,
-				4B38131D2BDFF33E008B2BFB /* EPSLastCreatedCell.h */,
-				4B38131E2BDFF33E008B2BFB /* EPSLastCreatedCell.m */,
-				4B7104DE2B5994070035C450 /* EPSModelOptionCell.h */,
-				4B7104E82B5994070035C450 /* EPSModelOptionCell.m */,
+				4B881B6C2B6C0D2A004D1505 /* EPSSignInViewController.h */,
+				4B881B6D2B6C0D2A004D1505 /* EPSSignInViewController.m */,
 			);
-			path = Cell;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		4B38131C2BDFF267008B2BFB /* Header */ = {
+		4B2759C92BFCFF97004BBB3C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */,
-				4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */,
+				4B9D3C3A2BEBEE8800861879 /* EPSUserSessionManager.h */,
+				4B9D3C3B2BEBEE8800861879 /* EPSUserSessionManager.m */,
 			);
-			path = Header;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4B2759CA2BFD008D004BBB3C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				4B2759CB2BFD00D2004BBB3C /* EPSHistoryViewController.h */,
+				4B2759CC2BFD00D2004BBB3C /* EPSHistoryViewController.m */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		4B2759D12BFD0F28004BBB3C /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				4B2759D22BFD0F40004BBB3C /* EPSTabBarController.h */,
+				4B2759D32BFD0F40004BBB3C /* EPSTabBarController.m */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		4B2759DB2BFD198A004BBB3C /* EPSGradientLabel */ = {
+			isa = PBXGroup;
+			children = (
+				4B2759DC2BFD19A2004BBB3C /* EPSGradientLabel.swift */,
+			);
+			path = EPSGradientLabel;
+			sourceTree = "<group>";
+		};
+		4B31E8CA2BFE468C0044260E /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF7C332BFFAE24002DF23C /* View */,
+				4B31E8DE2BFE57320044260E /* Controller */,
+				4B31E8DD2BFE572A0044260E /* Manager */,
+				4B31E8DC2BFE571E0044260E /* Model */,
+				4B31E8DB2BFE57100044260E /* Configuration */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
+		4B31E8DB2BFE57100044260E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4B31E8CB2BFE47E00044260E /* Configuration.storekit */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4B31E8DC2BFE571E0044260E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B31E8D62BFE50A90044260E /* EPSStoreKitItems.h */,
+				4B31E8D12BFE50A90044260E /* EPSStoreKitItems.m */,
+				4B31E8D52BFE50A90044260E /* EPSStoreKitProducts.h */,
+				4B31E8D22BFE50A90044260E /* EPSStoreKitProducts.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B31E8DD2BFE572A0044260E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4B31E8D72BFE50A90044260E /* EPSStoreKitManager.h */,
+				4B31E8D42BFE50A90044260E /* EPSStoreKitManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4B31E8DE2BFE57320044260E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B31E8DF2BFE574E0044260E /* EPSSubscriptionViewController.h */,
+				4B31E8E02BFE574E0044260E /* EPSSubscriptionViewController.m */,
+				4BDF7C302BFFABB4002DF23C /* EPSCreditPurchaseViewController.h */,
+				4BDF7C312BFFABB4002DF23C /* EPSCreditPurchaseViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4B4D10132B963243000DDF1F /* Ultilities */ = {
 			isa = PBXGroup;
 			children = (
-				4B4D10182B963A2D000DDF1F /* CommonView */,
 				4B4D10152B9632C4000DDF1F /* EPSDefines.h */,
 				4B4D10162B9632C4000DDF1F /* EPSDefines.m */,
+				4B4D10182B963A2D000DDF1F /* CommonView */,
+				4B9D3C362BEA89CD00861879 /* Database */,
+				4B2759DB2BFD198A004BBB3C /* EPSGradientLabel */,
+				4B77009E2BFE7BDF00C935E8 /* EPSSegmentedControl */,
 				4BAB7DF92B97048100B4F524 /* Extension */,
+				4B4F22BC2C03318A00187AF6 /* Formatter */,
 				4BC728EE2BD9902000B27C34 /* Helper */,
 				4BA62FDA2BD5945900956EE4 /* Masonry */,
+				4B4F229D2C01EAAD00187AF6 /* RequestBuilder */,
+				4BE899392BFB1C050063D85B /* SJAttributesFactory */,
+				4BCDBDC52BE8E66B00372F5C /* SnapKit */,
 				4BC728E72BD9664D00B27C34 /* Toast */,
+				4B4F22942C01DDB200187AF6 /* TSHelper */,
 			);
 			path = Ultilities;
 			sourceTree = "<group>";
@@ -241,12 +661,12 @@
 		4B4D10182B963A2D000DDF1F /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
-				4B4D10192B963A54000DDF1F /* EPSSystemButton.h */,
-				4B4D101A2B963A54000DDF1F /* EPSSystemButton.m */,
-				4BBD9D702BCFC2C4009C9ECD /* EPSLoadingView.h */,
-				4BBD9D712BCFC2C4009C9ECD /* EPSLoadingView.m */,
 				4BC728EB2BD9822A00B27C34 /* EPSBlurImageView.h */,
 				4BC728EC2BD9822A00B27C34 /* EPSBlurImageView.m */,
+				4BBD9D702BCFC2C4009C9ECD /* EPSLoadingView.h */,
+				4BBD9D712BCFC2C4009C9ECD /* EPSLoadingView.m */,
+				4B4D10192B963A54000DDF1F /* EPSSystemButton.h */,
+				4B4D101A2B963A54000DDF1F /* EPSSystemButton.m */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -263,44 +683,59 @@
 		4B4E48712BD841DC0004CE99 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				4B4E48722BD8423E0004CE99 /* EPSResultViewController.h */,
-				4B4E48732BD8423E0004CE99 /* EPSResultViewController.m */,
-				4BC728E12BD9581100B27C34 /* EPSShareableImage.h */,
-				4BC728E22BD9581100B27C34 /* EPSShareableImage.m */,
+				4BF5F7472BFBC52B0032DC02 /* Ultilities */,
+				4BF5F73C2BFB81A40032DC02 /* Model */,
+				4BF5F7342BFB723B0032DC02 /* View */,
+				4BF5F7332BFB72310032DC02 /* Controller */,
 			);
 			path = Result;
 			sourceTree = "<group>";
 		};
-		4B7104F62B5994760035C450 /* Home */ = {
+		4B4F228F2C01D51700187AF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4BD12ED72BCED9FE00B8DA16 /* Model */,
-				4BD12ED62BCED9F800B8DA16 /* Controller */,
-				4BD12ED52BCED9F100B8DA16 /* View */,
+				4B4F22902C01D57D00187AF6 /* EPSUserSession.h */,
+				4B4F22912C01D57D00187AF6 /* EPSUserSession.m */,
+				4B4F22B72C03281100187AF6 /* EPSUserSubscription.h */,
+				4B4F22B82C03281100187AF6 /* EPSUserSubscription.m */,
 			);
-			path = Home;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		4B7104F72B5994810035C450 /* Picker */ = {
+		4B4F22942C01DDB200187AF6 /* TSHelper */ = {
 			isa = PBXGroup;
 			children = (
-				4B7104E52B5994070035C450 /* EPSPickerViewController.h */,
-				4B7104E32B5994070035C450 /* EPSPickerViewController.m */,
+				4B4F22952C01DDC800187AF6 /* TSHelper.h */,
+				4B4F22962C01DDC800187AF6 /* TSHelper.m */,
 			);
-			path = Picker;
+			path = TSHelper;
 			sourceTree = "<group>";
 		};
-		4B7104F82B5994B00035C450 /* Edit */ = {
+		4B4F229D2C01EAAD00187AF6 /* RequestBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				4B7104DA2B5994060035C450 /* ToolView.h */,
-				4B7104E22B5994070035C450 /* ToolView.m */,
-				4B7104E62B5994070035C450 /* ToolViewCell.h */,
-				4B7104DB2B5994070035C450 /* ToolViewCell.m */,
-				4B7104E42B5994070035C450 /* EPSEditorViewController.h */,
-				4B7104E72B5994070035C450 /* EPSEditorViewController.m */,
+				4B4F229E2C01EAD500187AF6 /* EPSRequestBuilder.h */,
+				4B4F229F2C01EAD500187AF6 /* EPSRequestBuilder.m */,
 			);
-			path = Edit;
+			path = RequestBuilder;
+			sourceTree = "<group>";
+		};
+		4B4F22B32C031ED300187AF6 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4B4F22B42C031EF800187AF6 /* EPSUserInfoViewController.h */,
+				4B4F22B52C031EF800187AF6 /* EPSUserInfoViewController.m */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		4B4F22BC2C03318A00187AF6 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				4B4F22BA2C03318A00187AF6 /* NSDateFormatter+MediumDateFormatter.h */,
+				4B4F22BB2C03318A00187AF6 /* NSDateFormatter+MediumDateFormatter.m */,
+			);
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 		4B7104FA2B59953F0035C450 /* CoreML */ = {
@@ -314,11 +749,33 @@
 		4B7104FB2B5996560035C450 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				4BA62F7C2BD58E2F00956EE4 /* Controller */,
-				4BA62F7B2BD58E2800956EE4 /* View */,
 				4BA62F7A2BD58E2100956EE4 /* Model */,
+				4BA62F7B2BD58E2800956EE4 /* View */,
+				4BA62F7C2BD58E2F00956EE4 /* Controller */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		4B77009E2BFE7BDF00C935E8 /* EPSSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				4B7700982BFE7BDF00C935E8 /* EPSGradientView.h */,
+				4B7700992BFE7BDF00C935E8 /* EPSGradientView.m */,
+				4B77009A2BFE7BDF00C935E8 /* EPSSegmentedControl.h */,
+				4B77009B2BFE7BDF00C935E8 /* EPSSegmentedControl.m */,
+				4B77009C2BFE7BDF00C935E8 /* UIView+EPSRemoveConstraints.h */,
+				4B77009D2BFE7BDF00C935E8 /* UIView+EPSRemoveConstraints.m */,
+			);
+			path = EPSSegmentedControl;
+			sourceTree = "<group>";
+		};
+		4B9D3C362BEA89CD00861879 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4B9D3C372BEA89E900861879 /* EPSDatabaseManager.h */,
+				4B9D3C382BEA89E900861879 /* EPSDatabaseManager.m */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		4BA0B37E2B5846850066E6CB = {
@@ -341,17 +798,20 @@
 		4BA0B3892B5846850066E6CB /* AniPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				4B31E8CA2BFE468C0044260E /* IAP */,
+				4B2759D12BFD0F28004BBB3C /* Tab Bar */,
+				4B2759CA2BFD008D004BBB3C /* History */,
+				4BBEDB4E2BFA6E1500BF5F9E /* AniGAN */,
+				4BCDBCEB2BE8C2EC00372F5C /* Photo Picker */,
 				4B062AA12BD9969A00E84BD6 /* Resource */,
 				4B4E486A2BD83C7A0004CE99 /* Generator */,
-				4BBD9D732BCFC5BC009C9ECD /* Waiting */,
 				4B4E48712BD841DC0004CE99 /* Result */,
 				4B4D10132B963243000DDF1F /* Ultilities */,
 				4BC55C9D2B5FAE5D006B9022 /* Model */,
 				4B7104FA2B59953F0035C450 /* CoreML */,
-				4B7104F82B5994B00035C450 /* Edit */,
-				4B7104F62B5994760035C450 /* Home */,
-				4B7104F72B5994810035C450 /* Picker */,
+				4BB3C2692BF3536100F5C9EF /* Home */,
 				4B7104FB2B5996560035C450 /* Profile */,
+				4B4F22B32C031ED300187AF6 /* UserInfo */,
 				4BF7826A2B962CC600003B86 /* SignIn */,
 				4BA0B38A2B5846850066E6CB /* AppDelegate.h */,
 				4BA0B38B2B5846850066E6CB /* AppDelegate.m */,
@@ -376,8 +836,12 @@
 		4BA62F7B2BD58E2800956EE4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B8765B52B5DA4E8008822BF /* EPSSettingCell.h */,
-				4B8765B62B5DA4E8008822BF /* EPSSettingCell.m */,
+				4B2759D52BFD12F6004BBB3C /* EPSProfileHeaderCell.h */,
+				4B2759D62BFD12F6004BBB3C /* EPSProfileHeaderCell.m */,
+				4B2759D82BFD186F004BBB3C /* EPSProfileSubscriptionPromoteCell.h */,
+				4B2759D92BFD186F004BBB3C /* EPSProfileSubscriptionPromoteCell.m */,
+				4B8765B52B5DA4E8008822BF /* EPSProfileSettingCell.h */,
+				4B8765B62B5DA4E8008822BF /* EPSProfileSettingCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,8 +849,8 @@
 		4BA62F7C2BD58E2F00956EE4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4B7104FC2B59969F0035C450 /* EPSSettingsViewController.h */,
-				4B7104FD2B59969F0035C450 /* EPSSettingsViewController.m */,
+				4B7104FC2B59969F0035C450 /* EPSProfileViewController.h */,
+				4B7104FD2B59969F0035C450 /* EPSProfileViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -426,31 +890,68 @@
 		4BAB7DF92B97048100B4F524 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4B4F22A42C02655400187AF6 /* NSDictionary+Accessors.h */,
+				4B4F22A52C02655500187AF6 /* NSDictionary+Accessors.m */,
+				4B3813182BDFACE9008B2BFB /* NSString+EPS.h */,
+				4B3813192BDFACE9008B2BFB /* NSString+EPS.m */,
 				4BAB7DFA2B9704CD00B4F524 /* UIColor+EPS.h */,
 				4BAB7DFB2B9704CD00B4F524 /* UIColor+EPS.m */,
 				4BBD9D6D2BCFAC73009C9ECD /* UIImage+EPS.h */,
 				4BBD9D6E2BCFAC73009C9ECD /* UIImage+EPS.m */,
-				4B3813182BDFACE9008B2BFB /* NSString+EPS.h */,
-				4B3813192BDFACE9008B2BFB /* NSString+EPS.m */,
+				4BDF7C2C2BFF9949002DF23C /* UIButtonExtension.swift */,
+				4BDF7C2D2BFF9949002DF23C /* UIImageExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		4BBD9D732BCFC5BC009C9ECD /* Waiting */ = {
+		4BB3C2692BF3536100F5C9EF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4BBD9D742BCFC5D5009C9ECD /* Controller */,
+				4BB3C26D2BF356A300F5C9EF /* View */,
+				4BB3C26F2BF356AE00F5C9EF /* Controller */,
 			);
-			path = Waiting;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		4BBD9D742BCFC5D5009C9ECD /* Controller */ = {
+		4BB3C26D2BF356A300F5C9EF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4BBD9D752BCFC5FB009C9ECD /* EPSResultWaitingViewController.h */,
-				4BBD9D762BCFC5FB009C9ECD /* EPSResultWaitingViewController.m */,
+				4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */,
+				4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */,
+				4BB3C2702BF356C800F5C9EF /* EPSHomeToolCell.h */,
+				4BB3C2712BF356C800F5C9EF /* EPSHomeToolCell.m */,
+				4B38131D2BDFF33E008B2BFB /* EPSLastCreatedCell.h */,
+				4B38131E2BDFF33E008B2BFB /* EPSLastCreatedCell.m */,
+				4B429C8E2BFA02BA000B7F26 /* EPSHomeEditCell.h */,
+				4B429C8F2BFA02BA000B7F26 /* EPSHomeEditCell.m */,
+				4BF5F7482BFBD3120032DC02 /* EPSHomeBannerCell.h */,
+				4BF5F7492BFBD3120032DC02 /* EPSHomeBannerCell.m */,
+				4B45FB222BF9D82E00EB1CFF /* EPSOverlayHeaderView.h */,
+				4B45FB232BF9D82E00EB1CFF /* EPSOverlayHeaderView.m */,
+				4B45FB252BF9DD6700EB1CFF /* EPSHomeToolCollectionView.h */,
+				4B45FB262BF9DD6700EB1CFF /* EPSHomeToolCollectionView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BB3C26F2BF356AE00F5C9EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BB3C26A2BF3537F00F5C9EF /* EPSHomeViewController.h */,
+				4BB3C26B2BF3537F00F5C9EF /* EPSHomeViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BBEDB4E2BFA6E1500BF5F9E /* AniGAN */ = {
+			isa = PBXGroup;
+			children = (
+				4BE8990E2BFB17E60063D85B /* Ultilities */,
+				4BF5F7402BFBB6D00032DC02 /* Model */,
+				4BE8990B2BFB17B80063D85B /* View */,
+				4BE8990C2BFB17BF0063D85B /* Controller */,
+			);
+			path = AniGAN;
 			sourceTree = "<group>";
 		};
 		4BC55C9D2B5FAE5D006B9022 /* Model */ = {
@@ -476,35 +977,170 @@
 			children = (
 				4BC728EF2BD9904F00B27C34 /* EPSImageHelper.h */,
 				4BC728F02BD9904F00B27C34 /* EPSImageHelper.m */,
+				4B666D352BE7F9E3009D997B /* AniPhoto-Bridging-Header.h */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		4BD12ED52BCED9F100B8DA16 /* View */ = {
+		4BCDBCEB2BE8C2EC00372F5C /* Photo Picker */ = {
 			isa = PBXGroup;
 			children = (
-				4B38131C2BDFF267008B2BFB /* Header */,
-				4B38131B2BDFF262008B2BFB /* Cell */,
+				4BCDBDBC2BE8CD0900372F5C /* ZLPhotoBrowser.bundle */,
+				4BCDBCFF2BE8C31100372F5C /* Animation */,
+				4BCDBD012BE8C31100372F5C /* Camera */,
+				4BCDBD0F2BE8C31200372F5C /* Edit */,
+				4BCDBCFB2BE8C31100372F5C /* Extensions */,
+				4BCDBD342BE8C31200372F5C /* General */,
 			);
-			path = View;
+			path = "Photo Picker";
 			sourceTree = "<group>";
 		};
-		4BD12ED62BCED9F800B8DA16 /* Controller */ = {
+		4BCDBCFB2BE8C31100372F5C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4B7104E02B5994070035C450 /* EPSHomeViewController.h */,
-				4B7104EA2B5994070035C450 /* EPSHomeViewController.m */,
+				4BCDBCEC2BE8C31100372F5C /* Array+AniPhoto.swift */,
+				4BCDBCED2BE8C31100372F5C /* Bool+AniPhoto.swift */,
+				4BCDBCEE2BE8C31100372F5C /* Bundle+AniPhoto.swift */,
+				4BCDBCEF2BE8C31100372F5C /* Cell+AniPhoto.swift */,
+				4BCDBCF02BE8C31100372F5C /* CGFloat+AniPhoto.swift */,
+				4BCDBCF12BE8C31100372F5C /* NSError+AniPhoto.swift */,
+				4BCDBCF22BE8C31100372F5C /* PHAsset+AniPhoto.swift */,
+				4BCDBCF32BE8C31100372F5C /* String+AniPhoto.swift */,
+				4BCDBCF42BE8C31100372F5C /* UIColor+AniPhoto.swift */,
+				4BCDBCF52BE8C31100372F5C /* UIFont+AniPhoto.swift */,
+				4BCDBCF62BE8C31100372F5C /* UIGraphicsImageRenderer+AniPhoto.swift */,
+				4BCDBCF72BE8C31100372F5C /* UIImage+AniPhoto.swift */,
+				4BCDBCF82BE8C31100372F5C /* UIScrollView+AniPhoto.swift */,
+				4BCDBCF92BE8C31100372F5C /* UIView+AniPhoto.swift */,
+				4BCDBCFA2BE8C31100372F5C /* UIViewController+AniPhoto.swift */,
 			);
-			path = Controller;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4BD12ED72BCED9FE00B8DA16 /* Model */ = {
+		4BCDBCFF2BE8C31100372F5C /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				4BD12ED22BCED79600B8DA16 /* EPSModelOption.h */,
-				4BD12ED32BCED79600B8DA16 /* EPSModelOption.m */,
+				4BCDBCFC2BE8C31100372F5C /* EPSClipImageDismissAnimatedTransition.swift */,
+				4BCDBCFD2BE8C31100372F5C /* EPSPhotoPreviewAnimatedTransition.swift */,
+				4BCDBCFE2BE8C31100372F5C /* EPSPhotoPreviewPopInteractiveTransition.swift */,
 			);
-			path = Model;
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		4BCDBD012BE8C31100372F5C /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBD002BE8C31100372F5C /* EPSCustomCamera.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		4BCDBD0F2BE8C31200372F5C /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBDBE2BE8E3C000372F5C /* EPSImageStickerContainerView.swift */,
+				4BCDBD022BE8C31200372F5C /* EPSAdjustSlider.swift */,
+				4BCDBD032BE8C31200372F5C /* EPSBaseStickerState.swift */,
+				4BCDBD042BE8C31200372F5C /* EPSBaseStickerView.swift */,
+				4BCDBD052BE8C31200372F5C /* EPSClipImageViewController.swift */,
+				4BCDBD062BE8C31200372F5C /* EPSImageEditorViewController.swift */,
+				4BCDBD072BE8C31200372F5C /* EPSEditorManager.swift */,
+				4BCDBD082BE8C31200372F5C /* EPSEditToolCell.swift */,
+				4BCDBD092BE8C31200372F5C /* EPSVideoEditorViewController.swift */,
+				4BCDBD0A2BE8C31200372F5C /* EPSFilter.swift */,
+				4BCDBD0B2BE8C31200372F5C /* EPSImageStickerView.swift */,
+				4BCDBD0C2BE8C31200372F5C /* EPSInputTextViewController.swift */,
+				4BCDBD0D2BE8C31200372F5C /* EPSPaths.swift */,
+				4BCDBD0E2BE8C31200372F5C /* EPSTextStickerView.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		4BCDBD342BE8C31200372F5C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBD102BE8C31200372F5C /* EPSAddPhotoCell.swift */,
+				4BCDBD112BE8C31200372F5C /* EPSAlbumListCell.swift */,
+				4BCDBD122BE8C31200372F5C /* EPSAlbumListController.swift */,
+				4BCDBD132BE8C31200372F5C /* EPSAlbumListModel.swift */,
+				4BCDBD142BE8C31200372F5C /* EPSAnimationUtils.swift */,
+				4BCDBD152BE8C31200372F5C /* EPSCameraCell.swift */,
+				4BCDBD162BE8C31200372F5C /* EPSCameraConfiguration.swift */,
+				4BCDBD172BE8C31200372F5C /* EPSCollectionViewFlowLayout.swift */,
+				4BCDBD182BE8C31200372F5C /* EPSCustomAlertProtocol.swift */,
+				4BCDBD192BE8C31200372F5C /* EPSImageEditorConfiguration.swift */,
+				4BCDBD1A2BE8C31200372F5C /* EPSEmbedAlbumListView.swift */,
+				4BCDBD1B2BE8C31200372F5C /* EPSEnlargeButton.swift */,
+				4BCDBD1C2BE8C31200372F5C /* EPSFetchImageOperation.swift */,
+				4BCDBD1D2BE8C31200372F5C /* EPSGeneralDefine.swift */,
+				4BCDBD1E2BE8C31200372F5C /* EPSImageNavController.swift */,
+				4BCDBD1F2BE8C31200372F5C /* EPSImagePreviewController.swift */,
+				4BCDBD202BE8C31200372F5C /* EPSLanguageDefine.swift */,
+				4BCDBD212BE8C31200372F5C /* EPSPhotoBrowser.swift */,
+				4BCDBD222BE8C31200372F5C /* EPSPhotoConfiguration.swift */,
+				4BCDBD232BE8C31200372F5C /* EPSPhotoConfiguration+Chaining.swift */,
+				4BCDBD242BE8C31200372F5C /* EPSPhotoManager.swift */,
+				4BCDBD252BE8C31200372F5C /* EPSPhotoModel.swift */,
+				4BCDBD262BE8C31200372F5C /* EPSPhotoPreviewCell.swift */,
+				4BCDBD272BE8C31200372F5C /* EPSPhotoPreviewController.swift */,
+				4BCDBD282BE8C31200372F5C /* EPSPhotoPreviewSheet.swift */,
+				4BCDBD292BE8C31200372F5C /* EPSPhotoUIConfiguration.swift */,
+				4BCDBD2A2BE8C31200372F5C /* EPSPhotoUIConfiguration+Chaining.swift */,
+				4BCDBD2B2BE8C31200372F5C /* EPSProgressHUD.swift */,
+				4BCDBD2C2BE8C31200372F5C /* EPSProgressView.swift */,
+				4BCDBD2D2BE8C31200372F5C /* EPSResultModel.swift */,
+				4BCDBD2E2BE8C31200372F5C /* EPSThumbnailPhotoCell.swift */,
+				4BCDBD2F2BE8C31200372F5C /* EPSThumbnailViewController.swift */,
+				4BCDBD302BE8C31200372F5C /* EPSVideoManager.swift */,
+				4BCDBD312BE8C31200372F5C /* EPSWeakProxy.h */,
+				4BCDBD322BE8C31200372F5C /* EPSWeakProxy.m */,
+				4BCDBD332BE8C31200372F5C /* ZLWeakProxy.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		4BCDBDC52BE8E66B00372F5C /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBDDA2BE8E68300372F5C /* Constraint.swift */,
+				4BCDBDE02BE8E68300372F5C /* ConstraintAttributes.swift */,
+				4BCDBDCA2BE8E68200372F5C /* ConstraintConfig.swift */,
+				4BCDBDEA2BE8E68400372F5C /* ConstraintConstantTarget.swift */,
+				4BCDBDE32BE8E68400372F5C /* ConstraintDescription.swift */,
+				4BCDBDD52BE8E68300372F5C /* ConstraintDirectionalInsets.swift */,
+				4BCDBDE12BE8E68300372F5C /* ConstraintDirectionalInsetTarget.swift */,
+				4BCDBDD12BE8E68200372F5C /* ConstraintDSL.swift */,
+				4BCDBDCB2BE8E68200372F5C /* ConstraintInsets.swift */,
+				4BCDBDCC2BE8E68200372F5C /* ConstraintInsetTarget.swift */,
+				4BCDBDDD2BE8E68300372F5C /* ConstraintItem.swift */,
+				4BCDBDD22BE8E68200372F5C /* ConstraintLayoutGuide.swift */,
+				4BCDBDD82BE8E68300372F5C /* ConstraintLayoutGuide+Extensions.swift */,
+				4BCDBDE62BE8E68400372F5C /* ConstraintLayoutGuideDSL.swift */,
+				4BCDBDE52BE8E68400372F5C /* ConstraintLayoutSupport.swift */,
+				4BCDBDD42BE8E68300372F5C /* ConstraintLayoutSupportDSL.swift */,
+				4BCDBDDF2BE8E68300372F5C /* ConstraintMaker.swift */,
+				4BCDBDCE2BE8E68200372F5C /* ConstraintMakerEditable.swift */,
+				4BCDBDE72BE8E68400372F5C /* ConstraintMakerExtendable.swift */,
+				4BCDBDD32BE8E68200372F5C /* ConstraintMakerFinalizable.swift */,
+				4BCDBDD92BE8E68300372F5C /* ConstraintMakerPriortizable.swift */,
+				4BCDBDC82BE8E68200372F5C /* ConstraintMakerRelatable.swift */,
+				4BCDBDDB2BE8E68300372F5C /* ConstraintMakerRelatable+Extensions.swift */,
+				4BCDBDDC2BE8E68300372F5C /* ConstraintMultiplierTarget.swift */,
+				4BCDBDD02BE8E68200372F5C /* ConstraintOffsetTarget.swift */,
+				4BCDBDDE2BE8E68300372F5C /* ConstraintPriority.swift */,
+				4BCDBDCD2BE8E68200372F5C /* ConstraintPriorityTarget.swift */,
+				4BCDBDE22BE8E68400372F5C /* ConstraintRelatableTarget.swift */,
+				4BCDBDCF2BE8E68200372F5C /* ConstraintRelation.swift */,
+				4BCDBDC62BE8E68100372F5C /* ConstraintView.swift */,
+				4BCDBDE42BE8E68400372F5C /* ConstraintView+Extensions.swift */,
+				4BCDBDC72BE8E68200372F5C /* ConstraintViewDSL.swift */,
+				4BCDBDD62BE8E68300372F5C /* Debugging.swift */,
+				4BCDBDE92BE8E68400372F5C /* LayoutConstraint.swift */,
+				4BCDBDD72BE8E68300372F5C /* LayoutConstraintItem.swift */,
+				4BCDBDE82BE8E68400372F5C /* Typealiases.swift */,
+				4BCDBDC92BE8E68200372F5C /* UILayoutSupport+Extensions.swift */,
+			);
+			path = SnapKit;
 			sourceTree = "<group>";
 		};
 		4BD50ADE2BA014E8001F2DFC /* Frameworks */ = {
@@ -514,11 +1150,167 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4BDF7C332BFFAE24002DF23C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BDF7C372BFFB705002DF23C /* EPSCreditProductView.h */,
+				4BDF7C382BFFB705002DF23C /* EPSCreditProductView.m */,
+				4BDF7C342BFFAE53002DF23C /* EPSCurrentCreditFullView.h */,
+				4BDF7C352BFFAE53002DF23C /* EPSCurrentCreditFullView.m */,
+				4BDF7C3A2BFFBFEA002DF23C /* EPSCurrentCreditMiniView.h */,
+				4BDF7C3B2BFFBFEA002DF23C /* EPSCurrentCreditMiniView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BE8990B2BFB17B80063D85B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BBEDB522BFA74A500BF5F9E /* EPSAniGANEmptyView.h */,
+				4BBEDB532BFA74A500BF5F9E /* EPSAniGANEmptyView.m */,
+				4BF5F7442BFBB76C0032DC02 /* EPSAniGANFilterCell.h */,
+				4BF5F7452BFBB76C0032DC02 /* EPSAniGANFilterCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BE8990C2BFB17BF0063D85B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BBEDB4F2BFA6E3600BF5F9E /* EPSAniGANViewController.h */,
+				4BBEDB502BFA6E3600BF5F9E /* EPSAniGANViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BE8990E2BFB17E60063D85B /* Ultilities */ = {
+			isa = PBXGroup;
+			children = (
+				4BBEDB552BFA8D0C00BF5F9E /* EPSAniGANTransition.swift */,
+			);
+			path = Ultilities;
+			sourceTree = "<group>";
+		};
+		4BE899392BFB1C050063D85B /* SJAttributesFactory */ = {
+			isa = PBXGroup;
+			children = (
+				4BE8994E2BFB1C260063D85B /* SJAttributesFactory */,
+				4BE899522BFB1C260063D85B /* SJAttributesStringMaker */,
+			);
+			path = SJAttributesFactory;
+			sourceTree = "<group>";
+		};
+		4BE8993E2BFB1C260063D85B /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				4BE8993A2BFB1C260063D85B /* SJAttributesRecorder.h */,
+				4BE8993B2BFB1C260063D85B /* SJAttributesRecorder.m */,
+				4BE8993C2BFB1C260063D85B /* SJAttributeWorker.h */,
+				4BE8993D2BFB1C260063D85B /* SJAttributeWorker.m */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		4BE8994A2BFB1C260063D85B /* UIKitText */ = {
+			isa = PBXGroup;
+			children = (
+				4BE8993F2BFB1C260063D85B /* SJUIKitAttributesDefines.h */,
+				4BE899402BFB1C260063D85B /* SJUIKitTextMaker.h */,
+				4BE899412BFB1C260063D85B /* SJUIKitTextMaker.m */,
+				4BE899422BFB1C260063D85B /* SJUTAttributes.h */,
+				4BE899432BFB1C260063D85B /* SJUTAttributes.m */,
+				4BE899442BFB1C260063D85B /* SJUTRangeHandler.h */,
+				4BE899452BFB1C260063D85B /* SJUTRangeHandler.m */,
+				4BE899462BFB1C260063D85B /* SJUTRecorder.h */,
+				4BE899472BFB1C260063D85B /* SJUTRecorder.m */,
+				4BE899482BFB1C260063D85B /* SJUTRegexHandler.h */,
+				4BE899492BFB1C260063D85B /* SJUTRegexHandler.m */,
+			);
+			path = UIKitText;
+			sourceTree = "<group>";
+		};
+		4BE8994E2BFB1C260063D85B /* SJAttributesFactory */ = {
+			isa = PBXGroup;
+			children = (
+				4BE8993E2BFB1C260063D85B /* Deprecated */,
+				4BE8994A2BFB1C260063D85B /* UIKitText */,
+				4BE8994B2BFB1C260063D85B /* NSAttributedString+SJMake.h */,
+				4BE8994C2BFB1C260063D85B /* NSAttributedString+SJMake.m */,
+				4BE8994D2BFB1C260063D85B /* SJAttributesFactory.h */,
+			);
+			path = SJAttributesFactory;
+			sourceTree = "<group>";
+		};
+		4BE899502BFB1C260063D85B /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				4BE8994F2BFB1C260063D85B /* SJAttributesStringMaker.swift */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		4BE899522BFB1C260063D85B /* SJAttributesStringMaker */ = {
+			isa = PBXGroup;
+			children = (
+				4BE899502BFB1C260063D85B /* Deprecated */,
+				4BE899512BFB1C260063D85B /* SJUIKitTextMaker.swift */,
+			);
+			path = SJAttributesStringMaker;
+			sourceTree = "<group>";
+		};
+		4BF5F7332BFB72310032DC02 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5F7302BFB71CB0032DC02 /* EPSAniGANResultViewController.h */,
+				4BF5F7312BFB71CB0032DC02 /* EPSAniGANResultViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BF5F7342BFB723B0032DC02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5F7392BFB7A540032DC02 /* EPSAniGANResultToolCell.h */,
+				4BF5F73A2BFB7A540032DC02 /* EPSAniGANResultToolCell.m */,
+				4BF5F7352BFB72760032DC02 /* EPSAniGANResultSecondaryToolView.h */,
+				4BF5F7362BFB72760032DC02 /* EPSAniGANResultSecondaryToolView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BF5F73C2BFB81A40032DC02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5F73D2BFB81C90032DC02 /* EPSSimplifiedToolModel.h */,
+				4BF5F73E2BFB81C90032DC02 /* EPSSimplifiedToolModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BF5F7402BFBB6D00032DC02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5F7412BFBB6E00032DC02 /* EPSSimplifiedFilterModel.h */,
+				4BF5F7422BFBB6E00032DC02 /* EPSSimplifiedFilterModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BF5F7472BFBC52B0032DC02 /* Ultilities */ = {
+			isa = PBXGroup;
+			children = (
+				4BC728E12BD9581100B27C34 /* EPSShareableImage.h */,
+				4BC728E22BD9581100B27C34 /* EPSShareableImage.m */,
+			);
+			path = Ultilities;
+			sourceTree = "<group>";
+		};
 		4BF7826A2B962CC600003B86 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				4B881B6C2B6C0D2A004D1505 /* EPSSignInViewController.h */,
-				4B881B6D2B6C0D2A004D1505 /* EPSSignInViewController.m */,
+				4B2759C92BFCFF97004BBB3C /* Manager */,
+				4B4F228F2C01D51700187AF6 /* Model */,
+				4B2759C82BFCFF8F004BBB3C /* Controller */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -552,6 +1344,7 @@
 				4BA62F902BD591ED00956EE4 /* FirebaseMessaging */,
 				4BA62F922BD591ED00956EE4 /* FirebaseStorage */,
 				4BA62F952BD5920A00956EE4 /* SDWebImage */,
+				4B9D3C3E2BECF00000861879 /* FMDB */,
 			);
 			productName = AniPhoto;
 			productReference = 4BA0B3872B5846850066E6CB /* AniPhoto.app */;
@@ -568,7 +1361,7 @@
 				TargetAttributes = {
 					4BA0B3862B5846850066E6CB = {
 						CreatedOnToolsVersion = 15.0.1;
-						LastSwiftMigration = 1500;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -586,6 +1379,7 @@
 				4BA62F832BD591ED00956EE4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				4BA62F942BD5920A00956EE4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				4BC728E42BD964F300B27C34 /* XCRemoteSwiftPackageReference "toast-swift" */,
+				4B9D3C3D2BECF00000861879 /* XCRemoteSwiftPackageReference "fmdb" */,
 			);
 			productRefGroup = 4BA0B3882B5846850066E6CB /* Products */;
 			projectDirPath = "";
@@ -601,10 +1395,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B062AA52BD997B500E84BD6 /* 4A2A3BFA-E434-4EC7-A874-2ACBFE7CD5DF.jpeg in Resources */,
 				4BA0B39A2B58468E0066E6CB /* LaunchScreen.storyboard in Resources */,
 				4BA0B3972B58468E0066E6CB /* Assets.xcassets in Resources */,
 				4BD50ADC2BA01322001F2DFC /* GoogleService-Info.plist in Resources */,
+				4BC1BFE62C0454C50097C83D /* launchscreen_background2.jpg in Resources */,
+				4BCDBDBD2BE8CD0900372F5C /* ZLPhotoBrowser.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,47 +1410,194 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BCDBE0D2BE8E68400372F5C /* Typealiases.swift in Sources */,
+				4BDF7C322BFFABB4002DF23C /* EPSCreditPurchaseViewController.m in Sources */,
 				4BA62FF52BD5985900956EE4 /* NSArray+MASAdditions.m in Sources */,
+				4B4F22B92C03281100187AF6 /* EPSUserSubscription.m in Sources */,
 				4B8765B42B5D9E38008822BF /* EPSSettingSectionConfiguration.m in Sources */,
+				4BCDBD592BE8C31200372F5C /* EPSAnimationUtils.swift in Sources */,
+				4BCDBD582BE8C31200372F5C /* EPSAlbumListModel.swift in Sources */,
+				4BCDBD4B2BE8C31200372F5C /* EPSClipImageViewController.swift in Sources */,
+				4B7700A02BFE7BDF00C935E8 /* EPSSegmentedControl.m in Sources */,
+				4BCDBE092BE8E68400372F5C /* ConstraintView+Extensions.swift in Sources */,
+				4BCDBD752BE8C31200372F5C /* EPSVideoManager.swift in Sources */,
 				4BA62FF62BD5985900956EE4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				4B9D3C3C2BEBEE8800861879 /* EPSUserSessionManager.m in Sources */,
+				4BCDBD602BE8C31200372F5C /* EPSEnlargeButton.swift in Sources */,
+				4BCDBD412BE8C31200372F5C /* UIScrollView+AniPhoto.swift in Sources */,
+				4BCDBD482BE8C31200372F5C /* EPSAdjustSlider.swift in Sources */,
+				4BCDBD6B2BE8C31200372F5C /* EPSPhotoPreviewCell.swift in Sources */,
+				4BF5F7462BFBB76C0032DC02 /* EPSAniGANFilterCell.m in Sources */,
+				4B31E8D82BFE50A90044260E /* EPSStoreKitItems.m in Sources */,
+				4BCDBD722BE8C31200372F5C /* EPSResultModel.swift in Sources */,
+				4BCDBD5E2BE8C31200372F5C /* EPSImageEditorConfiguration.swift in Sources */,
+				4BCDBD652BE8C31200372F5C /* EPSLanguageDefine.swift in Sources */,
+				4BCDBD492BE8C31200372F5C /* EPSBaseStickerState.swift in Sources */,
+				4BF5F74A2BFBD3120032DC02 /* EPSHomeBannerCell.m in Sources */,
 				4BA62FFD2BD5985900956EE4 /* MASCompositeConstraint.m in Sources */,
+				4BCDBD5A2BE8C31200372F5C /* EPSCameraCell.swift in Sources */,
+				4B2759D42BFD0F40004BBB3C /* EPSTabBarController.m in Sources */,
 				4B4D10172B9632C4000DDF1F /* EPSDefines.m in Sources */,
 				4BA62FFA2BD5985900956EE4 /* ViewController+MASAdditions.m in Sources */,
+				4BE899542BFB1C260063D85B /* SJAttributeWorker.m in Sources */,
 				4BA62FF92BD5985900956EE4 /* MASConstraintMaker.m in Sources */,
+				4BCDBD432BE8C31200372F5C /* UIViewController+AniPhoto.swift in Sources */,
+				4BBEDB512BFA6E3600BF5F9E /* EPSAniGANViewController.m in Sources */,
+				4BCDBD4F2BE8C31200372F5C /* EPSVideoEditorViewController.swift in Sources */,
+				4BCDBD572BE8C31200372F5C /* EPSAlbumListController.swift in Sources */,
+				4BE899592BFB1C260063D85B /* SJUTRegexHandler.m in Sources */,
+				4BCDBD522BE8C31200372F5C /* EPSInputTextViewController.swift in Sources */,
+				4BE899582BFB1C260063D85B /* SJUTRecorder.m in Sources */,
+				4BE899552BFB1C260063D85B /* SJUIKitTextMaker.m in Sources */,
 				4BC55CA02B5FAEEB006B9022 /* EPSUserEntity.m in Sources */,
+				4BDF7C3C2BFFBFEA002DF23C /* EPSCurrentCreditMiniView.m in Sources */,
+				4BCDBD562BE8C31200372F5C /* EPSAlbumListCell.swift in Sources */,
 				4B881B6E2B6C0D2A004D1505 /* EPSSignInViewController.m in Sources */,
+				4BCDBDF72BE8E68400372F5C /* ConstraintLayoutGuide.swift in Sources */,
+				4BCDBD442BE8C31200372F5C /* EPSClipImageDismissAnimatedTransition.swift in Sources */,
+				4BCDBD5F2BE8C31200372F5C /* EPSEmbedAlbumListView.swift in Sources */,
+				4BCDBD4E2BE8C31200372F5C /* EPSEditToolCell.swift in Sources */,
 				4BC728E32BD9581100B27C34 /* EPSShareableImage.m in Sources */,
+				4BCDBDEF2BE8E68400372F5C /* ConstraintConfig.swift in Sources */,
+				4BCDBD672BE8C31200372F5C /* EPSPhotoConfiguration.swift in Sources */,
+				4B2759DA2BFD186F004BBB3C /* EPSProfileSubscriptionPromoteCell.m in Sources */,
+				4BBEDB562BFA8D0C00BF5F9E /* EPSAniGANTransition.swift in Sources */,
 				4BA0B38C2B5846850066E6CB /* AppDelegate.m in Sources */,
+				4BCDBD4D2BE8C31200372F5C /* EPSEditorManager.swift in Sources */,
+				4B77009F2BFE7BDF00C935E8 /* EPSGradientView.m in Sources */,
+				4BB3C2722BF356C800F5C9EF /* EPSHomeToolCell.m in Sources */,
+				4BF5F7322BFB71CB0032DC02 /* EPSAniGANResultViewController.m in Sources */,
+				4BCDBD382BE8C31200372F5C /* Cell+AniPhoto.swift in Sources */,
 				4B7104F52B5994160035C450 /* AnimeGANv2_1024.mlmodel in Sources */,
+				4BCDBDF52BE8E68400372F5C /* ConstraintOffsetTarget.swift in Sources */,
+				4BF5F7432BFBB6E00032DC02 /* EPSSimplifiedFilterModel.m in Sources */,
+				4BCDBE0B2BE8E68400372F5C /* ConstraintLayoutGuideDSL.swift in Sources */,
+				4B45FB272BF9DD6700EB1CFF /* EPSHomeToolCollectionView.m in Sources */,
 				4B38131F2BDFF33E008B2BFB /* EPSLastCreatedCell.m in Sources */,
-				4B7104F12B5994070035C450 /* EPSModelOptionCell.m in Sources */,
+				4BCDBD3F2BE8C31200372F5C /* UIGraphicsImageRenderer+AniPhoto.swift in Sources */,
+				4BCDBD392BE8C31200372F5C /* CGFloat+AniPhoto.swift in Sources */,
+				4BCDBD372BE8C31200372F5C /* Bundle+AniPhoto.swift in Sources */,
+				4BCDBD702BE8C31200372F5C /* EPSProgressHUD.swift in Sources */,
+				4BCDBD3B2BE8C31200372F5C /* PHAsset+AniPhoto.swift in Sources */,
+				4BCDBD6C2BE8C31200372F5C /* EPSPhotoPreviewController.swift in Sources */,
+				4BCDBD6A2BE8C31200372F5C /* EPSPhotoModel.swift in Sources */,
+				4BCDBD692BE8C31200372F5C /* EPSPhotoManager.swift in Sources */,
+				4BCDBD472BE8C31200372F5C /* EPSCustomCamera.swift in Sources */,
+				4BE899532BFB1C260063D85B /* SJAttributesRecorder.m in Sources */,
 				4BC728F12BD9904F00B27C34 /* EPSImageHelper.m in Sources */,
+				4BCDBDEB2BE8E68400372F5C /* ConstraintView.swift in Sources */,
 				4BA62FFC2BD5985900956EE4 /* View+MASAdditions.m in Sources */,
-				4B4E48742BD8423E0004CE99 /* EPSResultViewController.m in Sources */,
+				4BCDBD5D2BE8C31200372F5C /* EPSCustomAlertProtocol.swift in Sources */,
+				4BDF7C2F2BFF9949002DF23C /* UIImageExtension.swift in Sources */,
 				4BC728ED2BD9822A00B27C34 /* EPSBlurImageView.m in Sources */,
 				4B4E48702BD83D130004CE99 /* EPSPhotoGenerator.m in Sources */,
+				4BBEDB542BFA74A500BF5F9E /* EPSAniGANEmptyView.m in Sources */,
+				4BCDBD642BE8C31200372F5C /* EPSImagePreviewController.swift in Sources */,
 				4BA62FFE2BD5985900956EE4 /* MASViewAttribute.m in Sources */,
+				4B2759DD2BFD19A2004BBB3C /* EPSGradientLabel.swift in Sources */,
 				4BAB7DFC2B9704CD00B4F524 /* UIColor+EPS.m in Sources */,
+				4BCDBD6D2BE8C31200372F5C /* EPSPhotoPreviewSheet.swift in Sources */,
+				4BCDBE082BE8E68400372F5C /* ConstraintDescription.swift in Sources */,
+				4BCDBDED2BE8E68400372F5C /* ConstraintMakerRelatable.swift in Sources */,
+				4BCDBDFC2BE8E68400372F5C /* LayoutConstraintItem.swift in Sources */,
+				4B7700A12BFE7BDF00C935E8 /* UIView+EPSRemoveConstraints.m in Sources */,
+				4BCDBE062BE8E68400372F5C /* ConstraintDirectionalInsetTarget.swift in Sources */,
+				4BF5F73B2BFB7A540032DC02 /* EPSAniGANResultToolCell.m in Sources */,
+				4B31E8E12BFE574E0044260E /* EPSSubscriptionViewController.m in Sources */,
 				4BBD9D6F2BCFAC73009C9ECD /* UIImage+EPS.m in Sources */,
+				4BCDBE042BE8E68400372F5C /* ConstraintMaker.swift in Sources */,
+				4BCDBE032BE8E68400372F5C /* ConstraintPriority.swift in Sources */,
 				4BA62FF72BD5985900956EE4 /* MASConstraint.m in Sources */,
 				4BC728EA2BD9665D00B27C34 /* UIView+Toast.m in Sources */,
-				4BBD9D772BCFC5FB009C9ECD /* EPSResultWaitingViewController.m in Sources */,
-				4B7104F02B5994070035C450 /* EPSEditorViewController.m in Sources */,
-				4B7104EF2B5994070035C450 /* EPSPickerViewController.m in Sources */,
-				4B7104EB2B5994070035C450 /* ToolViewCell.m in Sources */,
-				4BB5BF852BDF947C000708EC /* EPSHomeHeaderCell.m in Sources */,
+				4BCDBD5B2BE8C31200372F5C /* EPSCameraConfiguration.swift in Sources */,
+				4B4F22922C01D57D00187AF6 /* EPSUserSession.m in Sources */,
+				4BCDBD662BE8C31200372F5C /* EPSPhotoBrowser.swift in Sources */,
+				4B31E8DA2BFE50A90044260E /* EPSStoreKitManager.m in Sources */,
+				4BCDBDFB2BE8E68400372F5C /* Debugging.swift in Sources */,
+				4BCDBD682BE8C31200372F5C /* EPSPhotoConfiguration+Chaining.swift in Sources */,
+				4BCDBD6F2BE8C31200372F5C /* EPSPhotoUIConfiguration+Chaining.swift in Sources */,
+				4BCDBDEE2BE8E68400372F5C /* UILayoutSupport+Extensions.swift in Sources */,
+				4B429C902BFA02BA000B7F26 /* EPSHomeEditCell.m in Sources */,
+				4BCDBE0A2BE8E68400372F5C /* ConstraintLayoutSupport.swift in Sources */,
+				4BE899572BFB1C260063D85B /* SJUTRangeHandler.m in Sources */,
+				4BCDBD762BE8C31200372F5C /* EPSWeakProxy.m in Sources */,
+				4BCDBDF82BE8E68400372F5C /* ConstraintMakerFinalizable.swift in Sources */,
+				4BCDBD732BE8C31200372F5C /* EPSThumbnailPhotoCell.swift in Sources */,
+				4BCDBE0E2BE8E68400372F5C /* LayoutConstraint.swift in Sources */,
+				4BCDBDEC2BE8E68400372F5C /* ConstraintViewDSL.swift in Sources */,
+				4BB3C26C2BF3537F00F5C9EF /* EPSHomeViewController.m in Sources */,
+				4BCDBD3E2BE8C31200372F5C /* UIFont+AniPhoto.swift in Sources */,
+				4B31E8D92BFE50A90044260E /* EPSStoreKitProducts.m in Sources */,
+				4BCDBE022BE8E68400372F5C /* ConstraintItem.swift in Sources */,
+				4BCDBD532BE8C31200372F5C /* EPSPaths.swift in Sources */,
+				4BCDBDF22BE8E68400372F5C /* ConstraintPriorityTarget.swift in Sources */,
+				4BCDBDF62BE8E68400372F5C /* ConstraintDSL.swift in Sources */,
+				4BCDBE002BE8E68400372F5C /* ConstraintMakerRelatable+Extensions.swift in Sources */,
+				4BE899562BFB1C260063D85B /* SJUTAttributes.m in Sources */,
+				4BDF7C2E2BFF9949002DF23C /* UIButtonExtension.swift in Sources */,
+				4BCDBE052BE8E68400372F5C /* ConstraintAttributes.swift in Sources */,
 				4BA0B39D2B58468E0066E6CB /* main.m in Sources */,
+				4BCDBD5C2BE8C31200372F5C /* EPSCollectionViewFlowLayout.swift in Sources */,
+				4BCDBE012BE8E68400372F5C /* ConstraintMultiplierTarget.swift in Sources */,
+				4BCDBDFE2BE8E68400372F5C /* ConstraintMakerPriortizable.swift in Sources */,
 				4BBD9D722BCFC2C4009C9ECD /* EPSLoadingView.m in Sources */,
+				4BE8995B2BFB1C260063D85B /* SJAttributesStringMaker.swift in Sources */,
+				4BCDBDBF2BE8E3C000372F5C /* EPSImageStickerContainerView.swift in Sources */,
+				4BCDBD6E2BE8C31200372F5C /* EPSPhotoUIConfiguration.swift in Sources */,
+				4B2759CD2BFD00D2004BBB3C /* EPSHistoryViewController.m in Sources */,
 				4BA62FFB2BD5985900956EE4 /* MASViewConstraint.m in Sources */,
+				4BCDBD502BE8C31200372F5C /* EPSFilter.swift in Sources */,
+				4B4F22BD2C03318A00187AF6 /* NSDateFormatter+MediumDateFormatter.m in Sources */,
 				4BA62FF82BD5985900956EE4 /* MASLayoutConstraint.m in Sources */,
+				4BCDBDFD2BE8E68400372F5C /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				4B38131A2BDFACE9008B2BFB /* NSString+EPS.m in Sources */,
+				4BDF7C362BFFAE53002DF23C /* EPSCurrentCreditFullView.m in Sources */,
+				4BCDBD612BE8C31200372F5C /* EPSFetchImageOperation.swift in Sources */,
+				4BDF7C392BFFB705002DF23C /* EPSCreditProductView.m in Sources */,
+				4BCDBDF32BE8E68400372F5C /* ConstraintMakerEditable.swift in Sources */,
+				4BCDBD3C2BE8C31200372F5C /* String+AniPhoto.swift in Sources */,
 				4B4D101B2B963A54000DDF1F /* EPSSystemButton.m in Sources */,
-				4B7104EE2B5994070035C450 /* ToolView.m in Sources */,
-				4B7104FE2B59969F0035C450 /* EPSSettingsViewController.m in Sources */,
+				4BCDBE0F2BE8E68400372F5C /* ConstraintConstantTarget.swift in Sources */,
+				4BCDBD632BE8C31200372F5C /* EPSImageNavController.swift in Sources */,
+				4BE8995C2BFB1C260063D85B /* SJUIKitTextMaker.swift in Sources */,
+				4BCDBD712BE8C31200372F5C /* EPSProgressView.swift in Sources */,
+				4BCDBDFA2BE8E68400372F5C /* ConstraintDirectionalInsets.swift in Sources */,
+				4BCDBDF02BE8E68400372F5C /* ConstraintInsets.swift in Sources */,
+				4BE8995A2BFB1C260063D85B /* NSAttributedString+SJMake.m in Sources */,
+				4BCDBE072BE8E68400372F5C /* ConstraintRelatableTarget.swift in Sources */,
+				4BCDBD552BE8C31200372F5C /* EPSAddPhotoCell.swift in Sources */,
+				4BCDBD422BE8C31200372F5C /* UIView+AniPhoto.swift in Sources */,
+				4BCDBD742BE8C31200372F5C /* EPSThumbnailViewController.swift in Sources */,
+				4BCDBD4C2BE8C31200372F5C /* EPSImageEditorViewController.swift in Sources */,
+				4B9D3C392BEA89E900861879 /* EPSDatabaseManager.m in Sources */,
+				4BCDBD402BE8C31200372F5C /* UIImage+AniPhoto.swift in Sources */,
+				4BCDBD3D2BE8C31200372F5C /* UIColor+AniPhoto.swift in Sources */,
+				4BCDBDF42BE8E68400372F5C /* ConstraintRelation.swift in Sources */,
+				4B7104FE2B59969F0035C450 /* EPSProfileViewController.m in Sources */,
+				4BCDBD352BE8C31200372F5C /* Array+AniPhoto.swift in Sources */,
+				4B4F22A02C01EAD500187AF6 /* EPSRequestBuilder.m in Sources */,
+				4B2759D72BFD12F6004BBB3C /* EPSProfileHeaderCell.m in Sources */,
+				4B4F22A62C02655500187AF6 /* NSDictionary+Accessors.m in Sources */,
+				4B4F22B62C031EF800187AF6 /* EPSUserInfoViewController.m in Sources */,
+				4B4F22972C01DDC800187AF6 /* TSHelper.m in Sources */,
+				4BCDBD512BE8C31200372F5C /* EPSImageStickerView.swift in Sources */,
+				4BCDBD452BE8C31200372F5C /* EPSPhotoPreviewAnimatedTransition.swift in Sources */,
+				4BCDBD542BE8C31200372F5C /* EPSTextStickerView.swift in Sources */,
+				4BCDBDF12BE8E68400372F5C /* ConstraintInsetTarget.swift in Sources */,
+				4BCDBD362BE8C31200372F5C /* Bool+AniPhoto.swift in Sources */,
 				4BD12EE62BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m in Sources */,
-				4B8765B72B5DA4E8008822BF /* EPSSettingCell.m in Sources */,
-				4B7104F32B5994070035C450 /* EPSHomeViewController.m in Sources */,
-				4BD12ED42BCED79600B8DA16 /* EPSModelOption.m in Sources */,
+				4B45FB242BF9D82E00EB1CFF /* EPSOverlayHeaderView.m in Sources */,
+				4B8765B72B5DA4E8008822BF /* EPSProfileSettingCell.m in Sources */,
+				4BCDBD3A2BE8C31200372F5C /* NSError+AniPhoto.swift in Sources */,
+				4BCDBD462BE8C31200372F5C /* EPSPhotoPreviewPopInteractiveTransition.swift in Sources */,
+				4BCDBD772BE8C31200372F5C /* ZLWeakProxy.swift in Sources */,
+				4BCDBDF92BE8E68400372F5C /* ConstraintLayoutSupportDSL.swift in Sources */,
+				4BF5F7372BFB72760032DC02 /* EPSAniGANResultSecondaryToolView.m in Sources */,
+				4BCDBD622BE8C31200372F5C /* EPSGeneralDefine.swift in Sources */,
+				4BF5F73F2BFB81C90032DC02 /* EPSSimplifiedToolModel.m in Sources */,
+				4BCDBE0C2BE8E68400372F5C /* ConstraintMakerExtendable.swift in Sources */,
+				4BCDBD4A2BE8C31200372F5C /* EPSBaseStickerView.swift in Sources */,
+				4BCDBDFF2BE8E68400372F5C /* Constraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,12 +1738,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = "Objective-C";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3FGV7F4AR4;
+				DEVELOPMENT_TEAM = S5UQWNYJJ2;
+				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AniPhoto/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take your photos";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to record video";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to save your photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to show photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -816,6 +1763,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhatCH.AniPhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AniPhoto/Ultilities/Helper/AniPhoto-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -829,12 +1777,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = "Objective-C";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3FGV7F4AR4;
+				DEVELOPMENT_TEAM = S5UQWNYJJ2;
+				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AniPhoto/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take your photos";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to record video";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to save your photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to show photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -849,6 +1802,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhatCH.AniPhoto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AniPhoto/Ultilities/Helper/AniPhoto-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -878,6 +1832,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4B9D3C3D2BECF00000861879 /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.10;
+			};
+		};
 		4BA62F7E2BD5918000956EE4 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/openid/AppAuth-iOS.git";
@@ -913,6 +1875,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4B9D3C3E2BECF00000861879 /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B9D3C3D2BECF00000861879 /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
 		4BA62F7F2BD5918000956EE4 /* AppAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4BA62F7E2BD5918000956EE4 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;

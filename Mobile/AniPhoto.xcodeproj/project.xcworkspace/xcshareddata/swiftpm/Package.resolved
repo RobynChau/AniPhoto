@@ -1,5 +1,5 @@
 {
-  "originHash" : "a869a580d344d0665127024d0bb5c3f8a30916296cf32a179ee5a1f0aaa823ba",
+  "originHash" : "9716830f8609e37835ad9bdcce1f18a9caee4cf6770717f72e450ced0ecdef68",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -35,6 +35,15 @@
       "state" : {
         "revision" : "42eae77a0af79e9c3f41df04a23c76f05cfdda77",
         "version" : "10.24.0"
+      }
+    },
+    {
+      "identity" : "fmdb",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ccgus/fmdb.git",
+      "state" : {
+        "revision" : "306c1f8421581d16a8d4a0e919766bb3195dc52b",
+        "version" : "2.7.10"
       }
     },
     {

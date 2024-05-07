@@ -11,7 +11,7 @@
 
 - (UIImage *)scaleToSize:(CGSize)size {
     UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
-    CGRect rect = {0,0,size.width,size.height};
+    CGRect rect = {0,0, size.width, size.height};
     [self drawInRect:rect];
     UIImage* result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -97,5 +97,14 @@
     return theImage;
 }
 
++ (UIImage *)imageWithColor:(UIColor *)color andBounds:(CGRect)imgBounds {
+    UIGraphicsBeginImageContextWithOptions(imgBounds.size, NO, 0);
+    [color setFill];
+    UIRectFill(imgBounds);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return img;
+}
 
 @end

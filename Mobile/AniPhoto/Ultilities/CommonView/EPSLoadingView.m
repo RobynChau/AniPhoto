@@ -34,9 +34,8 @@
         _shouldShowLabel = shouldShowLabel;
         _shouldDim = shouldDim;
 
-        self.backgroundColor = UIColor.blackColor;
         if (_shouldDim) {
-            self.backgroundColor = UIColor.blackColor;
+            self.backgroundColor = UIColor.darkGrayColor;
             self.alpha = 0.5;
         } else {
             self.backgroundColor = UIColor.clearColor;
@@ -81,6 +80,7 @@
 }
 
 - (void)setHidden:(BOOL)hidden {
+    [self setUserInteractionEnabled:YES];
     [super setHidden:hidden];
     if (hidden) {
         [self.spinner stopAnimating];

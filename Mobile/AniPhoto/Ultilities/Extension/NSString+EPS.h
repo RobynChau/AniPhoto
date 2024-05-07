@@ -2,7 +2,7 @@
 //  NSString+EPS.h
 //  AniPhoto
 //
-//  Created by LAP14667 on 29/4/24.
+//  Created by PhatCH on 29/4/24.
 //
 
 #import <UIKit/UIKit.h>
