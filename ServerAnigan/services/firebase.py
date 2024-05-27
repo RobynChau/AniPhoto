@@ -17,7 +17,9 @@ class FirebaseManager:
         else:
             firebase_cred = credentials.Certificate('adminSdk.json')
             firebase_admin.initialize_app(firebase_cred, {
-                'storageBucket': 'xetpasta.appspot.com'
+                'storageBucket': 'ios-entertainment-photography.appspot.com'
             })
             self.bucket = storage.bucket()
             FirebaseManager.__instance = self
+
+firebase_manager = FirebaseManager.get_instance()

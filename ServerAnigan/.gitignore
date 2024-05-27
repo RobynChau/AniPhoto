@@ -37,3 +37,8 @@ adminSdk.json
 # pytorch model
 *.pt
 *.ptl
+
+result_dir/*
+
+AK391_*/*
+trusted_list

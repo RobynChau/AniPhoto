@@ -1,13 +1,16 @@
 from fastapi import FastAPI
-from colabcode import ColabCode
-from services.firebase import FirebaseManager
-from services.model import ModelManager
-from routers import process, splash
+from routers import splash
+from routers.v2 import user as userV2,  images, ml, quota, subscription, history
 
 app = FastAPI()
 
-firebase_manager = FirebaseManager.get_instance()
-model_manager = ModelManager.get_instance()
-
-app.include_router(process.router)
 app.include_router(splash.router)
+app.include_router(userV2.router)
+app.include_router(images.router)
+app.include_router(ml.router)
+app.include_router(quota.router)
+app.include_router(subscription.router)
+app.include_router(history.router)
+
+
+

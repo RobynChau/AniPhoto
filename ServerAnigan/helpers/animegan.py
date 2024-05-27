@@ -1,22 +1,13 @@
 import os
 import requests
 import torch
-import uuid
 import urllib.parse
-
 from io import BytesIO
-from fastapi import APIRouter
 from PIL import Image
-from pydantic import BaseModel
 from torchvision import transforms
 
-from services.firebase import FirebaseManager
-from services.model import ModelManager
-
-router = APIRouter(
-    prefix="/process",
-    tags=["process"]
-)
+from services.model import model_manager
+from services.firebase import firebase_manager
 
 def postprocess_image(image):
     image = image.squeeze(0)
@@ -25,19 +16,14 @@ def postprocess_image(image):
     image = transforms.ToPILImage()(image)
     return image
 
-class ProcessImageDataV2(BaseModel):
-    source_img_path: str
-
-@router.post("/")
-def process_images(data: ProcessImageDataV2):
-    firebase_manager = FirebaseManager.get_instance()
-    model_manager = ModelManager.get_instance()
-
-    bucket = firebase_manager.bucket
+def generate_anime_image(source_img_path: str):
+    """
+    Retrieve all images.
+    """
     modelV2 = model_manager.modelV2
 
     # Add your image processing logic here
-    input_image = Image.open(BytesIO(requests.get(data.source_img_path).content)).convert('RGB')
+    input_image = Image.open(BytesIO(requests.get(source_img_path).content)).convert('RGB')
     target_width = 512
     # Calculate the target height based on the original aspect ratio
     original_width, original_height = input_image.size
@@ -52,7 +38,6 @@ def process_images(data: ProcessImageDataV2):
     transform = transforms.Compose(transform_list)
     input_tensor = transform(input_image).unsqueeze(0).cpu()
     
-    
     output_dir = "result_dir"
     os.makedirs(output_dir, exist_ok=True)
     
@@ -63,14 +48,14 @@ def process_images(data: ProcessImageDataV2):
     output_image = postprocess_image(output_tensor)
     output_image.save(save_file_path)
     print(f"Result is saved to: {save_file_path}")
-    # Upload to firebase
-    unique_id = str(uuid.uuid4())
-    path = f"processed/{unique_id}.png"
-    quoted_path = urllib.parse.quote(path, safe='')
-    blob = bucket.blob(path)
-    blob.upload_from_filename(save_file_path)
+
+    return save_file_path
+    
+def upload_to_firebase(file_path:str, save_path: str):
+    bucket = firebase_manager.bucket
+    quoted_path = urllib.parse.quote(save_path, safe='')
+    blob = bucket.blob(save_path)
+    blob.upload_from_filename(file_path)
     firebase_url =  f"https://firebasestorage.googleapis.com/v0/b/{bucket.name}/o/{quoted_path}?alt=media"
     print(f"Image uploaded to Firebase: {firebase_url}")
-    return {
-        "processed_url" : firebase_url
-    }
+    return firebase_url
