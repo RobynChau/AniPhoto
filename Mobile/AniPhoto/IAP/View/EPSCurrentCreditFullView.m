@@ -49,7 +49,8 @@
         [self addSubview:_iconView];
 
         _creditNumLabel = [[UILabel alloc] init];
-        _creditNumLabel.text = @(EPSUserSessionManager.shared.userSession.totalCreditCount).stringValue;
+        NSInteger creditCount = EPSUserSessionManager.shared.userSession.totalCreditCount;
+        _creditNumLabel.text = creditCount == NSNotFound ? @"..." : @(creditCount).stringValue;
         _creditNumLabel.textColor = UIColor.blackColor;
         _creditNumLabel.font = [UIFont systemFontOfSize:30 weight:UIFontWeightBold];
         [self addSubview:_creditNumLabel];
@@ -88,6 +89,10 @@
         make.height.equalTo(@(creditSize.height));
     }];
     [super updateConstraints];
+}
+
+- (void)updateWithUserCredit:(NSInteger)totalCreditCount {
+    self.creditNumLabel.text = @(totalCreditCount).stringValue;
 }
 
 @end

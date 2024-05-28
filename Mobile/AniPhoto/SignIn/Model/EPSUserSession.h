@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) EPSUserSubscription *currentSubscription;
 
-- (instancetype)initWithAccessToken:(NSString *)accessToken;
+- (instancetype)initWithAccessToken:(nullable NSString *)accessToken;
 
 - (void)updateWithID:(NSString *)userID
                 name:(NSString *)userName
@@ -39,6 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isSubscribing;
 
 - (void)updateTempCreditCount:(NSInteger)tempCreditCount;
+
+- (void)signOutUserSession;
 
 @end
 

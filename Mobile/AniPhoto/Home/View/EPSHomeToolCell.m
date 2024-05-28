@@ -81,31 +81,37 @@
             self.circleView.backgroundColor = UIColor.darkGrayColor;
             self.imageView.image = [UIImage systemImageNamed:@"plus"];
             self.label.text = @"Edit";
+            self.accessibilityIdentifier = @"Edit";
             self.label.font = [UIFont systemFontOfSize:12 weight:UIFontWeightLight];
             break;
         case EPSHomeToolTypeAniGAN:
             self.circleView.backgroundColor = UIColor.secondarySystemGroupedBackgroundColor;
             self.imageView.image = [UIImage systemImageNamed:@"wand.and.stars"];
+            self.imageView.accessibilityIdentifier = @"AI Cartoon";
             self.label.font = [UIFont systemFontOfSize:12 weight:UIFontWeightLight];
             self.label.text = @"AI Cartoon";
+            self.accessibilityIdentifier = @"AI Cartoon";
             break;
         case EPSHomeToolTypeSticker:
             self.circleView.backgroundColor = UIColor.secondarySystemGroupedBackgroundColor;
             self.imageView.image = [UIImage imageNamed:@"zl_imageSticker"];
             self.label.font = [UIFont systemFontOfSize:12 weight:UIFontWeightLight];
             self.label.text = @"Sticker";
+            self.accessibilityIdentifier = @"Sticker";
             break;
         case EPSHomeToolTypeText:
             self.circleView.backgroundColor = UIColor.secondarySystemGroupedBackgroundColor;
             self.imageView.image = [UIImage imageNamed:@"zl_textSticker"];
             self.label.font = [UIFont systemFontOfSize:12 weight:UIFontWeightLight];
             self.label.text = @"Text";
+            self.accessibilityIdentifier = @"Text";
             break;
         case EPSHomeToolTypeFilter:
             self.circleView.backgroundColor = UIColor.secondarySystemGroupedBackgroundColor;
             self.imageView.image = [UIImage imageNamed:@"zl_filter"];
             self.label.font = [UIFont systemFontOfSize:12 weight:UIFontWeightLight];
             self.label.text = @"Filter";
+            self.accessibilityIdentifier = @"Filter";
             break;
     }
 }

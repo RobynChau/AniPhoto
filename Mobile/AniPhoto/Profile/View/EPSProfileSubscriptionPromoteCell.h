@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)reuseIdentifier;
 
-- (void)updateWithPromoteSubscription:(EPSSubscriptionPlanType)subscriptionType;
+- (void)updateWithPromoteSubscription;
 
 @end
 

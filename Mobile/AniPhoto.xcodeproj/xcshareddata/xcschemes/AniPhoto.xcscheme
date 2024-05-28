@@ -29,6 +29,30 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4BAA94912C08552B001A2F3E"
+               BuildableName = "AniPhotoUITests.xctest"
+               BlueprintName = "AniPhotoUITests"
+               ReferencedContainer = "container:AniPhoto.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4BAA94A02C085D49001A2F3E"
+               BuildableName = "AniPhotoUnitTests.xctest"
+               BlueprintName = "AniPhotoUnitTests"
+               ReferencedContainer = "container:AniPhoto.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

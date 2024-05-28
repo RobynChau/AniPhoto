@@ -288,6 +288,7 @@
                 [NSNotificationCenter.defaultCenter postNotificationName:kEPSStoreKitManagerDidFinishPurchaseSubscription object:nil];
             }];
         } else {
+            NSLog(@"PhatCH Error Buying Subscription");
             [TSHelper dispatchAsyncMainQueue:^{
                 [NSNotificationCenter.defaultCenter postNotificationName:kEPSStoreKitManagerDidFailPurchaseSubscription object:nil];
             }];
@@ -333,6 +334,7 @@
                 [NSNotificationCenter.defaultCenter postNotificationName:kEPSStoreKitManagerDidFinishPurchaseCredits object:nil];
             }];
         } else {
+            NSLog(@"PhatCH Error Buying Credit");
             [TSHelper dispatchAsyncMainQueue:^{
                 [NSNotificationCenter.defaultCenter postNotificationName:kEPSStoreKitManagerDidFailPurchaseCredits object:nil];
             }];

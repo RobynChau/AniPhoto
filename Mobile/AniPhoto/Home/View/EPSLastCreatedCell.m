@@ -33,7 +33,6 @@
     if (self) {
         _imageView = [[UIImageView alloc] init];
         _imageView.alpha = 0.5;
-        _imageView.image = [UIImage imageNamed:@"output"];
         [self addSubview:_imageView];
 
         _generateStatus = [[UILabel alloc] init];

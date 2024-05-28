@@ -15,6 +15,7 @@
 #import "EPSDatabaseManager.h"
 #import "EPSPhotoGenerator.h"
 #import "EPSDefines.h"
+#import "AniPhoto-Swift.h"
 
 @interface EPSAniGANResultViewController () <
 UICollectionViewDelegate,
@@ -134,29 +135,17 @@ EPSAniGANResultSecondaryToolViewDelegate
 
     if (self.isFirstAppear && self.shouldGenerate) {
         self.isFirstAppear = NO;
-        [[EPSPhotoGenerator manager]
-         generatePhotoWithUIImage:self.originImage
-         completion:^(UIImage * _Nullable resultImage, NSError * _Nullable error) {
-            if (resultImage) {
-                [[EPSDatabaseManager sharedInstance] saveImage:resultImage withCreationTime:NSDate.now];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"EPSDtaManagerDidUpdateDB" object:nil];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.navigationItem.leftBarButtonItem setEnabled:YES];
-                    self.loadingView.hidden = YES;
-                    self.imageView.image = resultImage;
-                });
-            }
-        }];
+        [self _generateImage];
     }
 }
 
-- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath { 
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     EPSAniGANResultToolCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:EPSAniGANResultToolCell.cellIdentifier forIndexPath:indexPath];
     [cell updateWithModel:self.toolModels[indexPath.item]];
     return cell;
 }
 
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section { 
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.toolModels.count;
 }
 
@@ -204,7 +193,7 @@ EPSAniGANResultSecondaryToolViewDelegate
     }];
 }
 
-- (void)toolView:(nonnull EPSAniGANResultSecondaryToolView *)toolView didSelectToolType:(EPSAniGANResultSecondaryToolType)toolType { 
+- (void)toolView:(nonnull EPSAniGANResultSecondaryToolView *)toolView didSelectToolType:(EPSAniGANResultSecondaryToolType)toolType {
     switch (toolType) {
         case EPSAniGANResultSecondaryToolTypeShare:
             [self _shareImage:self.imageView.image];
@@ -253,6 +242,47 @@ EPSAniGANResultSecondaryToolViewDelegate
 
 - (void)_homeButtonPressed {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)_generateImage {
+    [[EPSPhotoGenerator manager]
+     generatePhotoWithUIImage:self.originImage
+     completion:^(UIImage * _Nullable resultImage, NSError * _Nullable error) {
+        if (resultImage) {
+            [self _handleGenerateImageSuccess:resultImage];
+        } else {
+            [self _handleGenerateImageFail];
+        }}];
+}
+
+- (void)_handleGenerateImageSuccess:(UIImage *)image {
+    [[EPSDatabaseManager sharedInstance] saveImage:image withCreationTime:NSDate.now];
+    [TSHelper dispatchAsyncMainQueue:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"EPSDtaManagerDidUpdateDB" object:nil];
+        [self.navigationItem.leftBarButtonItem setEnabled:YES];
+        self.loadingView.hidden = YES;
+        self.imageView.image = image;
+    }];
+}
+
+- (void)_handleGenerateImageFail {
+    [TSHelper dispatchAsyncMainQueue:^{
+        UIAlertController *ac = [UIAlertController
+                                 alertControllerWithTitle:@"Fail to generate photo"
+                                 message:@"There is an error while generating your photo. Please try again"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+        [ac addAction:[UIAlertAction actionWithTitle:@"Try again"
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * _Nonnull action) {
+            [self _generateImage];
+        }]];
+        [ac addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                               style:UIAlertActionStyleCancel
+                                             handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }]];
+        [self presentViewController:ac animated:YES completion:nil];
+    }];
 }
 
 @end

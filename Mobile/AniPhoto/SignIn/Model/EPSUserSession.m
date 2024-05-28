@@ -9,10 +9,10 @@
 #import "EPSDefines.h"
 
 @interface EPSUserSession ()
-@property (nonatomic, copy, readwrite) NSString *accessToken;
-@property (nonatomic, copy, readwrite) NSString *userName;
-@property (nonatomic, copy, readwrite) NSString *userID;
-@property (nonatomic, copy, readwrite) NSString *userEmail;
+@property (nonatomic, copy, readwrite, nullable) NSString *accessToken;
+@property (nonatomic, copy, readwrite, nullable) NSString *userName;
+@property (nonatomic, copy, readwrite, nullable) NSString *userID;
+@property (nonatomic, copy, readwrite, nullable) NSString *userEmail;
 @property (nonatomic, assign, readwrite) NSInteger latSignInDate;
 
 @property (nonatomic, assign, readwrite) NSInteger totalCreditCount;
@@ -22,11 +22,11 @@
 
 @implementation EPSUserSession
 
-- (instancetype)initWithAccessToken:(NSString *)accessToken {
+- (instancetype)initWithAccessToken:(nullable NSString *)accessToken {
     self = [super init];
     if (self) {
         _accessToken = accessToken;
-        _totalCreditCount = 0;
+        _totalCreditCount = NSNotFound;
         _currentSubscription = [[EPSUserSubscription alloc] init];
     }
     return self;
@@ -62,6 +62,18 @@
 
 - (void)updateTempCreditCount:(NSInteger)tempCreditCount {
     self.totalCreditCount = tempCreditCount;
+}
+
+- (void)signOutUserSession {
+    self.accessToken = nil;
+    self.userName = nil;
+    self.userID = nil;
+    self.userEmail = nil;
+
+    self.latSignInDate = NSNotFound;
+    self.totalCreditCount = NSNotFound;
+
+    self.currentSubscription = nil;
 }
 
 @end

@@ -9,9 +9,11 @@
 #import "EPSSubscriptionViewController.h"
 #import "EPSCurrentCreditFullView.h"
 #import "EPSCreditProductView.h"
+#import "EPSUserSessionManager.h"
 
 #import "EPSDefines.h"
 #import "EPSStoreKitManager.h"
+#import "AniPhoto-Swift.h"
 
 @interface EPSCreditPurchaseViewController ()
 @property (nonatomic, strong) EPSCurrentCreditFullView *creditView;
@@ -73,13 +75,8 @@
 
         _loadingView = [[EPSLoadingView alloc] initWithShouldShowLabel:NO shouldDim:YES];
         _loadingView.hidden = YES;
-        [self.view insertSubview:_loadingView atIndex:0];
+        [self.view insertSubview:_loadingView aboveSubview:_productView];
 
-        [NSNotificationCenter.defaultCenter
-         addObserver:self
-         selector:@selector(_storeKitUpdatedProducts)
-         name:kEPSStoreKitManagerDidUpdateProducts
-         object:nil];
         [NSNotificationCenter.defaultCenter
          addObserver:self
          selector:@selector(_storeKitIsPurchasingCredits)
@@ -94,6 +91,11 @@
          addObserver:self
          selector:@selector(_storeKitDidFailPurchaseCredits)
          name:kEPSStoreKitManagerDidFailPurchaseCredits
+         object:nil];
+        [NSNotificationCenter.defaultCenter
+         addObserver:self
+         selector:@selector(_userSessionDidFetchUserCredit)
+         name:kEPSSignInManagerDidFetchUserCredit
          object:nil];
     }
     return self;
@@ -195,6 +197,12 @@
                                  preferredStyle:UIAlertControllerStyleAlert];
         [ac addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:ac animated:YES completion:nil];
+    }];
+}
+
+- (void)_userSessionDidFetchUserCredit {
+    [TSHelper dispatchAsyncMainQueue:^{
+        [self.creditView updateWithUserCredit:EPSUserSessionManager.shared.userSession.totalCreditCount];
     }];
 }
 

@@ -56,13 +56,13 @@
         [self addSubview:_proLabel];
 
         _nameLabel = [[UILabel alloc] init];
-        _nameLabel.font = [UIFont systemFontOfSize:24 weight:UIFontWeightMedium];
-        _nameLabel.text = @"Robyn Chau";
+        _nameLabel.font = [UIFont systemFontOfSize:20 weight:UIFontWeightMedium];
+        _nameLabel.text = @"Sign up or Login";
         [self addSubview:_nameLabel];
 
         _subscriptionLabel = [[UILabel alloc] init];
         _subscriptionLabel.font = [UIFont systemFontOfSize:13 weight:UIFontWeightThin];
-        _subscriptionLabel.text = @"Expiration: 2024.05.23";
+        _subscriptionLabel.text = @"Join AniPhoto Pro";
         [self addSubview:_subscriptionLabel];
 
         _creditView = [[EPSCurrentCreditMiniView alloc] init];
@@ -173,30 +173,43 @@
 - (void)updateWithUserModel:(EPSUserSession *)userSession {
     if (userSession && userSession.isSignedIn) {
         if (IS_NONEMPTY_STRING(userSession.userName)) {
-            self.nameLabel.text = userSession.userName;
+            self.nameLabel.text = [NSString stringWithFormat:@"%@ >", userSession.userName];
         } else {
             self.nameLabel.text = @"...";
         }
     } else {
-        self.nameLabel.text = @"Sign up or Login";
+        self.nameLabel.text = @"Sign up or Login >";
     }
-    
-    if ([userSession.currentSubscription subscriptionPlanType] == EPSSubscriptionPlanTypeProPlus
-        || userSession.totalCreditCount >= kQuotaMax) {
+
+    if (userSession.isSignedIn) {
+        if ([userSession.currentSubscription subscriptionPlanType] == EPSSubscriptionPlanTypeProPlus) {
+            self.proLabel.text = @"Pro+";
+            self.proLabel.backgroundColor = UIColor.customYellow;
+        } else if ([userSession.currentSubscription subscriptionPlanType] == EPSSubscriptionPlanTypePro) {
+            self.proLabel.text = @"Pro";
+            self.proLabel.backgroundColor = UIColor.customYellow;
+        } else {
+            self.proLabel.text = @"Pro";
+            self.proLabel.backgroundColor = UIColor.darkGrayColor;
+        }
+    } else {
+        self.proLabel.text = @"Pro";
+        self.proLabel.backgroundColor = UIColor.darkGrayColor;
+    }
+
+    if (userSession.totalCreditCount == NSNotFound) {
+        [self.creditView updateWithTotalCreditCount:userSession.totalCreditCount];
+    } else if (userSession.totalCreditCount >= kQuotaMax) {
         [self.creditView updateWithUnlimitedCredit];
-        self.proLabel.text = @"Pro+";
     } else {
         [self.creditView updateWithTotalCreditCount:userSession.totalCreditCount];
-        self.proLabel.text = @"Pro";
     }
 
     if ([userSession isSubscribing]) {
         NSString *expireDateString = [NSDateFormatter.shared stringFromDate:[NSDate dateWithTimeIntervalSince1970:userSession.currentSubscription.expireTime]];
         self.subscriptionLabel.text = [NSString stringWithFormat:@"Expiration: %@", expireDateString];
-        self.proLabel.backgroundColor = UIColor.customYellow;
     } else {
         self.subscriptionLabel.text = @"Join AniPhoto Pro";
-        self.proLabel.backgroundColor = UIColor.darkGrayColor;
     }
 
     CGSize creditViewSize = [self.creditView.label.attributedText boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
@@ -208,7 +221,7 @@
 }
 
 - (BOOL)isSignInHeader {
-    return [self.nameLabel.text isEqualToString:@"Sign up or Login"];
+    return [self.nameLabel.text isEqualToString:@"Sign up or Login >"];
 }
 
 @end

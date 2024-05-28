@@ -21,6 +21,7 @@
 // Utilities
 #import "EPSDatabaseManager.h"
 #import "EPSDefines.h"
+#import "AniPhoto-Swift.h"
 
 #define BUTTON_WIDTH 180
 #define INTER_SECTION_PADDING 15.0f
@@ -41,9 +42,14 @@
 UICollectionViewDataSource,
 UICollectionViewDelegate,
 UICollectionViewDelegateFlowLayout,
+PHPhotoLibraryChangeObserver,
 EPSHomeToolViewDelegate,
 EPSHomeLabelSectionHeaderDelegate
->
+> {
+    dispatch_queue_t        _actionQueue;
+    const char*             _actionQueueName;
+    NSString*               _actionQueueNameStr;
+}
 @property (nonatomic, strong) NSArray<UIImage *> *lastCreatedImages;
 @property (nonatomic, strong) NSMutableArray<UIImage *> *latestPhotoPreviews;
 @property (nonatomic, strong) NSArray<NSNumber *> *tools;
@@ -60,6 +66,12 @@ EPSHomeLabelSectionHeaderDelegate
     if (self) {
         self.view.backgroundColor = UIColor.systemBackgroundColor;
 
+        [PHPhotoLibrary.sharedPhotoLibrary registerChangeObserver:self];
+
+        _actionQueueNameStr = @"com.PhatCH.EPSHomeViewController";
+        _actionQueueName = [_actionQueueNameStr UTF8String];
+        _actionQueue = createDispatchQueueWithObject(self, _actionQueueName, YES);
+
         _lastCreatedImages = [[EPSDatabaseManager sharedInstance] loadImages];
         _latestPhotoPreviews = [NSMutableArray array];
         _tools = @[@(EPSHomeToolTypeEdit), @(EPSHomeToolTypeAniGAN), @(EPSHomeToolTypeSticker), @(EPSHomeToolTypeText), @(EPSHomeToolTypeFilter)];
@@ -74,6 +86,11 @@ EPSHomeLabelSectionHeaderDelegate
          object:nil];
     }
     return self;
+}
+
+- (void)dealloc {
+    [PHPhotoLibrary.sharedPhotoLibrary unregisterChangeObserver:self];
+
 }
 
 - (void)viewDidLoad {
@@ -390,18 +407,23 @@ EPSHomeLabelSectionHeaderDelegate
 }
 
 - (void)_fetchLatestPhoto {
-    [EPSPhotoManager getCameraRollAlbumWithAllowSelectImage:YES allowSelectVideo:NO completion:^(EPSAlbumListModel * _Nonnull cameraRoll) {
-        NSArray *fetchResults = [EPSPhotoManager fetchPhotoIn:cameraRoll.result ascending:NO allowSelectImage:YES allowSelectVideo:NO limitCount:9];
-        for (EPSPhotoModel *model in fetchResults) {
-            [EPSPhotoManager fetchOriginalImageFor:model.asset progress:nil completion:^(UIImage * _Nullable image, BOOL isDegraded) {
-                if (image && !isDegraded && self.latestPhotoPreviews.count < 10) {
-                    [self.latestPhotoPreviews addObject:image];
-                }
-                if (self.latestPhotoPreviews.count == 9) {
-                    [self.mainCollectionView reloadData];
-                }
-            }];
-        }
+    [TSHelper dispatchAsyncOnQueue:_actionQueue withName:_actionQueueName withTask:^{
+        [self.latestPhotoPreviews removeAllObjects];
+        [EPSPhotoManager getCameraRollAlbumWithAllowSelectImage:YES allowSelectVideo:NO completion:^(EPSAlbumListModel * _Nonnull cameraRoll) {
+            NSArray *fetchResults = [EPSPhotoManager fetchPhotoIn:cameraRoll.result ascending:NO allowSelectImage:YES allowSelectVideo:NO limitCount:9];
+            for (EPSPhotoModel *model in fetchResults) {
+                [EPSPhotoManager fetchOriginalImageFor:model.asset progress:nil completion:^(UIImage * _Nullable image, BOOL isDegraded) {
+                    if (image && !isDegraded && self.latestPhotoPreviews.count < 10) {
+                        [self.latestPhotoPreviews addObject:image];
+                    }
+                    if (self.latestPhotoPreviews.count == 9) {
+                        [TSHelper dispatchAsyncMainQueue:^{
+                            [self.mainCollectionView reloadData];
+                        }];
+                    }
+                }];
+            }
+        }];
     }];
 }
 
@@ -477,4 +499,8 @@ EPSHomeLabelSectionHeaderDelegate
         [self.mainCollectionView reloadData];
     });
 }
+- (void)photoLibraryDidChange:(nonnull PHChange *)changeInstance { 
+    [self _fetchLatestPhoto];
+}
+
 @end

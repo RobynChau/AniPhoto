@@ -40,8 +40,7 @@
     if (self) {
         _actionQueueNameStr = @"com.PhatCH.ZASPhotoFeedBackgroundImageContext";
         _actionQueueName = [_actionQueueNameStr UTF8String];
-        dispatch_queue_attr_t qos = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_USER_INITIATED, -1);
-        _actionQueue = dispatch_queue_create(_actionQueueName, qos);
+        _actionQueue = createDispatchQueueWithObject(self, _actionQueueName, YES);
 
         _shouldUseOnDevice = NO;
     }
@@ -66,11 +65,11 @@
                     [self _generatePhotoUsingServerModelWithURL:photoURL 
                                                      completion:^(UIImage * _Nullable resultImage,
                                                                   NSError * _Nullable error) {
-                        if (!resultImage) {
-                            [self _generatePhotoUsingOnDeviceModelWithUIImage:processedUIImage completion:completion];
-                        } else {
+//                        if (!resultImage) {
+//                            [self _generatePhotoUsingOnDeviceModelWithUIImage:processedUIImage completion:completion];
+//                        } else {
                             completion(resultImage, nil);
-                        }
+//                        }
                     }];
                 }
             } else {
@@ -151,6 +150,7 @@
                 completion(image, error);
             }];
         } else {
+            NSLog(@"PhatCH Failed Gen Anime");
             completion(nil, error);
         }
     }];

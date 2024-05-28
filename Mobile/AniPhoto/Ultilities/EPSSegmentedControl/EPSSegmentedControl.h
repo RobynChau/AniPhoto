@@ -273,4 +273,8 @@ typedef NS_ENUM(NSUInteger, EPSSegmentedControlBounce) {
  */
 - (void)reloadData;
 
+- (void)selectStateViewAtIndex:(NSInteger)index;
+
+- (void)changeStateToState:(NSInteger)state;
+
 @end

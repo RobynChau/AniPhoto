@@ -44,17 +44,23 @@
         _actionQueueNameStr = @"com.PhatCH.AniPhoto.EPSSignInManager";
         _actionQueueName = [_actionQueueNameStr UTF8String];
         _actionQueue = createDispatchQueueWithObject(self, _actionQueueName, YES);
-        _deviceID = [[[[UIDevice currentDevice] identifierForVendor] UUIDString] copy];
+        _deviceID = [[[[UIDevice currentDevice] identifierForVendor] UUIDString] stringByAppendingString:@"-200102"];
 
         NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:kUserAccessToken];
         if (IS_NONEMPTY_STRING(accessToken)) {
             _userSession = [[EPSUserSession alloc] initWithAccessToken:accessToken];
         }
 
-        [[NSNotificationCenter defaultCenter] 
+        [[NSNotificationCenter defaultCenter]
          addObserver:self
          selector:@selector(_storeKitDidPurchaseSubscription)
          name:kEPSStoreKitManagerDidFinishPurchaseSubscription
+         object:nil];
+
+        [[NSNotificationCenter defaultCenter]
+         addObserver:self
+         selector:@selector(_storeKitDidPurchaseCredits)
+         name:kEPSStoreKitManagerDidFinishPurchaseCredits
          object:nil];
     }
     return self;
@@ -75,26 +81,28 @@
 }
 
 - (void)signOutUser {
-    self.userSession = nil;
+    [self.userSession signOutUserSession];
     [self _saveUserSession];
     [NSNotificationCenter.defaultCenter postNotificationName:kEPSSignInManagerDidSignOutUser object:nil];
+    [self fetchUserCredit];
 }
 
 - (void)initiateUserSession {
     if (IS_NONEMPTY_STRING(self.userSession.accessToken)) {
         [self fetchUserInfo];
-        [self fetchUserCredit];
         [self fetchUserSubscription];
     } else {
         NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:kUserAccessToken];
         NSInteger lastSignInDate = EPSDynamicCast([[NSUserDefaults standardUserDefaults] objectForKey:kUserLastSignInDate], NSNumber).integerValue;
         if (IS_NONEMPTY_STRING(accessToken) && NSDate.date.timeIntervalSince1970 - lastSignInDate < 1 * 24 * 60) {
-            self.userSession = [[EPSUserSession alloc] initWithAccessToken:accessToken];
+            _userSession = [[EPSUserSession alloc] initWithAccessToken:accessToken];
             [self fetchUserInfo];
-            [self fetchUserCredit];
             [self fetchUserSubscription];
+        } else {
+            _userSession = [[EPSUserSession alloc] initWithAccessToken:nil];
         }
     }
+    [self fetchUserCredit];
 }
 
 - (void)_saveUserSession {
@@ -125,6 +133,8 @@
                 [self.userSession updateWithID:userID name:userName email:userEmail];
                 [NSNotificationCenter.defaultCenter postNotificationName:kEPSSignInManagerDidFetchUserInfo object:nil];
             }];
+        } else {
+            NSLog(@"PhatCH Error Fetching User Info");
         }
     }];
 }
@@ -146,6 +156,8 @@
                 [self.userSession updateWithTotalCreditCount:totalCreditCount];
                 [NSNotificationCenter.defaultCenter postNotificationName:kEPSSignInManagerDidFetchUserCredit object:nil];
             }];
+        } else {
+            NSLog(@"PhatCH Error Fetching User Credit");
         }
     }];
 }
@@ -174,6 +186,8 @@
                                                 expireTime:expireDate.timeIntervalSince1970];
                 [NSNotificationCenter.defaultCenter postNotificationName:kEPSSignInManagerDidFetchUserSubscription object:nil];
             }];
+        }  else {
+            NSLog(@"PhatCH Error Fetching User Subscription");
         }
     }];
 }
@@ -268,6 +282,10 @@
 - (void)_storeKitDidPurchaseSubscription {
     [self fetchUserCredit];
     [self fetchUserSubscription];
+}
+
+- (void)_storeKitDidPurchaseCredits {
+    [self fetchUserCredit];
 }
 
 @end

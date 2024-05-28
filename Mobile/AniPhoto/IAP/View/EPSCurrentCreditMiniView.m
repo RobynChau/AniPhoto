@@ -65,22 +65,6 @@
     [super updateConstraints];
 }
 
-- (void)updateWithCredit:(NSInteger)credit {
-    NSAttributedString *text = [NSAttributedString sj_UIKitText:^(id<SJUIKitTextMakerProtocol>  _Nonnull make) {
-        make.appendImage(^(id<SJUTImageAttachment>  _Nonnull make) {
-            UIImage *image = [[UIImage systemImageNamed:@"leaf.fill"] imageWithTintColor:UIColor.greenColor];
-            make.image = image;
-            make.bounds = CGRectMake(0, 0, 9, 9);
-        });
-        make.font([UIFont boldSystemFontOfSize:9]).textColor(UIColor.whiteColor).lineSpacing(8);
-        make.append(@" ");
-        make.append(@(credit).stringValue);
-        make.alignment(NSTextAlignmentCenter);
-    }];
-    self.label.textAlignment = NSTextAlignmentCenter;
-    self.label.attributedText = text;
-}
-
 - (void)updateWithTotalCreditCount:(NSInteger)totalCreditCount {
     NSAttributedString *text = [NSAttributedString sj_UIKitText:^(id<SJUIKitTextMakerProtocol>  _Nonnull make) {
         make.appendImage(^(id<SJUTImageAttachment>  _Nonnull make) {
@@ -90,7 +74,7 @@
         });
         make.font(labelFont).textColor(UIColor.whiteColor).lineSpacing(8);
         make.append(@"  ");
-        make.append(@(totalCreditCount).stringValue);
+        make.append(totalCreditCount == NSNotFound ? @"..." : @(totalCreditCount).stringValue);
         make.alignment(NSTextAlignmentCenter);
     }];
     self.label.attributedText = text;

@@ -15,7 +15,6 @@
 #import "NSDictionary+Accessors.h"
 #import "NSDateFormatter+MediumDateFormatter.h"
 #import "SJAttributesFactory.h"
-#import "AniPhoto-Swift.h"
 #import "UIView+Toast.h"
 #import "EPSSegmentedControl.h"
 #import "EPSLoadingView.h"

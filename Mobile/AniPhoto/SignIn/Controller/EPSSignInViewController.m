@@ -28,11 +28,11 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.view.backgroundColor = UIColor.systemBackgroundColor;
+        self.view.backgroundColor = UIColor.whiteColor;
 
         _label1 = [[UILabel alloc] init];
         _label1.text = @"Sign up";
-        _label1.textColor = UIColor.labelColor;
+        _label1.textColor = UIColor.blackColor;
         _label1.textAlignment = NSTextAlignmentCenter;
         _label1.font = [UIFont boldSystemFontOfSize:18];
         [self.view addSubview:_label1];
@@ -40,11 +40,10 @@
         _label2 = [[UILabel alloc] init];
         _label2.text = @"Join us now! Unlock more features and sync your designs to the cloud for easy access.";
         _label2.textAlignment = NSTextAlignmentCenter;
-        _label2.textColor = UIColor.labelColor;
+        _label2.textColor = UIColor.blackColor;
         _label2.numberOfLines = 2;
         _label2.font = [UIFont systemFontOfSize:14];
         [self.view addSubview:_label2];
-
 
         _signUpButton = [UIButton buttonWithType:UIButtonTypeSystem];
         _signUpButton.backgroundColor = UIColor.secondaryLabelColor;
@@ -61,9 +60,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
-                                             initWithBarButtonSystemItem:UIBarButtonSystemItemClose
+                                             initWithImage:[UIImage systemImageNamed:@"xmark"]
+                                             style:UIBarButtonItemStylePlain
                                              target:self
                                              action:@selector(_closeButtonTapped)];
+    self.navigationItem.leftBarButtonItem.tintColor = UIColor.blackColor;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,7 +79,7 @@
         make.height.equalTo(@(label1Size.height));
     }];
     [self.label2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.trailing.equalTo(self.view.mas_safeAreaLayoutGuide).insets(UIEdgeInsetsMake(0, 0, 0, 0));
+        make.leading.trailing.equalTo(self.view.mas_safeAreaLayoutGuide).insets(UIEdgeInsetsMake(0, 12, 0, 12));
         make.top.equalTo(self.label1.mas_bottom).inset(8);
         make.height.equalTo(@(label2Size.height));
     }];

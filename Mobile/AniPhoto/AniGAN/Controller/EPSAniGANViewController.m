@@ -15,6 +15,7 @@
 #import "EPSSubscriptionViewController.h"
 
 #import "EPSDefines.h"
+#import "AniPhoto-Swift.h"
 
 #define BUTTON_WIDTH 180
 #define INTER_SECTION_PADDING 15.0f
@@ -168,16 +169,34 @@ UICollectionViewDelegate
 }
 
 - (void)_changeImageButtonPressed {
-    EPSCameraConfiguration *config = [[EPSCameraConfiguration alloc] init];
-    config.allowRecordVideo = NO;
-    config.devicePosition = DevicePositionFront;
-    EPSCustomCamera *camera = [[EPSCustomCamera alloc] initWithCameraConfig:config canEdit:NO];
-    camera.takeDoneBlock = ^(UIImage * _Nullable image, NSURL * _Nullable imageURL) {
-        self.imageView.image = image;
-        self.imageView.hidden = NO;
-        self.emptyView.hidden = YES;
-    };
-    [self showDetailViewController:camera sender:nil];
+    if (TARGET_OS_SIMULATOR) {
+        EPSPhotoConfiguration *config = [EPSPhotoConfiguration default];
+        config.allowSelectVideo = NO;
+        config.maxSelectCount = 1;
+        config.allowSelectGif = NO;
+        config.allowEditImage = NO;
+
+        EPSPhotoPreviewSheet *sheetPicker = [[EPSPhotoPreviewSheet alloc] initWithConfiguration:config];
+        sheetPicker.selectImageBlock = ^(NSArray<EPSResultModel *> * _Nonnull selectResults, BOOL isFullImage) {
+            EPSResultModel *selectResult = selectResults.firstObject;
+            UIImage *pickedImage = selectResult.image;
+            self.imageView.image = pickedImage;
+            self.imageView.hidden = NO;
+            self.emptyView.hidden = YES;
+        };
+        [sheetPicker showPhotoLibraryWithSender:self];
+    } else {
+        EPSCameraConfiguration *config = [[EPSCameraConfiguration alloc] init];
+        config.allowRecordVideo = NO;
+        config.devicePosition = DevicePositionFront;
+        EPSCustomCamera *camera = [[EPSCustomCamera alloc] initWithCameraConfig:config canEdit:NO];
+        camera.takeDoneBlock = ^(UIImage * _Nullable image, NSURL * _Nullable imageURL) {
+            self.imageView.image = image;
+            self.imageView.hidden = NO;
+            self.emptyView.hidden = YES;
+        };
+        [self showDetailViewController:camera sender:nil];
+    }
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath { 

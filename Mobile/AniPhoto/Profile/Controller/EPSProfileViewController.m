@@ -102,7 +102,7 @@ EPSProfileHeaderCellDelegate
         return cell;
     } else if ([sectionConfig.sectionTitle isEqualToString:@"Promote"]) {
         EPSProfileSubscriptionPromoteCell *cell = [tableView dequeueReusableCellWithIdentifier:EPSProfileSubscriptionPromoteCell.reuseIdentifier];
-        [cell updateWithPromoteSubscription:[EPSUserSessionManager.shared getPromoteSubscriptionType]];
+        [cell updateWithPromoteSubscription];
         cell.backgroundColor = UIColor.clearColor;
         return cell;
     } else {
@@ -158,10 +158,17 @@ EPSProfileHeaderCellDelegate
     if ([sectionConfig.sectionTitle isEqualToString:@"Header"]) {
 
     } else if ([sectionConfig.sectionTitle isEqualToString:@"Promote"]) {
-        EPSSubscriptionViewController *vc = [[EPSSubscriptionViewController alloc] init];
-        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
-        navVC.modalPresentationStyle = UIModalPresentationFullScreen;
-        [self presentViewController:navVC animated:YES completion:nil];
+        if ([EPSUserSessionManager.shared.userSession isSignedIn]) {
+            EPSSubscriptionViewController *vc = [[EPSSubscriptionViewController alloc] init];
+            UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+            navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:navVC animated:YES completion:nil];
+        } else {
+            EPSSignInViewController *vc = [[EPSSignInViewController alloc] init];
+            UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+            navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:navVC animated:YES completion:nil];
+        }
     } else {
         if ([itemConfig.settingTitle isEqualToString:@"Rate the app"]) {
             if (@available(iOS 14.0, *)) {
@@ -248,12 +255,7 @@ EPSProfileHeaderCellDelegate
 }
 
 - (void)_didSignOutUser {
-    [self _reloadHeaderSection];
-}
-
-- (void)_reloadHeaderSection {
-    NSIndexSet *sectionIndexSet = [NSIndexSet indexSetWithIndex:0];
-    [self.mainView reloadSections:sectionIndexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.mainView reloadData];
 }
 
 - (void)_handleSignOutButtonTapped {

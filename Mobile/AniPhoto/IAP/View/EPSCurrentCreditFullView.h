@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EPSCurrentCreditFullView : UIView
 
+- (void)updateWithUserCredit:(NSInteger)totalCreditCount;
+
 @end
 
 NS_ASSUME_NONNULL_END

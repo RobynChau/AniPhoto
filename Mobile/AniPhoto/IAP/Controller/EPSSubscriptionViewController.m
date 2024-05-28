@@ -7,8 +7,11 @@
 
 #import "EPSSubscriptionViewController.h"
 #import "EPSStoreKitManager.h"
+#import "EPSSignInViewController.h"
 
 #import "EPSDefines.h"
+#import "EPSUserSessionManager.h"
+#import "AniPhoto-Swift.h"
 
 @interface EPSSubscriptionViewController () <
 EPSSegmentedControlDataSource,
@@ -25,6 +28,8 @@ EPSSegmentedControlDelegate
 @property (nonatomic, strong) SKProduct *monthProduct;
 @property (nonatomic, strong) SKProduct *yearProduct;
 @property (nonatomic, strong) EPSLoadingView *loadingView;
+@property (nonatomic, assign) NSInteger initialSelectIndex;
+@property (nonatomic, strong) UIImageView *featureImageView;
 @end
 
 @implementation EPSSubscriptionViewController
@@ -33,6 +38,12 @@ EPSSegmentedControlDelegate
     self = [super init];
     if (self) {
         self.view.backgroundColor = UIColor.systemBackgroundColor;
+
+        _initialSelectIndex = 0;
+        EPSSubscriptionPlanType promotePlan = [EPSUserSessionManager.shared getPromoteSubscriptionType];
+        if (promotePlan == EPSSubscriptionPlanTypeProPlus) {
+            _initialSelectIndex = 1;
+        }
 
         _segmentControl = [[EPSSegmentedControl alloc] init];
         _segmentControl.backgroundColor = UIColor.lightGrayColor;
@@ -43,6 +54,7 @@ EPSSegmentedControlDelegate
         _segmentControl.shapeStyle = EPSSegmentedControlShapeStyleRoundedRect;
         _segmentControl.cornerRadius = 8.0f;
         _segmentControl.applyCornerRadiusToSelectorView = YES;
+        _segmentControl.currentState = _initialSelectIndex;
         [self.view addSubview:_segmentControl];
 
         _label1 = [[EPSGradientLabel alloc] init];
@@ -61,6 +73,13 @@ EPSSegmentedControlDelegate
         _label2.font = [UIFont systemFontOfSize:16 weight:UIFontWeightThin];
         _label2.textColor = UIColor.labelColor;
         [self.view addSubview:_label2];
+
+        _featureImageView = [[UIImageView alloc] init];
+        _featureImageView.backgroundColor = UIColor.lightGrayColor;
+        _featureImageView.layer.cornerRadius = 8.0f;
+        _featureImageView.clipsToBounds = YES;
+        _featureImageView.image = [UIImage imageNamed:@"pro_features"];
+        [self.view addSubview:_featureImageView];
 
         _productName = [[UILabel alloc] init];
         _productName.textColor = UIColor.labelColor;
@@ -81,6 +100,7 @@ EPSSegmentedControlDelegate
         [_yearButton setFont:[UIFont systemFontOfSize:18]];
         [_yearButton setTitleColor:UIColor.labelColor forState:UIControlStateNormal];
         [_yearButton addTarget:self action:@selector(_yearButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        _yearButton.hidden = YES;
         [_yearButton setGradientBackgroundColors:@[UIColor.customYellow, UIColor.customOrange]
                                        direction:DTImageGradientDirectionToRight
                                            state:UIControlStateNormal];
@@ -89,18 +109,21 @@ EPSSegmentedControlDelegate
         _monthButton = [UIButton buttonWithType:UIButtonTypeSystem];
         _monthButton.layer.cornerRadius = 20.0f;
         _monthButton.layer.masksToBounds = YES;
-        _monthButton.layer.borderWidth = 2.0f;
-        _monthButton.layer.borderColor = UIColor.orangeColor.CGColor;
+        //        _monthButton.layer.borderWidth = 2.0f;
+        //        _monthButton.layer.borderColor = UIColor.orangeColor.CGColor;
         [_monthButton setTitle:@"Subscribe 2" forState:UIControlStateNormal];
         [_monthButton setFont:[UIFont systemFontOfSize:18]];
         [_monthButton setTitleColor:UIColor.labelColor forState:UIControlStateNormal];
         [_monthButton setBackgroundColor:UIColor.clearColor];
         [_monthButton addTarget:self action:@selector(_monthButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        [_monthButton setGradientBackgroundColors:@[UIColor.customYellow, UIColor.customOrange]
+                                        direction:DTImageGradientDirectionToRight
+                                            state:UIControlStateNormal];
         [self.view addSubview:_monthButton];
 
         _loadingView = [[EPSLoadingView alloc] initWithShouldShowLabel:NO shouldDim:YES];
         _loadingView.hidden = YES;
-        [self.view insertSubview:_loadingView atIndex:0];
+        [self.view insertSubview:_loadingView aboveSubview:_featureImageView];
 
         [self _updateProducts];
 
@@ -150,7 +173,12 @@ EPSSegmentedControlDelegate
         make.width.equalTo(@(label2Size.width));
         make.height.equalTo(@(label2Size.height));
     }];
-
+    [self.featureImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.label2.mas_bottom).inset(100);
+        make.width.equalTo(self.view.mas_width).multipliedBy(0.9);
+        make.height.equalTo(self.view.mas_width).multipliedBy(0.7875);
+    }];
     [self.productName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).inset(100);
         make.centerX.equalTo(self.view);
@@ -195,8 +223,15 @@ EPSSegmentedControlDelegate
                                              action:@selector(_closeButtonPressed)];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    self.segmentControl.currentState = self.initialSelectIndex;
+    [self.segmentControl selectStateViewAtIndex:self.initialSelectIndex];
+    [self.segmentControl changeStateToState:self.initialSelectIndex];
     [self _updateButtonLabel];
 }
 
@@ -227,12 +262,19 @@ EPSSegmentedControlDelegate
         [self.yearButton setGradientBackgroundColors:@[UIColor.customYellow, UIColor.customOrange]
                                            direction:DTImageGradientDirectionToRight
                                                state:UIControlStateNormal];
+        [self.monthButton setGradientBackgroundColors:@[UIColor.customYellow, UIColor.customOrange]
+                                            direction:DTImageGradientDirectionToRight
+                                                state:UIControlStateNormal];
         self.monthButton.layer.borderColor = UIColor.orangeColor.CGColor;
+        self.featureImageView.image = [UIImage imageNamed:@"pro_features"];
     } else {
         [self.yearButton setGradientBackgroundColors:@[UIColor.systemPinkColor, UIColor.purpleColor]
                                            direction:DTImageGradientDirectionToRight
                                                state:UIControlStateNormal];
-        self.monthButton.layer.borderColor = UIColor.systemPurpleColor.CGColor;
+        [self.monthButton setGradientBackgroundColors:@[UIColor.systemPinkColor, UIColor.purpleColor]
+                                            direction:DTImageGradientDirectionToRight
+                                                state:UIControlStateNormal];
+        self.featureImageView.image = [UIImage imageNamed:@"proplus_features"];
     }
     [self _updateProducts];
     [self _updateButtonLabel];
@@ -285,11 +327,25 @@ EPSSegmentedControlDelegate
 }
 
 - (void)_monthButtonPressed {
-    [EPSStoreKitManager.shared buyProduct:self.monthProduct];
+    if ([EPSUserSessionManager.shared.userSession isSignedIn]) {
+        [EPSStoreKitManager.shared buyProduct:self.monthProduct];
+    } else {
+        EPSSignInViewController *vc = [[EPSSignInViewController alloc] init];
+        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+        navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:navVC animated:YES completion:nil];
+    }
 }
 
 - (void)_yearButtonPressed {
-    [EPSStoreKitManager.shared buyProduct:self.yearProduct];
+    if ([EPSUserSessionManager.shared.userSession isSignedIn]) {
+        [EPSStoreKitManager.shared buyProduct:self.yearProduct];
+    } else {
+        EPSSignInViewController *vc = [[EPSSignInViewController alloc] init];
+        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+        navVC.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:navVC animated:YES completion:nil];
+    }
 }
 
 - (void)_storeKitIsPurchasingSubscription {
