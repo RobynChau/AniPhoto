@@ -31,23 +31,27 @@ def get_total_quota(data = Depends(get_payload_optional_token), db: Session = De
     user: User = data.get('user')
     user_session: UserSession = data.get('session')
     quota_service = QuotaService(db)
-
+    
     device_quota = quota_service.get_quota_by_device_id(user_session.device_id)
 
-    if data.get('user') is None:
+    if user is None:
         return {
             "device_quota": device_quota,
-            "subscription_quota": [],
+            "subscription_quota": {},
             "product_quota": [],
             "total_quota_amount": device_quota.amount,
         }
     
     subscription_quota = quota_service.get_active_subscription_quota_by_user_id(user.id)
     product_quota = quota_service.get_total_product_quota_by_user_id(user.id)
+
     
     product_quota_total = sum(item.amount for item in product_quota)
     device_quota_amount = 0 if device_quota is None else device_quota.amount
     subscription_quota_amount = 0 if subscription_quota is None else subscription_quota.amount
+
+    subscription_quota = {} if subscription_quota is None else subscription_quota
+    device_quota = {} if device_quota is None else device_quota
     
     return {
         "device_quota": device_quota,

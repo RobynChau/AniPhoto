@@ -5,7 +5,7 @@ from services.subscription_transaction_service import SubscriptionTransactionSer
 from services.device_quota_service import DeviceQuotaService
 from services.quota_service import QuotaService
 
-def use_quota(device_id: str, user_id: str, db: Session):
+def use_quota(device_id: str, user_id: str | None, db: Session):
     device_quota_service = DeviceQuotaService(db)
     quota_service = QuotaService(db)
     subscription_service = SubscriptionTransactionService(db)
@@ -20,14 +20,14 @@ def use_quota(device_id: str, user_id: str, db: Session):
 
     # Check subcribe quota
     use_subcribe_quota = False
-    if use_free_quota == False:
-        quota_to_use = subscription_service.get_user_current_active_subscription(user_id)
+    if use_free_quota == False and user_id is not None:
+        quota_to_use = quota_service.get_active_subscription_quota_by_user_id(user_id)
         if quota_to_use != None and quota_to_use.amount > 0:
             use_subcribe_quota= True
 
     # Check bought quota
     use_buy_quota = False
-    if use_free_quota == False and use_subcribe_quota == False:
+    if use_free_quota == False and use_subcribe_quota == False and user_id is not None:
         quotas = quota_service.get_total_product_quota_by_user_id(user_id)
         total = sum(item.amount for item in quotas)
         if total > 0:

@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
 from schemas.user import User
-import uuid
 from datetime import datetime
 
 class UserService:
@@ -25,7 +24,7 @@ class UserService:
         """
         return self.db.query(User).filter(User.email == email).first()
 
-    def create_user(self, username: str, email: str, first_name: str, last_name: str, user_type: str, id: str = uuid.uuid4()):
+    def create_user(self, username: str, email: str, first_name: str, last_name: str, user_type: str, id: str):
         """
         Create a new user in the database.
         """
