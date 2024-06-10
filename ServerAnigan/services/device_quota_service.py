@@ -1,8 +1,9 @@
 from sqlalchemy.orm import Session
-from schemas.device_quota import DeviceQuota
 from typing import List
 import uuid
 from datetime import datetime
+
+from ..schemas.device_quota import DeviceQuota
 
 class DeviceQuotaService:
     def __init__(self, db: Session):

@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, TIMESTAMP, Float, ForeignKey
-from config import Base
+from ..config import Base
 
 class QuotaBuy(Base):
     __tablename__ = "app_quota_buy"

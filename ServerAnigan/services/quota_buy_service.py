@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from schemas.quota_buy import QuotaBuy
+from ..schemas.quota_buy import QuotaBuy
 from datetime import datetime
 import uuid
 

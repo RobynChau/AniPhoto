@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 
-from services.subscription_transaction_service import SubscriptionTransactionService
-from services.device_quota_service import DeviceQuotaService
-from services.quota_service import QuotaService
+from ..services.subscription_transaction_service import SubscriptionTransactionService
+from ..services.device_quota_service import DeviceQuotaService
+from ..services.quota_service import QuotaService
 
 def use_quota(device_id: str, user_id: str | None, db: Session):
     device_quota_service = DeviceQuotaService(db)

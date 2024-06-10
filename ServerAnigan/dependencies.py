@@ -2,14 +2,15 @@ from typing import Annotated
 
 from fastapi.security import OAuth2AuthorizationCodeBearer
 from fastapi import Security, Header, HTTPException, status, Depends
-from services.user_service import UserService
-from services.user_session_service import UserSessionService
-from services.device_service import DeviceService
-
-import jwt
-from config import get_db
 from sqlalchemy.orm import Session
-from helpers.register_device import register_device
+import jwt
+
+from .services.user_service import UserService
+from .services.user_session_service import UserSessionService
+from .services.device_service import DeviceService
+
+from .config import get_db
+from .helpers.register_device import register_device
 
 oauth2_scheme = OAuth2AuthorizationCodeBearer(
     authorizationUrl= "https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/protocol/openid-connect/auth",

@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, ForeignKey, TIMESTAMP
-from config import Base
+from ..config import Base
 
 class SubscriptionTransaction(Base):
     __tablename__ = "app_subscription_transaction"

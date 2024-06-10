@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from schemas.subscription import Subscription
+from ..schemas.subscription import Subscription
 from datetime import datetime
 import uuid
 

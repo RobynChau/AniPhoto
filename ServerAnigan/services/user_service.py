@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from schemas.user import User
 from datetime import datetime
+from ..schemas.user import User
 
 class UserService:
     def __init__(self, db: Session):

@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String,TIMESTAMP,Float
-from config import Base
+from ..config import Base
 
 class QuotaProduct(Base):
     __tablename__ = "app_quota_product"

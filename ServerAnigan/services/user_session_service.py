@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import and_
-from schemas.user_session import UserSession
+from ..schemas.user_session import UserSession
 from datetime import datetime
 
 class UserSessionService:

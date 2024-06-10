@@ -1,5 +1,5 @@
 from sqlalchemy import  Column, String, ForeignKey, TIMESTAMP
-from config import Base
+from ..config import Base
 
 class UserSession(Base):
     __tablename__ ="app_user_session"

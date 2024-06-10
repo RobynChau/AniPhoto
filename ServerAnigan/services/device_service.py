@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from schemas.device import Device
 from typing import List
 from datetime import datetime
+from ..schemas.device import Device
 
 class DeviceService:
     def __init__(self, db: Session):

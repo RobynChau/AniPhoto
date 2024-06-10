@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from schemas.quota_product import QuotaProduct
+from ..schemas.quota_product import QuotaProduct
 from datetime import datetime
 
 class QuotaProductService:

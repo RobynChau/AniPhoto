@@ -1,13 +1,13 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from services.subscription_transaction_service import SubscriptionTransactionService
-from services.subscription_service import SubscriptionService
-from services.quota_service import QuotaService
+from ...services.subscription_transaction_service import SubscriptionTransactionService
+from ...services.subscription_service import SubscriptionService
+from ...services.quota_service import QuotaService
 
-from config import get_db
-from dependencies import get_payload
-from schemas.user_session import UserSession
-from models.subscription import ConfirmSubscriptionBody
+from ...config import get_db
+from ...dependencies import get_payload
+from ...schemas.user_session import UserSession
+from ...models.subscription import ConfirmSubscriptionBody
 
 router = APIRouter(
     prefix="/subscriptions",

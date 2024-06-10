@@ -2,14 +2,14 @@ import datetime
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from config import get_db
-from helpers.animegan import generate_anime_image, upload_to_firebase
-from dependencies import get_payload_optional_token
-from schemas.user_session import UserSession
-from schemas.user import User
-from services.image_service import ImageService
-from helpers.use_quota import use_quota
-from models.ml import GenerateAnimeBody
+from ...config import get_db
+from ...helpers.animegan import generate_anime_image, upload_to_firebase
+from ...dependencies import get_payload_optional_token
+from ...schemas.user_session import UserSession
+from ...schemas.user import User
+from ...services.image_service import ImageService
+from ...helpers.use_quota import use_quota
+from ...models.ml import GenerateAnimeBody
 
 router = APIRouter(
     prefix="/v2/ml",

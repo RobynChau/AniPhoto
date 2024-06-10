@@ -1,14 +1,15 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from services.quota_service import QuotaService
-from services.quota_product_service import QuotaProductService
-from services.quota_buy_service import QuotaBuyService
 
-from dependencies import get_payload_optional_token, get_payload
-from schemas.user_session import UserSession
-from schemas.user import User
-from config import get_db
-from models.quota import ConfirmQuotaBuyBody
+from ...services.quota_service import QuotaService
+from ...services.quota_product_service import QuotaProductService
+from ...services.quota_buy_service import QuotaBuyService
+
+from ...dependencies import get_payload_optional_token, get_payload
+from ...schemas.user_session import UserSession
+from ...schemas.user import User
+from ...config import get_db
+from ...models.quota import ConfirmQuotaBuyBody
 
 router = APIRouter(
     prefix="/quotas",

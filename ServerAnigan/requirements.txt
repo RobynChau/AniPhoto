@@ -11,3 +11,4 @@ PyJWT==2.5.0
 cryptography
 SQLAlchemy
 psycopg2-binary
+pytest

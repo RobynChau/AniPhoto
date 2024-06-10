@@ -1,10 +1,11 @@
 from sqlalchemy.orm import Session
-from schemas.image import Image
-from schemas.user_session import UserSession
-from schemas.user import User
-from schemas.device import Device
-
 from datetime import datetime
+
+from ..schemas.image import Image
+from ..schemas.user_session import UserSession
+from ..schemas.user import User
+from ..schemas.device import Device
+
 
 class ImageService:
     def __init__(self, db: Session):

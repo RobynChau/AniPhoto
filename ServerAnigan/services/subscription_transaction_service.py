@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from schemas.subscription_transaction import SubscriptionTransaction
-from schemas.quota import Quota
-from schemas.subscription import Subscription
+from ..schemas.subscription_transaction import SubscriptionTransaction
+from ..schemas.quota import Quota
+from ..schemas.subscription import Subscription
 from datetime import datetime, timedelta
 import uuid
 

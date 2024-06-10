@@ -6,8 +6,8 @@ from io import BytesIO
 from PIL import Image
 from torchvision import transforms
 
-from services.model import model_manager
-from services.firebase import firebase_manager
+from ..services.model import model_manager
+from ..services.firebase import firebase_manager
 
 def postprocess_image(image):
     image = image.squeeze(0)

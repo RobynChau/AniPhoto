@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, Float, String,TIMESTAMP
-from config import Base
+from ..config import Base
 
 class Subscription(Base):
     __tablename__ = "app_subscription"

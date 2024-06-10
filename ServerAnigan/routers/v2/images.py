@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from services.image_service import ImageService
-from config import get_db
-from dependencies import get_payload_optional_token
-from schemas.user_session import UserSession
-from models.image import ImageCreateBody
+from ...services.image_service import ImageService
+from ...config import get_db
+from ...dependencies import get_payload_optional_token
+from ...schemas.user_session import UserSession
+from ...models.image import ImageCreateBody
 
 router = APIRouter(
     prefix="/images",

@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
-from schemas.quota import Quota
-from schemas.device_quota import DeviceQuota
-from schemas.quota_buy import QuotaBuy
+from ..schemas.quota import Quota
+from ..schemas.device_quota import DeviceQuota
+from ..schemas.quota_buy import QuotaBuy
 
-from schemas.subscription_transaction import SubscriptionTransaction
+from ..schemas.subscription_transaction import SubscriptionTransaction
 
 from datetime import datetime
 import uuid
