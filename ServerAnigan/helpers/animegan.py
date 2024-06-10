@@ -5,6 +5,7 @@ import urllib.parse
 from io import BytesIO
 from PIL import Image
 from torchvision import transforms
+import time
 
 from services.model import model_manager
 from services.firebase import firebase_manager
@@ -41,15 +42,19 @@ def generate_anime_image(source_img_path: str):
     output_dir = "result_dir"
     os.makedirs(output_dir, exist_ok=True)
     
+    start_time = time.time()
     with torch.no_grad():
         output_tensor = modelV2(input_tensor)
-        
+    end_time = time.time()
+
+    response_time = end_time - start_time
+
     save_file_path = os.path.join(output_dir, f"output.png")
     output_image = postprocess_image(output_tensor)
     output_image.save(save_file_path)
     print(f"Result is saved to: {save_file_path}")
 
-    return save_file_path
+    return save_file_path, response_time
     
 def upload_to_firebase(file_path:str, save_path: str):
     bucket = firebase_manager.bucket
