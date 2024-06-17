@@ -21,7 +21,8 @@ COPY --chown=user . $HOME/app
 RUN chmod +x $HOME/app/scripts/prepare-env.sh
 RUN $HOME/app/scripts/prepare-env.sh
 # Install requirements.txt 
-RUN pip install --no-cache-dir --upgrade -r $HOME/app/requirements.txt
+# RUN pip install --no-cache-dir --upgrade -r $HOME/app/requirements.txt
+RUN pip install -r $HOME/app/requirements.txt
 
 RUN cd $HOME/app
 

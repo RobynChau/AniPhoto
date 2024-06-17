@@ -1,5 +1,5 @@
 from typing import Annotated
-
+import os
 from fastapi.security import OAuth2AuthorizationCodeBearer
 from fastapi import Security, Header, HTTPException, status, Depends
 from services.user_service import UserService
@@ -11,15 +11,17 @@ from config import get_db
 from sqlalchemy.orm import Session
 from helpers.register_device import register_device
 
+oauth_url = os.getenv("OAUTH_URL", "https://keycloak.vohuynh19.info/")
+
 oauth2_scheme = OAuth2AuthorizationCodeBearer(
-    authorizationUrl= "https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/protocol/openid-connect/auth",
-    tokenUrl="https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/protocol/openid-connect/token",
+    authorizationUrl=f"{oauth_url}realms/ios-entertainment-photography/protocol/openid-connect/auth",
+    tokenUrl=f"{oauth_url}realms/ios-entertainment-photography/protocol/openid-connect/token",
     auto_error=True
 )
 
 oauth2_scheme_not_auto = OAuth2AuthorizationCodeBearer(
-    authorizationUrl= "https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/protocol/openid-connect/auth",
-    tokenUrl="https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/protocol/openid-connect/token",
+    authorizationUrl=f"{oauth_url}realms/ios-entertainment-photography/protocol/openid-connect/auth",
+    tokenUrl=f"{oauth_url}realms/ios-entertainment-photography/protocol/openid-connect/token",
     auto_error=False
 )
 

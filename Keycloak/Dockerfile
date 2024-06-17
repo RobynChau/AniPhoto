@@ -21,8 +21,9 @@ ENV KC_DB_URL=jdbc:postgresql://ep-late-tree-a1oy2h84.ap-southeast-1.aws.neon.te
 ENV KC_DB_USERNAME=keycloak-vhuynh_owner
 ENV KC_DB_PASSWORD=1hqSFDyBLgj3
 ENV KC_HOSTNAME_URL="https://keycloak.vohuynh19.info"
-ENV KC_HOSTNAME_STRICT_HTTPS="true"
-ENV KC_HOSTNAME_STRICT_BACKCHANNEL="true"
+ENV KC_HOSTNAME_STRICT="false"
+ENV KC_HOSTNAME_STRICT_HTTPS="false"
+ENV KC_HOSTNAME_STRICT_BACKCHANNEL="false"
 ENV KC_PROXY=edge
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
