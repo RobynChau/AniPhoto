@@ -26,7 +26,7 @@ def create_anime_image(body: GenerateAnimeBody, data = Depends(get_payload_optio
     # Decrease the quota
     use_quota(data.get('device_id'), user_id, db)
 
-    image_file_path = generate_anime_image(body.source_img_path)
+    image_file_path = generate_anime_image(body.source_img_path)[0]
     timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
     firebase_url = upload_to_firebase(image_file_path, f'images/{session.id}/{timestamp}.png')
     image_service.create_image(firebase_url, 'anime', session.id)
