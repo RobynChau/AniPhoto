@@ -18,10 +18,10 @@
 #import "UIView+Toast.h"
 #import "EPSSegmentedControl.h"
 #import "EPSLoadingView.h"
+#import "EPSCompileDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define kServerEndPointURL @"https://vohuynh19-animegan-server.hf.space"
 #define kUserAccessToken @"accessToken"
 #define kUserLastSignInDate @"lastSignInDate"
 #define kEPSSignInManagerDidFetchUserInfo @"kEPSSignInManagerDidFetchUserInfo"

@@ -93,11 +93,11 @@
 }
 
 - (void)signUpButtonPressed {
-    NSURL *authorizationEndpoint = [NSURL URLWithString:@"https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/protocol/openid-connect/auth"];
-    NSURL *tokenEndpoint = [NSURL URLWithString:@"https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/protocol/openid-connect/token"];
-    NSURL *issuer = [NSURL URLWithString:@"https://keycloak.vohuynh19.info/realms/ios-entertainment-photography"];
-    NSURL *registrationEndpoint = [NSURL URLWithString:@"https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/clients-registrations/openid-connect"];
-    NSURL *endSessionEndpoint = [NSURL URLWithString:@"https://keycloak.vohuynh19.info/realms/ios-entertainment-photography/protocol/openid-connect/logoutt"];
+    NSURL *authorizationEndpoint = [NSURL URLWithString:kAuthEndPointURL];
+    NSURL *tokenEndpoint = [NSURL URLWithString:kAuthTokenEndpointURL];
+    NSURL *issuer = [NSURL URLWithString:kAuthIssuerURL];
+    NSURL *registrationEndpoint = [NSURL URLWithString:kAuthRegistrationEndpointURL];
+    NSURL *endSessionEndpoint = [NSURL URLWithString:kAuthEndSessionEndpointURL];
 
     OIDServiceConfiguration *configuration = [[OIDServiceConfiguration alloc]
                                               initWithAuthorizationEndpoint:authorizationEndpoint
@@ -109,10 +109,10 @@
     // perform the auth request...
     OIDAuthorizationRequest *request = [[OIDAuthorizationRequest alloc]
                                         initWithConfiguration:configuration
-                                        clientId:@"iOS_AniPhoto"
-                                        clientSecret:@"TkYf2zOddqj58mELgXkAIYVmShAobQgm"
+                                        clientId:kAuthClientID
+                                        clientSecret:kAuthClientSecret
                                         scopes:@[OIDScopeOpenID, OIDScopeProfile, OIDScopeEmail]
-                                        redirectURL:[NSURL URLWithString:@"aniphoto://login"]
+                                        redirectURL:[NSURL URLWithString:kAuthRedirectURI]
                                         responseType:OIDResponseTypeCode
                                         additionalParameters:nil];
 
@@ -130,6 +130,14 @@
                 [self dismissViewControllerAnimated:YES completion:nil];
             }];
         } else {
+            [TSHelper dispatchOnMainQueue:^{
+                UIAlertController *ac = [UIAlertController
+                                         alertControllerWithTitle:@"Failed to sign in"
+                                         message:@"There is a problem when signing into AniPhoto. Please try again"
+                                         preferredStyle:UIAlertControllerStyleAlert];
+                [ac addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+                [self presentViewController:ac animated:YES completion:nil];
+            }];
             NSLog(@"Authorization error: %@", [error localizedDescription]);
         }
     }];
