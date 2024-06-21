@@ -1,6 +1,9 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import storage
+import os
+
+project_name = os.getenv("FIREBASE_PROJECT_NAME", "ios-entertainment-photography")
 
 class FirebaseManager:
     __instance = None
@@ -17,7 +20,7 @@ class FirebaseManager:
         else:
             firebase_cred = credentials.Certificate('adminSdk.json')
             firebase_admin.initialize_app(firebase_cred, {
-                'storageBucket': 'ios-entertainment-photography.appspot.com'
+                'storageBucket': f'{project_name}.appspot.com'
             })
             self.bucket = storage.bucket()
             FirebaseManager.__instance = self
