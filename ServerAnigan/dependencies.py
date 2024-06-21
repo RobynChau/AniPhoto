@@ -12,20 +12,20 @@ from sqlalchemy.orm import Session
 from helpers.register_device import register_device
 
 oauth_url = os.getenv("OAUTH_URL", "https://keycloak.vohuynh19.info/")
+project_name = os.getenv("FIREBASE_PROJECT_NAME", "ios-entertainment-photography")
+public_key = os.getenv("PUBLIC_KEY", "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn4mjiau2Ko9KCLPH6BdVUw8RMf8yjQTqh8p7ZledBByvJKDDoEx7KR/Al/FYlOxg6C0hS4DyD3TtGankE03YKTeSqClSbBU7YRNMpyDT7JcUi7wyqOdgsNfEc7/N5e8rNMAavPw3kj8I7RkXKNo3iCrTrwIE20nANwoHTLva3sxfBnqQqZV4XWgcxwmDTidl0LOvwjFYuRMXT2vIndjkNND5l4luhV55QwF+FGjmH+vOgtxxm4qB50gxarlNTpUTvt9Q9i3lU9iuqVMbXkksSqzK8OfatmcB8K9UPVEvR8Hx8o3Igs4UuwOsdP4m6qlbXqGoLHT0kgiGgfnXm/u8LwIDAQAB")
 
 oauth2_scheme = OAuth2AuthorizationCodeBearer(
-    authorizationUrl=f"{oauth_url}realms/ios-entertainment-photography/protocol/openid-connect/auth",
-    tokenUrl=f"{oauth_url}realms/ios-entertainment-photography/protocol/openid-connect/token",
+    authorizationUrl=f"{oauth_url}realms/{project_name}/protocol/openid-connect/auth",
+    tokenUrl=f"{oauth_url}realms/{project_name}/protocol/openid-connect/token",
     auto_error=True
 )
 
 oauth2_scheme_not_auto = OAuth2AuthorizationCodeBearer(
-    authorizationUrl=f"{oauth_url}realms/ios-entertainment-photography/protocol/openid-connect/auth",
-    tokenUrl=f"{oauth_url}realms/ios-entertainment-photography/protocol/openid-connect/token",
+    authorizationUrl=f"{oauth_url}realms/{project_name}/protocol/openid-connect/auth",
+    tokenUrl=f"{oauth_url}realms/{project_name}/protocol/openid-connect/token",
     auto_error=False
 )
-
-public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn4mjiau2Ko9KCLPH6BdVUw8RMf8yjQTqh8p7ZledBByvJKDDoEx7KR/Al/FYlOxg6C0hS4DyD3TtGankE03YKTeSqClSbBU7YRNMpyDT7JcUi7wyqOdgsNfEc7/N5e8rNMAavPw3kj8I7RkXKNo3iCrTrwIE20nANwoHTLva3sxfBnqQqZV4XWgcxwmDTidl0LOvwjFYuRMXT2vIndjkNND5l4luhV55QwF+FGjmH+vOgtxxm4qB50gxarlNTpUTvt9Q9i3lU9iuqVMbXkksSqzK8OfatmcB8K9UPVEvR8Hx8o3Igs4UuwOsdP4m6qlbXqGoLHT0kgiGgfnXm/u8LwIDAQAB"
 
 async def get_device_id(device_id: str = Header("device-id")):
     """

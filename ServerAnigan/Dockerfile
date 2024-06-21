@@ -17,9 +17,6 @@ WORKDIR $HOME/app
 # Copy the current directory contents into the container at $HOME/app setting the owner to the user
 COPY --chown=user . $HOME/app
 
-# Run the prepare-env.sh script
-RUN chmod +x $HOME/app/scripts/prepare-env.sh
-RUN $HOME/app/scripts/prepare-env.sh
 # Install requirements.txt 
 # RUN pip install --no-cache-dir --upgrade -r $HOME/app/requirements.txt
 RUN pip install -r $HOME/app/requirements.txt
