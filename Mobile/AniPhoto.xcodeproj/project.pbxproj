@@ -186,7 +186,6 @@
 		4BCDBE0E2BE8E68400372F5C /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE92BE8E68400372F5C /* LayoutConstraint.swift */; };
 		4BCDBE0F2BE8E68400372F5C /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDEA2BE8E68400372F5C /* ConstraintConstantTarget.swift */; };
 		4BD12EE62BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */; };
-		4BD50ADC2BA01322001F2DFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */; };
 		4BDF7C2E2BFF9949002DF23C /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C2C2BFF9949002DF23C /* UIButtonExtension.swift */; };
 		4BDF7C2F2BFF9949002DF23C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C2D2BFF9949002DF23C /* UIImageExtension.swift */; };
 		4BDF7C322BFFABB4002DF23C /* EPSCreditPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF7C312BFFABB4002DF23C /* EPSCreditPurchaseViewController.m */; };
@@ -472,7 +471,6 @@
 		4BCDBDEA2BE8E68400372F5C /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		4BD12EE42BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeLabelSectionHeaderView.h; sourceTree = "<group>"; };
 		4BD12EE52BCEF34900B8DA16 /* EPSHomeLabelSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeLabelSectionHeaderView.m; sourceTree = "<group>"; };
-		4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4BDF7C2C2BFF9949002DF23C /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		4BDF7C2D2BFF9949002DF23C /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		4BDF7C302BFFABB4002DF23C /* EPSCreditPurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCreditPurchaseViewController.h; sourceTree = "<group>"; };
@@ -517,6 +515,7 @@
 		4BF5F7452BFBB76C0032DC02 /* EPSAniGANFilterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAniGANFilterCell.m; sourceTree = "<group>"; };
 		4BF5F7482BFBD3120032DC02 /* EPSHomeBannerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSHomeBannerCell.h; sourceTree = "<group>"; };
 		4BF5F7492BFBD3120032DC02 /* EPSHomeBannerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSHomeBannerCell.m; sourceTree = "<group>"; };
+		D99F694F2C25EEC900A62E01 /* EPSCompileDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSCompileDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -650,6 +649,7 @@
 		4B4D10132B963243000DDF1F /* Ultilities */ = {
 			isa = PBXGroup;
 			children = (
+				D99F694F2C25EEC900A62E01 /* EPSCompileDefines.h */,
 				4B4D10152B9632C4000DDF1F /* EPSDefines.h */,
 				4B4D10162B9632C4000DDF1F /* EPSDefines.m */,
 				4B4D10182B963A2D000DDF1F /* CommonView */,
@@ -831,7 +831,6 @@
 				4BA0B38A2B5846850066E6CB /* AppDelegate.h */,
 				4BA0B38B2B5846850066E6CB /* AppDelegate.m */,
 				4BA0B39C2B58468E0066E6CB /* main.m */,
-				4BD50ADB2BA01322001F2DFC /* GoogleService-Info.plist */,
 				4BA0B39B2B58468E0066E6CB /* Info.plist */,
 				4BA0B3982B58468E0066E6CB /* LaunchScreen.storyboard */,
 				4BA0B3962B58468E0066E6CB /* Assets.xcassets */,
@@ -1463,7 +1462,6 @@
 			files = (
 				4BA0B39A2B58468E0066E6CB /* LaunchScreen.storyboard in Resources */,
 				4BA0B3972B58468E0066E6CB /* Assets.xcassets in Resources */,
-				4BD50ADC2BA01322001F2DFC /* GoogleService-Info.plist in Resources */,
 				4BC1BFE62C0454C50097C83D /* launchscreen_background2.jpg in Resources */,
 				4BCDBDBD2BE8CD0900372F5C /* ZLPhotoBrowser.bundle in Resources */,
 			);
